@@ -38,9 +38,9 @@ const Dresses = () => {
               <option value='desc'>High to Low</option>
             </Select>
             <div className={style.pagebox}>
-              <button disabled={page <= 1} onClick={() => setPage((prev) => prev - 1)}> <MdArrowBackIosNew className={style.arrow} size={"30px"} /> </button>
+              <button disabled={page <= 1} onClick={() => setPage((prev) => prev - 1)}> <MdArrowBackIosNew size={"30px"} /> </button>
               <h2>{page}</h2>
-              <button onClick={() => setPage((prev) => prev + 1)}> <MdArrowForwardIos className={style.arrow} size={"30px"} /> </button>
+              <button onClick={() => setPage((prev) => prev + 1)}> <MdArrowForwardIos size={"30px"} /> </button>
             </div>
           </div>
         </div>
