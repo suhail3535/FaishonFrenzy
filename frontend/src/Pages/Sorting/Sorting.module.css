@@ -1,0 +1,41 @@
+.head{
+    display: grid; 
+    gap: 14px; 
+    font-weight: 100; 
+}
+
+.head *{
+    font-weight: 100; 
+}
+
+.browse{
+    color: rgb(46, 46, 46); 
+    font-family: sans-serif; 
+    font-size: small; 
+    font-weight: 500;  
+    color: rgb(22, 22, 22);
+}
+
+.page{
+    font-size: small; 
+    text-decoration: underline;  
+    text-underline-offset: 1px; 
+    color: rgb(79,154,171); 
+    cursor: pointer; 
+}
+
+.hr{
+    background-color: rgb(180, 180, 180); 
+    border-radius: 30px; 
+    height: 1px; 
+    width: 100%; 
+}
+
+.sortbox{
+    display: grid; 
+    gap: 10px; 
+}
+
+
+
+

@@ -1,21 +1,88 @@
-
-.container{
-    display: flex;   
-    border: 1px solid black;
-    padding: 10px;  
-    width: 96%; 
-    margin: auto; 
+.container {
+  display: flex;
+  border: 1px solid black;
+  padding: 2px;
+  font-family: sans-serif;
+  width: 96%;
+  margin: auto;
+  gap: 20px;
 }
 
-.container>div:nth-child(1){
-    flex: 2;
-    border: 1px solid rgb(255, 0, 0);
-
+h4 {
+  font-weight: 400;
 }
 
-.container>div:nth-child(2){
-    border: 1px solid rgb(0, 42, 255);
-    flex: 7;
+.container > div:nth-child(1) {
+  flex: 2;
+  border: 1px solid rgb(255, 0, 0);
+  padding: 10px;
+}
+.container > div:nth-child(2) {
+  flex: 8;
+  padding: 4px;
+}
+
+.mydress {
+  /* border: 1px solid rgb(0, 42, 255); */
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.datatop{
+    display: flex; 
+    margin: 20px 0; 
+    justify-content: space-between;  
+} 
+
+.datatop>div:nth-child(1){
+    display: flex; 
+    align-items: center;  
+} 
+
+.sort{
+    font-size: small; 
+    font-family: Tahoma, Geneva, Verdana, sans-serif; 
+    font-weight: 400;
+}
+ 
+.datatop h6{
+    color: rgb(166, 166, 166);  
+    font-size: small; 
+}
+
+.datatop>div:nth-child(1){
+    display: flex;
+    align-items: center;  
+    gap: 10px ;
+}
+.datatop>div:nth-child(2){
+    display: flex;
+    align-items: center;  
+    gap: 10px ;   
+}
+
+.datatop h1{
+    font-size: x-large; 
+}  
+
+.pagebox{
+    display: flex ; 
+    align-items: center;  
+    gap: 5px;
+} 
+
+.arrow{
+    font-weight: 100;
 }
 
 
+
+@media screen and (min-width: 100px) and (max-width: 820px) {
+  .container {
+    display: grid;
+  }
+  .mydress {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

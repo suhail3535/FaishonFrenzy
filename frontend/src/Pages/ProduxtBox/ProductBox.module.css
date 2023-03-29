@@ -1,0 +1,25 @@
+.head > * {
+  margin: 4px 0px;
+} 
+
+.head:hover h4{
+    color: rgb(5, 33, 146);
+}
+
+.head > h4 {
+  font-weight: 400;
+  margin-left: 1px;
+}
+
+.head > p {
+  font-weight: 100;
+  margin-left: 1px;
+  /* border: 1px solid black; */
+}
+
+.img{
+    width: 100%;  
+}
+
+/* ======================= */
+
