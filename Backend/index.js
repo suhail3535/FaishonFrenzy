@@ -2,6 +2,8 @@ require("dotenv").config();
 const express = require("express");
 const { connection } = require("./config/db");
 const {userRouter}=require("./Routes/user.route")
+const {pageRouter} = require("./Routes/page.route");
+const {cartRouter} = require("./Routes/cart.route");
 const app = express();
 app.use(express.json());
 
@@ -12,6 +14,9 @@ app.get("/", (req, res) => {
 
 
 app.use("/users", userRouter);
+app.use("/pages", pageRouter);
+app.use("/carts", cartRouter);
+
 
 app.listen(process.env.port, async () => {
   try {
