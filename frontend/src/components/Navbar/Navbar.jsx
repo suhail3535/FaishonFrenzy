@@ -11,7 +11,6 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
-  MenuDivider,
   useDisclosure,
   useColorModeValue,
   Stack,
@@ -42,7 +41,7 @@ import { useState } from 'react';
 import { Navigate } from "react-router-dom";
 import { FaUserAlt } from "react-icons/fa";
 import {FiSearch} from "react-icons/fi";
-import {SlHandbag} from "react-icons/sl"
+import {SlHandbag} from "react-icons/sl" 
 
 
 const Links = ['𝐵𝑒𝒻𝒶𝓈𝒽𝒾𝑜𝓃𝒶𝒷𝓁𝑒'];

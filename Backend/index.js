@@ -5,11 +5,12 @@ const { userRouter } = require("./Routes/user.route");
 const { pageRouter } = require("./Routes/page.route");
 const { cartRouter } = require("./Routes/cart.route");
 const { dressRouter } = require("./Routes/dress.routes");
-const {adminRouter}=require("./Routes/admin.route")
+const { adminRouter } = require("./Routes/admin.route")
+const cors=require("cors")
 // const { auth } = require("./middlewere/auth.middleware");
 const app = express();
 app.use(express.json());
-
+app.use(cors())
 app.get("/", (req, res) => {
   res.status(200).send("Welcome To HomePage");
 });
