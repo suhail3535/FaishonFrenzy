@@ -6,14 +6,14 @@ const { DressModel } = require("../models/dress.models");
 const dressRouter = express.Router();
 
 dressRouter.get("/", async (req, res) => {
-  const token = req.headers.authorization;
-  const decoded = jwt.verify(token, "project");
+  // const token = req.headers.authorization;
+  // const decoded = jwt.verify(token, "project");
 
   try {
-    if (decoded) { 
-      const dressitem = await DressModel.find({ userID: decoded.userID });
+    // if (decoded) { 
+      const dressitem = await DressModel.find();
       res.status(200).send(dressitem);
-    }
+    
   } catch (error) {
     res.status(400).send({ message: error.message });
   }
