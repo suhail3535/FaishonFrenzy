@@ -3,6 +3,10 @@ import "./CartPage.css";
 import PaymentCard from "../../components/PaymentCard/PaymentCard";
 
 const CartPage = () => {
+
+  const handleCheckout = () => {
+
+  }
   return (
     <div>
       <div className="cartPage-wrapper">
@@ -48,7 +52,7 @@ const CartPage = () => {
                     <span>$ 0.00</span>
                   </div>
                   <div>
-                    <span style={{color:"black"}}>Total</span>
+                    <span style={{ color: "black" }}>Total</span>
                     <span>$ 220.00</span>
                   </div>
                 </div>
@@ -56,7 +60,10 @@ const CartPage = () => {
                   <div>Or 4 interest-free installments of $55.00 with </div>
                   <div>Klarna or afterpay</div>
                 </div>
-                <button>PROCEED TO CHECKOUT</button>
+                <a href="https://buy.stripe.com/test_28o6qF8JD0lp4XS9AA">
+                  <button onClick={handleCheckout}>PROCEED TO CHECKOUT</button>
+                </a>
+
                 <div className="paypal-btn">
                   <button>
                     <img
