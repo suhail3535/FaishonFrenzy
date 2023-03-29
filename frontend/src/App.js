@@ -2,7 +2,7 @@ import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import MainRoutes from "./Pages/MainRoutes/MainRoutes";
-// import { SingleProduct } from "./Pages/SingleProduct/SingleProduct";
+import { SingleProduct } from "./Pages/SingleProduct/SingleProduct";
 import CartPage from "./Pages/CartPage/CartPage";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <Navbar />
       <MainRoutes />
       {/* <SingleProduct/> */}
-      <CartPage/>
+      {/* <CartPage/> */}
       <Footer />
     </div>
   );
