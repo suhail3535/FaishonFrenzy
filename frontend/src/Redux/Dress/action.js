@@ -1,11 +1,11 @@
 import axios from "axios";
-import { DRESS_DATA_LOADING, DRESS_DATA_SUCCESS } from "./actionType";
+import { DRESS_DATA_ERROR, DRESS_DATA_LOADING, DRESS_DATA_SUCCESS } from "./actionType";
 
 export const getDress = (param) => async (dispatch) => {
   try {
     dispatch({ type: DRESS_DATA_LOADING });
     let res = await axios
-      .get("http://localhost:8080/dress", param)
+      .get("http://localhost:7700/dress", param)
       .then((e) => {
         dispatch({ type: DRESS_DATA_SUCCESS, payload: e.data });
         return e.data;
