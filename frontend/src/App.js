@@ -17,8 +17,8 @@ function App() {
 
       <Dresses /> 
 
-      {/* <SingleProduct/> */}
-      {/* <CartPage/> */}
+       <SingleProduct/>
+       <CartPage/> 
 
       <Footer />
     </div>
