@@ -1,5 +1,5 @@
 import axios from "axios";
-import { DRESS_DATA_LOADING, DRESS_DATA_SUCCESS } from "./actionType";
+import { DRESS_DATA_ERROR, DRESS_DATA_LOADING, DRESS_DATA_SUCCESS } from "./actionType";
 
 export const getDress = (param) => async (dispatch) => {
   try {
