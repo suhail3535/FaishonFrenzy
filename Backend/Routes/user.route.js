@@ -1,4 +1,3 @@
-
 const { UserModel } = require("../models/user.models");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
@@ -29,7 +28,7 @@ userRouter.post("/login", async (req, res) => {
         if (result) {
           res.status(200).send({
             message: "Login Successfull",
-            token: jwt.sign({ userID: user._id }, "project"), 
+            token: jwt.sign({ userID: user._id }, "project"),
           });
         } else {
           res.status(400).send({ message: "Wrong Credentials! " });
@@ -44,5 +43,5 @@ userRouter.post("/login", async (req, res) => {
 });
 
 module.exports = {
-    userRouter
+  userRouter,
 };
