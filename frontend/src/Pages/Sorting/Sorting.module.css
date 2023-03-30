@@ -34,7 +34,8 @@
 
 .sortbox{
     display: grid; 
-    gap: 10px; 
+    gap: 10px;  
+    margin: 10px 0;
 } 
 
 

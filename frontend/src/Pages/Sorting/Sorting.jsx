@@ -34,25 +34,28 @@ const Sorting = ({ pageon, price }) => {
     return (
         <div className={style.head}>
             <h3 className={style.browse}>Browse by: </h3>
-            <hr />
+            <hr /> 
             <h3 className={style.page}>{pageon}</h3>
             <div className={style.sortbox}>
                 <h2> Rating </h2> 
+                <hr />   
                 <RadioGroup onChange={setorder} value={order}>
                     <Stack direction='column'>
-                        <Radio value='3'>3 &#9733; &#9733; &#9733;</Radio>
-                        <Radio value='4'>4 &#9733; &#9733; &#9733; &#9733; </Radio>
-                        <Radio value='5'>5 &#9733; &#9733; &#9733; &#9733; &#9733;</Radio>
+                        <Radio value='2.9'>3 &#9733; &#9733; &#9733;</Radio>
+                        <Radio value='3.9'>4 &#9733; &#9733; &#9733; &#9733; </Radio>
+                        <Radio value='4.9'>5 &#9733; &#9733; &#9733; &#9733; &#9733;</Radio>
                     </Stack>
                 </RadioGroup>
             </div>
             {/* <hr className={style.hr} /> */}
             <div className={style.sortbox}>
                 <h2>Brand</h2>
+                <hr />  
                 <div className={style.sortbox}>
                     <Checkbox
                         size="lg"
-                        onChange={handleChange}
+                        onChange={handleChange} 
+                        defaultChecked={category.includes("Pilcro")}
                         value={"Pilcro"}
                         colorScheme="messenger"
                     >
@@ -60,7 +63,8 @@ const Sorting = ({ pageon, price }) => {
                     </Checkbox>
                     <Checkbox
                         size="lg"
-                        onChange={handleChange}
+                        onChange={handleChange} 
+                        defaultChecked={category.includes("By Anthropologie")}
                         value={"By Anthropologie"}
                         colorScheme="messenger"
                     >
@@ -68,7 +72,8 @@ const Sorting = ({ pageon, price }) => {
                     </Checkbox>
                     <Checkbox
                         size="lg"
-                        onChange={handleChange}
+                        onChange={handleChange} 
+                        defaultChecked={category.includes("Maeve")}
                         value={"Maeve"}
                         colorScheme="messenger"
                     >
@@ -76,7 +81,8 @@ const Sorting = ({ pageon, price }) => {
                     </Checkbox>
                     <Checkbox
                         size="lg"
-                        onChange={handleChange}
+                        onChange={handleChange} 
+                        defaultChecked={category.includes("Sloggi")}
                         value={"Sloggi"}
                         colorScheme="messenger"
                     >
@@ -84,6 +90,50 @@ const Sorting = ({ pageon, price }) => {
                     </Checkbox>
                 </div>
             </div>
+            <div className={style.sortbox}>
+                    <h2>Size </h2>
+                    <hr />
+                    <Checkbox size="lg" colorScheme="messenger">
+                        Extra Small (XS)
+                    </Checkbox>
+                    <Checkbox size="lg" colorScheme="messenger">
+                        Small (S)
+                    </Checkbox>
+                    <Checkbox size="lg" colorScheme="messenger">
+                        medium (M)
+                    </Checkbox>
+                    <Checkbox size="lg" colorScheme="messenger">
+                        Large (L)
+                    </Checkbox>
+                    <Checkbox size="lg" colorScheme="messenger">
+                        Extra Large (XL)
+                    </Checkbox>
+                    <Checkbox size="lg" colorScheme="messenger">
+                        2X Large (2XL)
+                    </Checkbox>
+                </div>
+                <div className={style.sortbox}>
+                    <h2>Discount </h2>
+                    <hr />
+                    <Checkbox size="lg" colorScheme="messenger">
+                        10% Off or more
+                    </Checkbox>
+                    <Checkbox size="lg" colorScheme="messenger">
+                        15% Off or more
+                    </Checkbox>
+                    <Checkbox size="lg" colorScheme="messenger">
+                        20% Off or more
+                    </Checkbox>
+                    <Checkbox size="lg" colorScheme="messenger">
+                        25% Off or more
+                    </Checkbox>
+                    <Checkbox size="lg" colorScheme="messenger">
+                        30% Off or more
+                    </Checkbox>
+                    <Checkbox size="lg" colorScheme="messenger">
+                        35% Off or more
+                    </Checkbox>
+                </div>
         </div>
     );
 };
