@@ -10,23 +10,20 @@ import Product from "./Pages/Admin/Admin";
 
 import AuthPage from "./Pages/AuthPage/AuthPage";
 
-
 function App() {
   return (
     <div className="App">
       <Navbar />
       <MainRoutes />
 
-
       <Dresses />
 
       <SingleProduct />
       <CartPage />
 
-      <AuthPage/>
+      <AuthPage />
 
       <Footer />
-    
     </div>
   );
 }
