@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 import {
   Box,
   Flex,
@@ -19,76 +19,75 @@ import {
   Input,
   ButtonGroup,
   Divider,
-  Text
-} from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon ,MoonIcon,SunIcon} from '@chakra-ui/icons';
+  Text,
+} from "@chakra-ui/react";
+import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 // import {Link as }
 import { Link as RouterLink } from "react-router-dom";
 import source from "../../Images/HomePage/img1.png";
 import Source2 from "../../Images/HomePage/img2.png";
 import {
-    MDBContainer,
-    MDBNavbar,
-    MDBBtn,
-    MDBInputGroup
-  } from 'mdb-react-ui-kit';
-import BelowNavbar from './BelowNavbar';
-import { useContext } from 'react';
+  MDBContainer,
+  MDBNavbar,
+  MDBBtn,
+  MDBInputGroup,
+} from "mdb-react-ui-kit";
+import BelowNavbar from "./BelowNavbar";
+import { useContext } from "react";
 
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { useEffect } from "react";
+import { useState } from "react";
 // import { CartContext } from '../Contexts/CartContext';
 import { Navigate } from "react-router-dom";
 import { FaUserAlt } from "react-icons/fa";
+
 import {FiSearch} from "react-icons/fi";
 import {SlHandbag} from "react-icons/sl" 
 import OnhoverProp from './Onhover';
 
-const Links = ['𝐵𝑒𝒻𝒶𝓈𝒽𝒾𝑜𝓃𝒶𝒷𝓁𝑒'];
+
+const Links = ["𝐵𝑒𝒻𝒶𝓈𝒽𝒾𝑜𝓃𝒶𝒷𝓁𝑒"];
 
 const NavLink = ({ children }) => (
   <Link
     px={2}
     py={1}
-    rounded={'md'}
+    rounded={"md"}
     _hover={{
-      textDecoration: 'none',
-      bg: useColorModeValue('gray.200', 'gray.700'),
+      textDecoration: "none",
+      bg: useColorModeValue("gray.200", "gray.700"),
     }}
     fontSize={"20"}
-    href={'#'}>
+    href={"#"}
+  >
     {children}
   </Link>
 );
 
 const getData = async (val) => {
-  if(val){
-    const res = await fetch(`https://test-api-2.onrender.com/products?q=${val}`);
+  if (val) {
+    const res = await fetch(
+      `https://test-api-2.onrender.com/products?q=${val}`
+    );
     const data = await res.json();
-    return data; 
+    return data;
   }
-
-}
+};
 
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
 
-  const [inputData,setInputData] = useState("");
- 
+  const [inputData, setInputData] = useState("");
 
-  const fetchedData =async (inputData) => {
+  const fetchedData = async (inputData) => {
     const result = await getData(inputData);
-
-  }
-
-
+  };
 
   return (
     <>
-      {/* <BelowNavbar /> */}
-      <OnhoverProp />
-      <Image src={Source2} alt={"Error"} />
+
+    <Image src={Source2} alt={"Error"} />
       <Box
         bg={useColorModeValue("gray.100", "gray.900")}
         px={4}
