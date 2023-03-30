@@ -10,11 +10,8 @@ import AuthPage from "./Pages/AuthPage/AuthPage";
 function App() {
   return (
     <div className="App">
-      {/* <Navbar /> */}
+      <Navbar />
       <MainRoutes />
-      {/* <Dresses /> */}
-      {/* <SingleProduct /> */}
-      {/* <CartPage /> */}
       <AuthPage/>
       <Footer />
     </div>
