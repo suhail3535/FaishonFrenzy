@@ -56,26 +56,27 @@
 }
 
 .bookbtn {
-    background-color: #17274a;
-    border: 2px solid transparent;
+    background-color:rgb(75,86,102);
+    border: 1px solid transparent;
 
-    /* height: 60px; */
-    width: 40%;
+    height: 45px;
+    width: 95%;
     display: block;
-    padding: 20px 25px;
+    /* padding: 20px 25px; */
     color: white;
-    font-weight: bold;
+ 
+    word-spacing: 0px;
     margin: 20px auto;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
-    border-radius: 8px;
+ 
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .bookbtn:hover {
     background-color: white;
     color: #17274a;
-    border: 2px solid #17274a;
-    border-radius: 15px;
+    border: 1px solid #17274a;
+    
 }
 
 .bookbtn2 {
