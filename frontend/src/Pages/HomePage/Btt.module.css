@@ -1,0 +1,8 @@
+.bttBtn{
+    background-color: aliceblue;
+    color: "#167a92";
+}
+
+.bttBtn:hover{
+    background-color: blueviolet;
+}
