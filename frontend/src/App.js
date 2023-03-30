@@ -10,7 +10,6 @@ function App() {
       <Navbar />
       <Navbartepm />
       <MainRoutes />
-
     </div>
   );
 }

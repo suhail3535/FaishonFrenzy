@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   padding: 2px;
   font-family: sans-serif;
   width: 96%;
@@ -14,7 +14,7 @@ h4 {
 
 .container > div:nth-child(1) {
   flex: 2;
-  border: 1px solid rgb(255, 0, 0);
+  /* border: 1px solid rgb(255, 0, 0); */
   padding: 10px;
 }
 .container > div:nth-child(2) {
@@ -71,10 +71,6 @@ h4 {
     align-items: center;  
     gap: 5px;
 } 
-
-.arrow{
-    font-weight: 100;
-}
 
 
 
