@@ -7,6 +7,7 @@ import Dresses from "./Pages/Dresses/Dresses";
 
 import { SingleProduct } from "./Pages/SingleProduct/SingleProduct";
 import CartPage from "./Pages/CartPage/CartPage";
+import Product from "./Pages/Admin/Admin";
 
 
 function App() {
@@ -15,12 +16,13 @@ function App() {
       <Navbar />
       <MainRoutes />
 
-      <Dresses /> 
+      <Dresses />
 
-       <SingleProduct/>
-       <CartPage/> 
+      <SingleProduct />
+      <CartPage />
 
       <Footer />
+    
     </div>
   );
 }
