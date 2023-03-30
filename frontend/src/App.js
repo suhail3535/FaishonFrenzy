@@ -1,26 +1,17 @@
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
+import Navbartepm from "./components/Navbartemp/Navbartemp";
+
 import MainRoutes from "./Pages/MainRoutes/MainRoutes";
-
-import Dresses from "./Pages/Dresses/Dresses";
-
-import { SingleProduct } from "./Pages/SingleProduct/SingleProduct";
-import CartPage from "./Pages/CartPage/CartPage";
-
 
 function App() {
   return (
     <div className="App">
       <Navbar />
+      <Navbartepm />
       <MainRoutes />
 
-      <Dresses /> 
 
-       <SingleProduct/>
-       <CartPage/> 
-
-      <Footer />
     </div>
   );
 }
