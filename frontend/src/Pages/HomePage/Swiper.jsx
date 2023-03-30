@@ -60,26 +60,25 @@ export function Swiper() {
           <Link to="/store?filter=MacBook+Air&filter=MacBook+Pro">
             <MyCard
               src="https://images.urbndata.com/is/image/Anthropologie/4130578570023_041_b2?$an-category$&qlt=80&fit=constrain"
-              cap="The Somerset Maxi Dress: Embroidered Edition"
+              cap="Somerset Maxi Dress"
             />
           </Link>
           <Link to="/store?filter=iPhone">
             <MyCard
               src="https://images.urbndata.com/is/image/Anthropologie/4123650590242_010_b2?$an-category$&qlt=80&fit=constrain"
-              cap="The Ophelia Puff-Sleeve Lace Dress"
+              cap="Ophelia Puff-Sleeve"
             />
           </Link>
           <Link to="/store?filter=iPad">
             <MyCard
               src="https://images.urbndata.com/is/image/Anthropologie/4130646420009_085_b2?$an-category$&qlt=80&fit=constrain"
-              cap="
-              The Colette Cropped Wide-Leg Pants"
+              cap="Colette Wide-Leg Pants"
             />
           </Link>
           <Link to="/store?filter=Watch">
             <MyCard
               src="https://images.urbndata.com/is/image/Anthropologie/4123650590131_070_b?$an-category$&qlt=80&fit=constrain"
-              cap="V. Chapman Vera Ruffle-Strap Corset Side-Slit Midi Dress"
+              cap="Wide-Leg Flare Pants"
             />
           </Link>
           <Link to="/store?filter=Airpods">
@@ -91,33 +90,33 @@ export function Swiper() {
           <Link to="/store?filter=Tv+%26+Home">
             <MyCard
               src="https://images.urbndata.com/is/image/Anthropologie/4130647160161_001_b2?$an-category$&qlt=80&fit=constrain"
-              cap="Jo Faulkner Strapless Dress"
+              cap="Faulkner Strapless Dress"
             />
           </Link>
           <Link to="/store?filter=Entertainment">
             <MyCard
               src="https://images.urbndata.com/is/image/Anthropologie/4122900970121_093_b2?$an-category$&qlt=80&fit=constrain"
-              cap="The Colette Cropped Wide-Leg Pants"
+              cap="Colette Wide-Leg Pants"
             />
           </Link>
           <Link to="/store?filter=Accessorires">
             <MyCard
               src="https://images.urbndata.com/is/image/Anthropologie/4130084320097_085_b15?$an-category$&qlt=80&fit=constrain"
-              cap="The Naomi Ponte Wide-Leg Flare Pants"
+              cap="Ruffle-Strap-Slit Midi Dress"
             />
           </Link>
 
           <Link to="/store?filter=Accessorires">
             <MyCard
               src="https://images.urbndata.com/is/image/Anthropologie/4130360680079_066_b2?$an-category$&qlt=80&fit=constrain"
-              cap="Porridge Ruffled Long-Sleeve Dress"
+              cap="Porridge Long-Sleeve Dress"
             />
           </Link>
 
           <Link to="/store?filter=Accessorires">
             <MyCard
               src="https://images.urbndata.com/is/image/Anthropologie/67117135_040_b?$an-category$&qlt=80&fit=constrain"
-              cap=" V. Chapman Vera Ruffle-Strap Corset Side-Slit Midi Dress"
+              cap="Ruffle-Strap Midi Dress"
             />
           </Link>
         </div>

@@ -93,29 +93,7 @@ export default function LargeWithLogoCentered() {
         </Stack>
         </SimpleGrid>
       </Container>
-      {/* <Box py={10}>
-        <Flex
-          align={'center'}
-          _before={{
-            content: '""',
-            borderBottom: '1px solid',
-            borderColor: useColorModeValue('gray.200', 'gray.700'),
-            flexGrow: 1,
-            mr: 8,
-          }}
-          _after={{
-            content: '""',
-            borderBottom: '1px solid',
-            borderColor: useColorModeValue('gray.200', 'gray.700'),
-            flexGrow: 1,
-            ml: 8,
-          }}>
-          <Logo />
-        </Flex>
-        <Text pt={6} fontSize={'sm'} textAlign={'center'}>
-          © 2022 Chakra Templates. All rights reserved
-        </Text>
-      </Box> */}
+    
       <Flex gap={4} justifyContent="center" alignItems={"center"} >
       <img style={{width:"50px",height:"50px"}} src='https://cdn-icons-png.flaticon.com/128/5968/5968764.png' alt='fb'/>
       <img style={{width:"50px",height:"50px"}} src="https://cdn-icons-png.flaticon.com/128/3670/3670151.png" alt="twitter" />
