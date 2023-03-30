@@ -6,14 +6,25 @@ const { DressModel } = require("../models/dress.models");
 const dressRouter = express.Router();
 
 dressRouter.get("/", async (req, res) => {
-  // const token = req.headers.authorization;
-  // const decoded = jwt.verify(token, "project");
-
+  const { brand, rating, price } = req.query; 
+  const data = req.query; 
+  console.log(data); 
+  let obj;
   try {
-    // if (decoded) { 
-      const dressitem = await DressModel.find();
-      res.status(200).send(dressitem);
+    if (price == "asc") { 
+      obj = { price: 1 };
+    } else if (price == "desc") {
+      obj = { price: -1 };
+    } 
     
+    if (rating) {
+      const dressitem = await DressModel.find({rating:{ $gt: rating }}).sort(obj);
+      res.status(200).send(dressitem);
+    }
+    else{
+      const dressitem = await DressModel.find().sort(obj);
+      res.status(200).send(dressitem);
+    }
   } catch (error) {
     res.status(400).send({ message: error.message });
   }
