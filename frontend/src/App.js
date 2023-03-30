@@ -12,7 +12,9 @@ function App() {
     <div className="App">
       <Navbar />
       <MainRoutes />
-      <AuthPage/>
+      {/* <AuthPage/> */}
+      {/* <Dresses/> */}
+      
       <Footer />
     </div>
   );

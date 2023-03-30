@@ -6,9 +6,25 @@ import {
   AccordionItemButton,
   AccordionItemHeading,
   AccordionItemPanel,
-} from "react-accessible-accordion";
+} from "react-accessible-accordion"; 
+
+// {
+//   "_id": {
+//     "$oid": "6423db95bc2a4d45539224fd"
+//   },
+//   "name": "Pilcro The Romy Relaxed Buttondown",
+//   "img": "https://images.urbndata.com/is/image/Anthropologie/4110907290003_019_b2?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720",
+//   "price": 7399.47,
+//   "Spise": 8057.2,
+//   "brand": "Pilcro",
+//   "rating": 4.2
+// }
 
 export const SingleProduct = () => {
+  
+
+
+
   return (
     <div>
       <div className="singleProd-wrapper">
