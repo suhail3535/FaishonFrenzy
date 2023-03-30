@@ -13,12 +13,6 @@ function App() {
     <div className="App">
       <Navbar />
       <MainRoutes />
-
-      <Dresses />
-
-      <SingleProduct />
-      <CartPage />
-
       <AuthPage />
 
       <Footer />
