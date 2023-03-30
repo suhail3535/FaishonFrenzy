@@ -1,0 +1,157 @@
+#second {
+    border: 0px solid gray;
+    padding: 10px 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 30%;
+    margin: 20px auto;
+    border-radius: 15px;
+}
+#first {
+    border: 0px solid rgb(0, 47, 255);
+    padding: 10px 20px;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 60%;
+    border-radius: 15px;
+    margin: 20px auto;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#btn {
+    background-color: #17274a;
+    border: 2px solid transparent;
+    /* height: 60px; */
+    width: 60%;
+    display: block;
+    padding: 10px 15px;
+    color: white;
+    font-weight: bold;
+    margin: 20px auto;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#btn:hover {
+    background-color: white;
+    color: #17274a;
+    border: 2px solid #17274a;
+    border-radius: 15px;
+}
+#edit {
+    /* background-color: #17274a; */
+    border: 2px solid transparent;
+    height: 35px;
+    /* align-items: center;
+    justify-content: center; */
+    /* width: 50%; */
+    display: block;
+    padding: 0px 15px;
+    color: blue;
+    /* font-weight: bold; */
+    /* margin: 20px auto; */
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#edit:hover {
+    background-color: white;
+    /* color: #17274a; */
+     border: 2px solid #17274a; 
+    border-radius: 15px;
+}
+#delete {
+    /* background-color: tomato; */
+    border: 2px solid transparent;
+    height: 35px;
+    /* align-items: center;
+    justify-content: center; */
+    /* width: 50%; */
+    display: block;
+    padding: 0px 15px;
+    color: red;
+    /* font-weight: bold; */
+    /* margin: 20px auto; */
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#delete:hover {
+    background-color: white;
+    color: tomato;
+    border: 2px solid tomato;
+    border-radius: 15px;
+}
+#container {
+    border: 0px solid green;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 5px auto;
+}
+#heading {
+    border: 0px solid red;
+    padding: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #17274a;
+    font-family: "Visuelt Pro", sans-serif;
+}
+/* #navadmin {
+    border: 0px solid green;
+    width: 90%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    align-items: center;
+    height: 50px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+} */
+
+#card {
+    border: 0px solid green;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+/* edit&delete button */
+#button {
+    border: 0px solid red;
+    /* padding: 10px; */
+    display: flex;
+    overflow: hidden;
+    width: 200px;
+    margin: auto;
+    padding: 2px;
+    justify-content: space-around;
+    gap: 5px;
+}
+
+#input {
+    border: 0px solid red;
+    width: 40%;
+    margin: 30px auto;
+    padding: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#editbtn {
+    width: 40%;
+    background-color: rgb(126, 162, 219);
+    margin-left: 160px;
+}
+
+@media all and (max-width: 1200px) and (min-width: 800px) {
+    #container {
+        flex-direction: column;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media all and (max-width: 799px) and (min-width: 300px) {
+    #container {
+        flex-direction: column;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
