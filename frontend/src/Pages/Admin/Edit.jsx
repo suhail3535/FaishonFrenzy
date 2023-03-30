@@ -10,7 +10,7 @@ import styles from "./Admin.module.css";
 const Edit = () => {
   const navigate = useNavigate();
     const {id } = useParams();
-    console.log(typeof id)
+    // console.log(typeof id)
     const product = useSelector((store) => store.adminReducer.product);
     console.log("line",product)
   const [price, setPrice] = useState("");

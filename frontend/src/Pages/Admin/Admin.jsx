@@ -41,15 +41,15 @@ const Admin = () => {
   useEffect(() => {
     dispatch(getProduct());
   }, []);
-  // console.log(women);
+ 
   return (
     <div>
       <Heading size="lg" style={{ textAlign: "center", margin: "20px" }}>
-        Welcome Admin😎
+        Welcome Admin
       </Heading>
       <div id={styles.container}>
         <Box id={styles.first}>
-          {product.map((ele) => {
+          {product.reverse().map((ele) => {
             return (
               <div>
                 <AdminCard key={ele.id} {...ele} />
