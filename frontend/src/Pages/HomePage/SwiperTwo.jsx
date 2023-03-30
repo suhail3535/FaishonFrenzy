@@ -1,4 +1,4 @@
-import styles from "./Swiper.module.css";
+import styless from "./SwiperTwo.module.css";
 import { Link } from "react-router-dom";
 
 export function MyCard({ src, cap }) {
@@ -21,7 +21,7 @@ export function MyCard({ src, cap }) {
         alt="i"
         style={{ height: "100%", width:"100%", margin: "auto" }}
       />
-      <div className={styles.myCardCaption}>
+      <div className={styless.myCardCaption}>
         <Link to="/"><p style={{fontStyle:"10px"}}>{cap}</p></Link>
       </div>
     </div>
@@ -41,11 +41,11 @@ export function SwiperTwo() {
 
   return (
     <div>
-      <div className={styles.productCarousal}>
-        <button onClick={btnpressprev} className={styles.preBtn}>
+      <div className={styless.productCarousal}>
+        <button onClick={btnpressprev} className={styless.preBtn}>
           <p>⇐</p>
         </button>
-        <button onClick={btnpressnext} className={styles.nextBtn}>
+        <button onClick={btnpressnext} className={styless.nextBtn}>
           <p>⇒</p>
         </button>
         <div
@@ -60,63 +60,63 @@ export function SwiperTwo() {
           <Link to="/store?filter=MacBook+Air&filter=MacBook+Pro">
             <MyCard
               src="https://images.urbndata.com/is/image/Anthropologie/4139952400010_000_b?$an-category$&qlt=80&fit=constrain"
-              cap="Reformation Frankie Silk Maxi Dress"
+              cap="Reformation Silk Dress"
             />
           </Link>
           <Link to="/store?filter=iPhone">
             <MyCard
               src="https://images.urbndata.com/is/image/Anthropologie/4139952400027_037_b2?$an-category$&qlt=80&fit=constrain"
-              cap="Jeffrey Campbell Linques Sandals"
+              cap="Jeffrey Campbell Dress"
             />
           </Link>
           <Link to="/store?filter=iPad">
             <MyCard
               src="https://images.urbndata.com/is/image/Anthropologie/4139952400005_060_b?$an-category$&qlt=80&fit=constrain"
-              cap="Reformation Frankie Silk Maxi Dress"
+              cap="Reformation Frankie Dress"
             />
           </Link>
           <Link to="/store?filter=Watch">
             <MyCard
               src="https://images.urbndata.com/is/image/Anthropologie/83226613_048_b?$an-category$&qlt=80&fit=constrain"
-              cap="Reformation Frankie Silk Maxi Dress"
+              cap="Ruffled V-Neck Dress"
             />
           </Link>
           <Link to="/store?filter=Airpods">
             <MyCard
               src="https://images.urbndata.com/is/image/Anthropologie/4130024090114_266_b2?$an-category$&qlt=80&fit=constrain"
-              cap="Reformation Frankie Silk Maxi Dress"
+              cap="Farm Summer Dress"
             />
           </Link>
           <Link to="/store?filter=Tv+%26+Home">
             <MyCard
               src="https://images.urbndata.com/is/image/Anthropologie/4130916210153_009_b2?$an-category$&qlt=80&fit=constrain"
-              cap="Reformation Frankie Silk Maxi Dress"
+              cap="Maeve Drop-Waist Dress"
             />
           </Link>
           <Link to="/store?filter=Entertainment">
             <MyCard
               src="https://images.urbndata.com/is/image/Anthropologie/83227934_048_b?$an-category$&qlt=80&fit=constrain"
-              cap="Reformation Frankie Silk Maxi Dress"
+              cap="Maeve Racerback Tank"
             />
           </Link>
           <Link to="/store?filter=Accessorires">
             <MyCard
               src="https://images.urbndata.com/is/image/Anthropologie/60058286_021_b2?$an-category$&qlt=80&fit=constrain"
-              cap="Reformation Frankie Silk Maxi Dress"
+              cap="Babydoll Top"
             />
           </Link>
 
           <Link to="/store?filter=Accessorires">
             <MyCard
               src="https://images.urbndata.com/is/image/Anthropologie/82260787_070_b2?$an-category$&qlt=80&fit=constrain"
-              cap="Reformation Frankie Silk Maxi Dress"
+              cap="Robin Tiered Mini Dress "
             />
           </Link>
 
           <Link to="/store?filter=Accessorires">
             <MyCard
               src="https://images.urbndata.com/is/image/Anthropologie/4130572650057_082_b2?$an-category$&qlt=80&fit=constrain"
-              cap="Reformation Frankie Silk Maxi Dress"
+              cap="Reformation Frankie Dress"
             />
           </Link>
         </div>
