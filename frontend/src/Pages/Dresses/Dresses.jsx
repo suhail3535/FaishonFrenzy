@@ -6,24 +6,36 @@ import ProductBox from '../ProduxtBox/ProductBox';
 import Sorting from '../Sorting/Sorting';
 import style from "./Dresses.module.css";
 import { MdArrowBackIosNew, MdArrowForwardIos } from 'react-icons/md';
+import { useLocation, useSearchParams } from 'react-router-dom';
 
 
 const Dresses = () => {
   const store = useSelector((store) => store.dressManager.dress);
   const dispatch = useDispatch();
   const [page, setPage] = useState(1);
-  const [price, setPrice] = React.useState("");
+  const [price, setPrice] = useState(""); 
+  const location = useLocation();
+  const [serchParams,setSerchParams] = useSearchParams(); 
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  let obj = {
+    params: {
+        ringsize: serchParams.getAll("brand"),
+        _sort: serchParams.get("rating") && "rating",
+        _order: serchParams.get("rating") 
+    },
+}; 
 
 
   useEffect(() => {
-    dispatch(getDress());
-    console.log(store);
-  }, [])
+    dispatch(getDress()); 
+    // console.log(obj); 
+  }, [location.search])
 
   return (
     <div className={style.container}>
       <div>
-        <Sorting pageon={"Dresses"} />
+        <Sorting pageon={"Dresses"} price={price} />
       </div>
       <div>
         <div className={style.datatop}>
