@@ -1,32 +1,4 @@
-// import { Select } from "@chakra-ui/react";
-// import React, { useEffect, useState } from "react";
-// import { useDispatch, useSelector } from "react-redux";
-// import ProductBox from "../ProduxtBox/ProductBox";
 
-// import { getProduct } from "../../Redux/Admin/action";
-// import AdminCard from "./AdminCard";
-
-// const Admin = () => {
-//   const product = useSelector((store) => store.adminReducer.product);
-//   const dispatch = useDispatch();
-
-//   useEffect(() => {
-//     dispatch(getProduct());
-//     console.log(product);
-//   }, []);
-
-//   return (
-//     <div>
-//       <div>
-//         {product.map((e) => (
-//           <AdminCard key={e.id} {...e} />
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Admin;
 
 import React, { useEffect, useState } from "react";
 import styles from "./Admin.module.css";
