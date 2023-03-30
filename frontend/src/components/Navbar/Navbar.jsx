@@ -336,7 +336,7 @@ export default function Navbar() {
                 <MenuList>
                   {/* <MenuItem> */}
                   <MenuItem>
-                    <RouterLink to="/login">Login</RouterLink>
+                    <RouterLink to="/authpage">Login</RouterLink>
                   </MenuItem>
                   <MenuItem>LogOut</MenuItem>
                   {/* <MenuItem>SignUP</MenuItem> */}

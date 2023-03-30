@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+// import { Link } from "react-router-dom";
 import {
   Box,
   Flex,
@@ -50,46 +51,48 @@ export default function BelowNavbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Box bg={useColorModeValue('white', 'gray.900')} px={6} >
-        <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
+      <Box bg={useColorModeValue("white", "gray.900")} px={6}>
+        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <Flex gap={10}>
+            <Link href="/admin">
+              <OnhoverProp NewArray={Toprated} title={"New!"} />
+            </Link>
 
-            <OnhoverProp NewArray={Toprated} title={"New!"} />
             <OnhoverProp NewArray={Toprated} title={"Top-Rated"} />
-            <OnhoverProp NewArray={Dresses} title={"Dresses"} /> 
-            <OnhoverProp NewArray={Toprated} title={"Clothing"} /> 
-            <OnhoverProp NewArray={Shoes} title={"Shoes"} />
+            <Link href="dress">
+              <OnhoverProp NewArray={Dresses} title={"Dresses"} />
+            </Link>
+            <OnhoverProp NewArray={Toprated} title={"Clothing"} />
+            <Link href='shoes'>
+              <OnhoverProp NewArray={Shoes} title={"Shoes"} />{" "}
+            </Link>
             <OnhoverProp NewArray={Accessories} title={"Accessories"} />
             <OnhoverProp NewArray={Dresses} title={"Weddings"} />
             <OnhoverProp NewArray={Toprated} title={"Home and Furniture"} />
             <OnhoverProp NewArray={Shoes} title={"Beauty Wellness"} />
             <OnhoverProp NewArray={Accessories} title={"Gifts & Candles"} />
             <OnhoverProp NewArray={Dresses} title={"Sale"} />
-          </Flex>  
-          <Flex alignItems={'center'}>
-            <Stack direction={'row'} spacing={7}>
-             
-
+          </Flex>
+          <Flex alignItems={"center"}>
+            <Stack direction={"row"} spacing={7}>
               <Menu>
                 <MenuButton
                   as={Button}
-                  rounded={'full'}
-                  variant={'link'}
-                  cursor={'pointer'}
-                  minW={0}>
+                  rounded={"full"}
+                  variant={"link"}
+                  cursor={"pointer"}
+                  minW={0}
+                >
                   {/* <Avatar
                     size={'sm'}
                     src={'https://avatars.dicebear.com/api/male/username.svg'}
                   /> */}
                 </MenuButton>
-              
               </Menu>
             </Stack>
           </Flex>
         </Flex>
       </Box>
-
-     
     </>
   );
 }
