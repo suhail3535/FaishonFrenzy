@@ -7,6 +7,7 @@ import Admin from "../Admin/Admin"
 import Edit from '../Admin/Edit'
 import AuthPage from '../AuthPage/AuthPage'
 import Dresses from '../Dresses/Dresses'
+import ShippingAdresss from '../Shipping/ShippingAdress'
 
 const MainRoutes = () => {
     return (
@@ -18,13 +19,13 @@ const MainRoutes = () => {
           <Route path="/edit/:id" element={<Edit />} />
           <Route path="/authpage" element={<AuthPage />} />
           <Route path="/dress" element={<Dresses />} />
+          <Route path="/ship" element={<ShippingAdresss />} />
           <Route path="/dress/:id" element={<SingleProduct />} />
           {/* <Route path="/top" element={<top/>} />
           <Route path="/dress/:id" element={<SingleProduct />} />
 
           <Route path="/shoes" element={<shoes/>} /> */}
           {/* <Route path="/shoes/:id" element={<SingleProduct/>} /> */}
-          
         </Routes>
       </div>
     );

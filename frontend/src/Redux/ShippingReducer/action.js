@@ -1,5 +1,5 @@
 import axios from "axios";
-import { POST_FAILURE } from "../AdminReducer/actiontype";
+import { POST_FAILURE } from "../ShippingReducer/actiontype";
 import {
   DELETE_SUCCESS,
   GET_ADDRESS_SUCCESS,
@@ -29,7 +29,7 @@ export const deldatasuccess = () => {
 export const postRequestAddress = (payload) => (dispatch) => {
   dispatch(getpostRequest());
   axios
-    .post("http://localhost:7700/address", payload)
+    .post("http://localhost:7700/address/add", payload)
     .then((res) => {
       console.log("post", res.data);
       dispatch(getpostSuccessAddress(res.data));

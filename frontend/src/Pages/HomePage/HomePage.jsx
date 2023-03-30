@@ -125,7 +125,7 @@ const SliderData2 = [
 function HomePage() {
 
     return (
-        <>
+        < >
             <SimpleGrid columns={[1, 2, 2, 4]} spacing='3px' className={styles.paddinLeft} paddingTop={"30px"} paddingBottom={"30px"}>
                 <GridItem>
                     <Image w={"100%"} src="https://images.ctfassets.net/5de70he6op10/gB8j1vpg2pP2rpRpa75i9/312436ccf606776719785ef409420f46/LS_M0_Banner_a.jpg?w=630&q=80&fm=webp" alt="Error" />
@@ -146,11 +146,11 @@ function HomePage() {
 
             <Flex flexDirection={["column","column","row","row"]} gap={"20px"} className={styles.paddinLeft}>
                 {/* <GridItem width={"160%"} > */}
-                    <Image h={"650px"}width={"100%"}  src="https://images.ctfassets.net/5de70he6op10/2qNPYihpSMixD9hklRMIOH/952d55b8268d66373b3bc3333b733c0b/LS_M1a-1-2.jpg?w=1784&q=80&fm=webp" alt={"error"} />
+                    <Image h={"650px"}width={["100%","100%","68%","68%"]}  src="https://images.ctfassets.net/5de70he6op10/2qNPYihpSMixD9hklRMIOH/952d55b8268d66373b3bc3333b733c0b/LS_M1a-1-2.jpg?w=1784&q=80&fm=webp" alt={"error"} />
                    
                 {/* </GridItem> */}
                 {/* <GridItem > */}
-                <Image h={"650px"}width={["100%","100%","60%","60%"]} src="https://images.ctfassets.net/5de70he6op10/7qi0oKfnqUGDqWtXby6cva/876293b82a386f8bdbf49e4e1aa28100/484733007-hpg_m1-b.gif?w=428&q=80&fm=webp" alt={"error"} />
+                <Image h={"650px"}width={["100%","100%","30%","30%"]} src="https://images.ctfassets.net/5de70he6op10/7qi0oKfnqUGDqWtXby6cva/876293b82a386f8bdbf49e4e1aa28100/484733007-hpg_m1-b.gif?w=428&q=80&fm=webp" alt={"error"} />
                 {/* </GridItem> */}
             </Flex>
 
@@ -174,11 +174,11 @@ function HomePage() {
             </SimpleGrid>
             <Flex flexDirection={["column","column","row","row"]} gap={"25px"} marginTop={"35px"} className={styles.paddinLeft}>
                 {/* <GridItem width={"160%"} > */}
-                    <Image h={"620px"}width={"100%"}  src="https://images.ctfassets.net/5de70he6op10/1V3Atq484hyeMWCw1MVXas/12f900820a162ba443ed50c4fdfd42d3/484733140-ls_m3a.jpg?w=1756&q=80&fm=webp" alt={"error"} />
+                    <Image h={"620px"}width={["100%","100%","68%","68%"]} src="https://images.ctfassets.net/5de70he6op10/1V3Atq484hyeMWCw1MVXas/12f900820a162ba443ed50c4fdfd42d3/484733140-ls_m3a.jpg?w=1756&q=80&fm=webp" alt={"error"} />
                    
                 {/* </GridItem> */}
                 {/* <GridItem > */}
-                <Image h={"620px"} width={["100%","100%","60%","60%"]} src="https://images.ctfassets.net/5de70he6op10/3rKgQlzbypafdDTvNckO2q/193350ddf772ecfdc9c89ee5879ff993/484733144-ls_m3b.jpg?w=856&q=80&fm=webp" alt={"error"} />
+                <Image h={"620px"} width={["100%","100%","30%","30%"]}  src="https://images.ctfassets.net/5de70he6op10/3rKgQlzbypafdDTvNckO2q/193350ddf772ecfdc9c89ee5879ff993/484733144-ls_m3b.jpg?w=856&q=80&fm=webp" alt={"error"} />
                 {/* </GridItem> */}
             </Flex>
 
@@ -228,29 +228,31 @@ function HomePage() {
             <SimpleGrid columns={[1,null,3]} gap={5} className={styles.paddinLeft}>
              <Flex direction={"column"} gap={5}>
                 <Image src="https://images.ctfassets.net/5de70he6op10/U2fCd9Ep6otJYrxWA6a0t/2a236b9ea21b5785d7e98cee0f11871e/MTE_1.jpg?w=856&q=80&fm=webp" alt="Error"/>
-                <Text fontSize={30} fontFamily={"Times"} textAlign={"start"}>
-                 BHLDN x TERRAIN: Vow To Wow Giveaway
+                <Text fontSize={22} fontFamily={"Times"} textAlign={"start"} color={"#696969"}>
+                 
+New Chapter, Fresh Paige
                 </Text>
-                <Text  textAlign={"start"}>We're treating one lucky bride to an unforgettable wedding gift.</Text>
-                <Link  textAlign={"start"} color={"#167a92"}>enter to win</Link>
-             </Flex>
-
-             <Flex direction={"column"} gap={5}>
-                <Image src="https://images.ctfassets.net/5de70he6op10/25UKbR1vHJpq6yriubNoSD/c1e9f1ba93a96c9b3d7ac869951de29c/MTE_2.jpg?w=856&q=80&fm=webp" alt="Error"/>
-                <Text fontSize={30} fontFamily={"Times"} textAlign={"start"}> 
-                 BHLDN x TERRAIN: Vow To Wow Giveaway
-                </Text>
-                <Text  textAlign={"start"}>We're treating one lucky bride to an unforgettable wedding gift.</Text>
+                <Text  textAlign={"start"}>Turn to the experts in flattering fits and flawlessly tailored pairs to start spring on the right note.</Text>
                 <Link  textAlign={"start"} color={"#167a92"}>shop Paige jeans</Link>
              </Flex>
 
              <Flex direction={"column"} gap={5}>
-                <Image src="https://images.ctfassets.net/5de70he6op10/4oNoIgRJVULLXu6o02FnFA/79760e323b6140b7fc68bb50638c8079/032023_HPG_MTE_3.jpg?w=856&q=80&fm=webp" alt="Error"/>
-                <Text fontSize={30} fontFamily={"Times"} textAlign={"start"}>
-                 BHLDN x TERRAIN: Vow To Wow Giveaway
+                <Image src="https://images.ctfassets.net/5de70he6op10/25UKbR1vHJpq6yriubNoSD/c1e9f1ba93a96c9b3d7ac869951de29c/MTE_2.jpg?w=856&q=80&fm=webp" alt="Error"/>
+                <Text fontSize={22} fontFamily={"Times"} textAlign={"start"} color={"#696969"}> 
+                The Beauty Edit: TikTok-Famous!
                 </Text>
-                <Text  textAlign={"start"}>We're treating one lucky bride to an unforgettable wedding gift.</Text>
+                <Text  textAlign={"start"}>Make Beauty is just one of the brands you'll find in our curated collection of gone-viral TikTok faves.</Text>
                 <Link  textAlign={"start"} color={"#167a92"}>don't miss these must-haves</Link>
+             </Flex>
+
+             <Flex direction={"column"} gap={5}>
+                <Image src="https://images.ctfassets.net/5de70he6op10/4oNoIgRJVULLXu6o02FnFA/79760e323b6140b7fc68bb50638c8079/032023_HPG_MTE_3.jpg?w=856&q=80&fm=webp" alt="Error"/>
+                <Text fontSize={22} fontFamily={"Times"} textAlign={"start"} color={"#696969"}>
+                celebrating
+International Women's Day
+                </Text>
+                <Text  textAlign={"start"}>We're proud to support women-owned brands each and every day.</Text>
+                <Link  textAlign={"start"} color={"#167a92"}>discover new favorites</Link>
              </Flex>
             </SimpleGrid>
             {/* <br /> */}

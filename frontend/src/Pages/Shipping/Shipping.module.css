@@ -1,41 +1,41 @@
 #main {
-    border: 0px solid rgb(185, 96, 96);
+    border: 2px solid rgb(185, 96, 96);
     /* height: 1200px; */
     display: flex;
-    width: 90%;
+    width: 95%;
     margin: 20px auto;
-    justify-content: space-around;
-    border-radius: 15px;
+  
     /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
 }
+#tab{
+    border:1px solid red;
+    width: 50%;
+    margin-left: 55px;
+    display: flex;
+    justify-content: space-between;
+}
+#tab1{
+    height: 50px;
+    border: 2px solid green;
+    width: 200px;
+
+}
 #one {
-    border: 0px solid green;
+    border: 2px solid green;
     width: 70%;
-    margin: 0px auto;
+    margin: 40px auto;
     padding: 20px;
-    border-radius: 15px;
+   
 }
 #two {
-    border: 1px solid rgb(243, 237, 237);
+    border: 1px solid gray;
     width: 30%;
     margin: 20px;
     padding: 20px;
     margin-top: 40px;
+    height: 20%;
 }
-.buttonpay {
-    border: 1px solid black;
-    display: flex;
-    width: 40%;
-    height: 40px;
-    margin: auto;
-    margin-top: 30px;
-    background-color: #ffc439;
-    padding-left: 20px;
-    padding-top: 5px;
-    border-radius: 50px;
-    color: black;
-    font-weight: lighter;
-}
+
 #phone {
     border: 0px solid red;
     width: 40%;
@@ -46,9 +46,7 @@
     border-radius: 5px;
     margin-left: 80px;
 }
-.buttonpay:hover {
-    background-color: #9b96f3;
-}
+
 #span {
     margin-left: 250px;
     font-weight: 100;
@@ -56,50 +54,31 @@
 }
 
 .bookbtn {
-    background-color: #17274a;
-    border: 2px solid transparent;
+    background-color:rgb(75,86,102);
+    border: 1px solid transparent;
 
-    /* height: 60px; */
-    width: 40%;
+    height: 45px;
+    width: 100%;
     display: block;
-    padding: 20px 25px;
+    /* padding: 20px 25px; */
     color: white;
-    font-weight: bold;
+ 
+    word-spacing: 0px;
     margin: 20px auto;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
-    border-radius: 8px;
+ 
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .bookbtn:hover {
     background-color: white;
     color: #17274a;
-    border: 2px solid #17274a;
-    border-radius: 15px;
+    border: 1px solid #17274a;
+    
 }
 
-.bookbtn2 {
-        background-color: #17274a;
-    border: 2px solid transparent;
 
-    /* height: 60px; */
-    width: 20%;
-    display: block;
-    padding: 20px 25px;
-    color: white;
-    font-weight: bold;
-    margin: 20px auto;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-    border-radius: 8px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-.bookbtn2:hover {
-    background-color: white;
-    color: #17274a;
-    border: 2px solid #17274a;
-    border-radius: 15px;
-}
+
 .fourth {
     border: 1px solid rgb(243, 237, 237);
     height: auto;
@@ -107,7 +86,7 @@
 }
 
 #third {
-    border: 0px solid yellow;
+    border: 2px solid yellow;
     height: auto;
     padding: 20px;
 }

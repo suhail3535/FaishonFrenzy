@@ -3,9 +3,7 @@ import {
   Box,
   Flex,
   Avatar,
-  HStack,
   Link,
-  IconButton,
   Button,
   Menu,
   MenuButton,
@@ -16,37 +14,17 @@ import {
   useColorModeValue,
   Stack,
   useColorMode,
-  Image,
-  Input,
-  ButtonGroup,
+  Center,
   Divider,
-  Text
 } from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon ,MoonIcon,SunIcon} from '@chakra-ui/icons';
-// import {Link as }
-import { Link as RouterLink } from "react-router-dom";
-import source from "../../Images/HomePage/img1.png";
-import Source2 from "../../Images/HomePage/img2.png";
+import { MoonIcon, SunIcon,ChevronDownIcon } from '@chakra-ui/icons';
 import {
-    MDBContainer,
-    MDBNavbar,
-    MDBBtn,
-    MDBInputGroup
-  } from 'mdb-react-ui-kit';
-import BelowNavbar from './BelowNavbar';
-import { useContext } from 'react';
-
-import { useEffect } from 'react';
-import { useState } from 'react';
-// import { CartContext } from '../Contexts/CartContext';
-import { Navigate } from "react-router-dom";
-import { FaUserAlt } from "react-icons/fa";
-import {FiSearch} from "react-icons/fi";
-import {SlHandbag} from "react-icons/sl"
-
-
-const Links = ['𝐵𝑒𝒻𝒶𝓈𝒽𝒾𝑜𝓃𝒶𝒷𝓁𝑒'];
-
+    MenuItemOption,
+    MenuGroup,
+    MenuOptionGroup,
+  } from '@chakra-ui/react'
+import Prop from './Onhover';
+import OnhoverProp from './Onhover';
 const NavLink = ({ children }) => (
   <Link
     px={2}
@@ -56,152 +34,62 @@ const NavLink = ({ children }) => (
       textDecoration: 'none',
       bg: useColorModeValue('gray.200', 'gray.700'),
     }}
-    fontSize={"20"}
     href={'#'}>
     {children}
   </Link>
 );
 
-const getData = async (val) => {
-  if(val){
-    const res = await fetch(`https://test-api-2.onrender.com/products?q=${val}`);
-    const data = await res.json();
-    return data; 
-  }
+const Toprated = ["Shop All Top-Rated","Top-Rated Dresses","Top-Rated Clothing","Top-Rated Shoes","Top-Rated Accessories","Top-Rated Wedding","Top-Rated Home & Furniture","Top-Rated Beauty",,"Mini & Tunic Dresses","Cocktail & Party Dresses","Petite Dresses","Plus Dresses","Wedding Dresses","Wedding Guest Dresses","Bold & Bright Dresses","Shirt Dresses","Trending: Tulle & Sheer","Little Black Dresses","Little White Dresses"];
+const Dresses = ["Shop All Dresses","New!","Top-Rated Dresses","Bridesmaid Dresses","Formal Dresses","Jumpsuits","Lounge & Casual Dresses","Maxi Dresses","Midi Dresses","Mini & Tunic Dresses","Cocktail & Party Dresses","Petite Dresses","Plus Dresses","Wedding Dresses","Wedding Guest Dresses","Bold & Bright Dresses","Shirt Dresses","Trending: Tulle & Sheer","Little Black Dresses","Little White Dresses"];
+const Shoes = ["Shop All Shoes","New!","Top-Rated","Boots & Booties","Cold Weather Boots","Flats","Heels & Wedges","Mules & Clogs","Sandals","Slippers","Sneakers","Socks & Tights","It's Here! The Reformation Shop","Rainbow Brights : Shoes &","Accessories","Thong Sandals","Embellished Shoes","Party Shoes","Platform Shoes",""];
+const Accessories = ["Shop All Accessories","New!","Top-Rated","Bags & Small Accessories","Belts","Fashion Gloves","Hair Accessories","Hats","Jewelry","Scarves","Socks & Tights","Sunglasses & Reading Glasses","Travel & Tech","Necklaces","Earrings","Bracelets","Rings","Hoop Shop","Fine & Demi-Fine Jewelry","Shop All Jewelry"];
 
-}
 
-export default function Navbar() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+export default function BelowNavbar() {
   const { colorMode, toggleColorMode } = useColorMode();
-  // const {authState,loginUser,logoutUser} = useContext(AuthContext);
-  // const { searchData,setSearchData } = useContext(SearchContext);
-  const [inputData,setInputData] = useState("");
-  // const {searchData,setSearchData} = useContext(CartContext);
-  // const data
-
-  const fetchedData =async (inputData) => {
-    const result = await getData(inputData);
-    // console.log(result);
-    // setSearchData(result);
-  }
-
-//  useEffect(() => {
-//   fetchedData(inputData);
-//  },[inputData]);
-// console.log(inputData);
-
-// if(inputData !== ""){
-//  <Navigate to={"/products"} />
-// }
-  
-
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Image src={Source2}  alt={"Error"}/>
-      <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4} borderBottom={"0.1px solid #b1b5be"} borderTop={"0.1px solid #b1b5be"}>
+      <Box bg={useColorModeValue('white', 'gray.900')} px={6} >
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-          <IconButton
-            size={'md'}
-            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-            aria-label={'Open Menu'}
-            display={{ md: 'none' }}
-            onClick={isOpen ? onClose : onOpen}
-          />
-          <HStack spacing={8} alignItems={'center'}>
-            <Box pb={4} display={['none','none','none','block','block']}>
-              <RouterLink to="/">
-              {/* <Image borderRight={"0.1px solid #b1b5be"} borderLeft={"0.1px solid #b1b5be"} w={"200px"} height={"65px"} src={source} alt={"error"} /> */}
-           <p style={{borderRight:"0.1px solid #b1b5be",padding:"15px",fontWeight:"bold",fontSize:"122%",borderTop:"3.5px solid #167a92",borderLeft:"0.1px solid #b1b5be"}}> 𝙵𝚊𝚒𝚜𝚑𝚘𝚗𝙵𝚛𝚎𝚗𝚣𝚢</p>   
-              </RouterLink>
-            </Box>
-            <HStack
-             borderRight={"0.1px solid #b1b5be"}
+          <Flex gap={10}>
+
+            <OnhoverProp NewArray={Toprated} title={"New!"} />
+            <OnhoverProp NewArray={Toprated} title={"Top-Rated"} />
+            <OnhoverProp NewArray={Dresses} title={"Dresses"} /> 
+            <OnhoverProp NewArray={Toprated} title={"Clothing"} /> 
+            <OnhoverProp NewArray={Shoes} title={"Shoes"} />
+            <OnhoverProp NewArray={Accessories} title={"Accessories"} />
+            <OnhoverProp NewArray={Dresses} title={"Weddings"} />
+            <OnhoverProp NewArray={Toprated} title={"Home and Furniture"} />
+            <OnhoverProp NewArray={Shoes} title={"Beauty Wellness"} />
+            <OnhoverProp NewArray={Accessories} title={"Gifts & Candles"} />
+            <OnhoverProp NewArray={Dresses} title={"Sale"} />
+          </Flex>  
+          <Flex alignItems={'center'}>
+            <Stack direction={'row'} spacing={7}>
              
-             w={"200px"} height={"65px"}
-              as={'nav'}
-              spacing={4}
-              pb={4} display={['none','none','none','flex','block']}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))}
-            </HStack>
-          </HStack>
-          {/* <ButtonGroup bg={"blue"} border={"1px solid blue"} tag="form" className='d-flex w-auto mb-3'>
-            <Input border={"none"} w={"300px"} className='form-control' placeholder="Type query" aria-label="Search" type='Search' />
-            <Button border={"none"} outline>Search</Button>
-           </ButtonGroup> */}
-           <Flex w={"50%"}>
-           <input onChange={(e) => setInputData(e.target.value)} placeholder='Search FaishonFrenzy' style={{width: "100%",border:"1px solid grey"}} _focus={"none"} borderRadius={"none"} />
-           <Button _hover={"#167a92"} border={"2px solid #167a92"} borderRadius={"none"} backgroundColor={"#167a92"}  color={"white"}><FiSearch/></Button>
-           </Flex>
 
-           <Button onClick={toggleColorMode}>
-                {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
-          </Button>
-         
-         <RouterLink to={"/cart"}>
-         {/* <Image _hover={"#167a92"} color={"#167a92"} h={"350px"} w={"35px"} size={'sm'} src={"data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjAgMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgYXJpYS1sYWJlbD0iTXkgU2hvcHBpbmcgQ2FydCIgcm9sZT0iaW1nIiBmb2N1c2FibGU9ImZhbHNlIj48cGF0aCBkPSJNMTQuNzggNi40OVY1LjE4NUMxNC43OCAyLjYwMSAxMi42MzcuNSAxMCAuNVM1LjIyIDIuNjAxIDUuMjIgNS4xODR2MS4zMDdIMHY3Ljk3M0MwIDE3LjI0IDIuMzU3IDE5LjUgNS4yNTQgMTkuNWg5LjQ5M2MyLjg5NyAwIDUuMjUzLTIuMjYgNS4yNTMtNS4wMzZWNi40OXpNNi4yMiA1LjE4NUM2LjIyIDMuMTUzIDcuOTE0IDEuNSAxMCAxLjVzMy43OCAxLjY1MyAzLjc4IDMuNjg0djEuMzA3SDYuMjJ6TTE5IDE0LjQ2NGMwIDIuMjI1LTEuOTA4IDQuMDM2LTQuMjUzIDQuMDM2SDUuMjU0QzIuOTA4IDE4LjUgMSAxNi42OSAxIDE0LjQ2NFY3LjQ5aDQuMjJ2Mi40MjdoMVY3LjQ5MWg3LjU2djIuNDI3aDFWNy40OTFIMTl6Ii8+PC9zdmc+"}  alt={"error"}/> */}
-        <Box pb={4} display={['none','none','none','block','block']}><SlHandbag style={{height:"350px", width:"35px", color:"#167a92"}} /></Box> 
-         </RouterLink>
-          
-          <Flex  alignItems={'center'}>
-            <Menu  > 
-                {/* <Box> */}
-             {/* </Box> */}
-
-              <MenuButton
-                as={Button}
-                rounded={'full'}
-                variant={'link'}
-                cursor={'pointer'}
-                minW={0}
-                pb={4} display={['none','none','none','block','block']}
-                > 
-                
-                {/* {authState.isAuth ? (<Avatar
-                  size={'md'}
-                  src={
-                    user
-                  }
-                />) : (   
-                    <FaUserAlt marginLeft={"20px"} size={"25px"} />    
-                )}
-                 */}
-                  <FaUserAlt marginLeft={"20px"} size={"25px"} /> 
-              </MenuButton>
-              <MenuList >
-                {/* <MenuItem> */}
-                <MenuItem>
-                   <RouterLink to="/login">
-
-                       Login
-                    
-                    </RouterLink>
-             </MenuItem>
-             <MenuItem >
-                  LogOut
-             </MenuItem>
-                {/* <MenuItem>SignUP</MenuItem> */}
-              </MenuList>
-            </Menu>
+              <Menu>
+                <MenuButton
+                  as={Button}
+                  rounded={'full'}
+                  variant={'link'}
+                  cursor={'pointer'}
+                  minW={0}>
+                  {/* <Avatar
+                    size={'sm'}
+                    src={'https://avatars.dicebear.com/api/male/username.svg'}
+                  /> */}
+                </MenuButton>
+              
+              </Menu>
+            </Stack>
           </Flex>
         </Flex>
-
-        {isOpen ? (
-          <Box pb={4} display={['none','none','none','block','block']}>
-            <Stack  as={'nav'} spacing={4}>
-              {Links.map((link) => (
-                <NavLink key={link} >{link}</NavLink>
-              ))}
-            </Stack>
-          </Box>
-        ) : null}
       </Box>
-      {/* <Box p={4}> */}
-        {/* Main Content Here */}
-        {/* <BelowNavbar/> */}
-    {/* </Box> */}
+
+     
     </>
   );
 }

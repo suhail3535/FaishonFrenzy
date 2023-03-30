@@ -6,6 +6,7 @@ const { pageRouter } = require("./Routes/page.route");
 const { cartRouter } = require("./Routes/cart.route");
 const { dressRouter } = require("./Routes/dress.routes");
 const { adminRouter } = require("./Routes/admin.route")
+const{shippingRouter} =require("./Routes/shippingRoute")
 const cors=require("cors")
 // const { auth } = require("./middlewere/auth.middleware");
 const app = express();
@@ -19,6 +20,7 @@ app.use("/admin",adminRouter)
 app.use("/users", userRouter);
 app.use("/pages", pageRouter);
 app.use("/carts", cartRouter);
+app.use("/address",shippingRouter);
 // app.use(auth);
 app.use("/dress", dressRouter);
 
