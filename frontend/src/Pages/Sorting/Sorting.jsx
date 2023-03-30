@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import style from "./Sorting.module.css";
 
-const Sorting = ({ pageon,price }) => {
+const Sorting = ({ pageon, price }) => {
     const [serchParam, setSerchParams] = useSearchParams();
     const initalState = serchParam.getAll("brand");
     const initalOrder = serchParam.get("order");
@@ -25,12 +25,11 @@ const Sorting = ({ pageon,price }) => {
     useEffect(() => {
         let params = {
             brand: category,
-        }; 
-        price!=="" && (params.price = price); 
-        order && (params.rating = order); 
+        };
+        price !== "" && (params.price = price);
+        order && (params.rating = order);
         setSerchParams(params);
-    }, [category, order,price]);
-
+    }, [category, order, price]);
 
     return (
         <div className={style.head}>
@@ -38,27 +37,23 @@ const Sorting = ({ pageon,price }) => {
             <hr />
             <h3 className={style.page}>{pageon}</h3>
             <div className={style.sortbox}>
-                <h2> Rating </h2>
+                <h2> Rating </h2> 
                 <RadioGroup onChange={setorder} value={order}>
-                    <Stack direction="column">
-                        <Radio size="sm" value={"asc"}>
-                            Low to High
-                        </Radio>
-                        <Radio size="sm" value={"desc"}>
-                            High to Low
-                        </Radio>
+                    <Stack direction='column'>
+                        <Radio value='3'>3 &#9733; &#9733; &#9733;</Radio>
+                        <Radio value='4'>4 &#9733; &#9733; &#9733; &#9733; </Radio>
+                        <Radio value='5'>5 &#9733; &#9733; &#9733; &#9733; &#9733;</Radio>
                     </Stack>
                 </RadioGroup>
             </div>
             {/* <hr className={style.hr} /> */}
             <div className={style.sortbox}>
                 <h2>Brand</h2>
-                <div>
+                <div className={style.sortbox}>
                     <Checkbox
                         size="lg"
                         onChange={handleChange}
                         value={"Pilcro"}
-                        defaultChecked={category.includes("Pilcro")}
                         colorScheme="messenger"
                     >
                         Pilcro
@@ -67,7 +62,6 @@ const Sorting = ({ pageon,price }) => {
                         size="lg"
                         onChange={handleChange}
                         value={"By Anthropologie"}
-                        defaultChecked={category.includes("By Anthropologie")}
                         colorScheme="messenger"
                     >
                         By Anthropologie
@@ -76,7 +70,6 @@ const Sorting = ({ pageon,price }) => {
                         size="lg"
                         onChange={handleChange}
                         value={"Maeve"}
-                        defaultChecked={category.includes("Maeve")}
                         colorScheme="messenger"
                     >
                         Maeve
@@ -85,7 +78,6 @@ const Sorting = ({ pageon,price }) => {
                         size="lg"
                         onChange={handleChange}
                         value={"Sloggi"}
-                        defaultChecked={category.includes("Sloggi")}
                         colorScheme="messenger"
                     >
                         Sloggi

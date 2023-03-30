@@ -13,23 +13,22 @@ const Dresses = () => {
   const store = useSelector((store) => store.dressManager.dress);
   const dispatch = useDispatch();
   const [page, setPage] = useState(1);
-  const [price, setPrice] = useState(""); 
+  const [price, setPrice] = useState("");
   const location = useLocation();
-  const [serchParams,setSerchParams] = useSearchParams(); 
+  const [serchParams] = useSearchParams();
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   let obj = {
     params: {
-        ringsize: serchParams.getAll("brand"),
-        _sort: serchParams.get("rating") && "rating",
-        _order: serchParams.get("rating") 
+      brand: serchParams.getAll("brand"),
+      // _sort: serchParams.get("rating") && "rating",
+      rating: serchParams.get("rating"), 
+      price: serchParams.get("price")
     },
-}; 
+  };
 
 
   useEffect(() => {
-    dispatch(getDress()); 
-    // console.log(obj); 
+    dispatch(getDress(obj));
   }, [location.search])
 
   return (
@@ -57,7 +56,7 @@ const Dresses = () => {
           </div>
         </div>
         <div className={style.mydress}>
-          {store.map((e) => ( 
+          {store.map((e) => (
             <ProductBox key={e.id} {...e} />
           ))}
         </div>

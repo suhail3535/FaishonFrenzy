@@ -2,14 +2,16 @@ import React from 'react'
 import style from "./ProductBox.module.css"
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
+import { Link } from 'react-router-dom'
 
-const ProductBox = ({ name, img, price }) => {
+const ProductBox = ({_id, name, img, price }) => { 
+
     return (
-        <div className={style.head}> 
+        <Link to={`/dress/${_id}`} className={style.head}> 
             {img ? <img src={img} alt="product-img" /> : <Skeleton height={"200px"} />}
             <h4>{name ? name : <Skeleton />}</h4>
-            <p>₹{price ? price : <Skeleton />}</p>
-        </div>
+            <p>₹{price ? price : <Skeleton />}</p> 
+        </Link> 
     )
 }
 
