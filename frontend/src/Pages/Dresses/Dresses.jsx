@@ -57,7 +57,7 @@ const Dresses = () => {
           </div>
         </div>
         <div className={style.mydress}>
-          {store.map((e) => (
+          {store.map((e) => ( 
             <ProductBox key={e.id} {...e} />
           ))}
         </div>
