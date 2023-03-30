@@ -2,7 +2,7 @@ import { applyMiddleware, combineReducers, legacy_createStore } from "redux";
 import thunk from "redux-thunk";  
 import {reducer as dressManager} from "./Dress/reducer"  
 import { reducer as adminReducer } from "./Admin/reducer"
-import{reducer as shippingReducer} from "./Admin/reducer"
+import{reducer as shippingReducer} from "./ShippingReducer/reducer"
 
 const rootReducer = combineReducers({
   dressManager,
