@@ -13,8 +13,6 @@ function App() {
     <div className="App">
       <Navbar />
       <MainRoutes />
-
-
       <AuthPage />
 
       <Footer />
