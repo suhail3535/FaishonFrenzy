@@ -40,8 +40,11 @@ import { useState } from "react";
 // import { CartContext } from '../Contexts/CartContext';
 import { Navigate } from "react-router-dom";
 import { FaUserAlt } from "react-icons/fa";
-import { FiSearch } from "react-icons/fi";
-import { SlHandbag } from "react-icons/sl";
+
+import {FiSearch} from "react-icons/fi";
+import {SlHandbag} from "react-icons/sl" 
+import OnhoverProp from './Onhover';
+
 
 const Links = ["𝐵𝑒𝒻𝒶𝓈𝒽𝒾𝑜𝓃𝒶𝒷𝓁𝑒"];
 
@@ -83,7 +86,8 @@ export default function Navbar() {
 
   return (
     <>
-      <Image src={Source2} alt={"Error"} />
+
+    <Image src={Source2} alt={"Error"} />
       <Box
         bg={useColorModeValue("gray.100", "gray.900")}
         px={4}
