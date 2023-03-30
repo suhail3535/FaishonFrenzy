@@ -17,7 +17,7 @@
     "mdb-react-ui-kit": "^5.1.0",
     "react": "^18.2.0",
     "react-accessible-accordion": "^5.0.0",
-    "react-animate-height": "^3.1.0",
+    "react-animate-height": "^3.1.1",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
     "react-loading-skeleton": "^3.2.0",
@@ -26,11 +26,8 @@
     "react-scripts": "5.0.1",
     "redux": "^4.2.1",
     "redux-thunk": "^2.4.2",
-
     "source-map-loader": "^4.0.1",
-
     "sweetalert2": "^10.3.5",
-
     "web-vitals": "^2.1.4"
   },
   "scripts": {
