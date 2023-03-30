@@ -1,0 +1,245 @@
+#main {
+    border: 0px solid rgb(185, 96, 96);
+    /* height: 1200px; */
+    display: flex;
+    width: 90%;
+    margin: 20px auto;
+    justify-content: space-around;
+    border-radius: 15px;
+    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+}
+#one {
+    border: 0px solid green;
+    width: 70%;
+    margin: 0px auto;
+    padding: 20px;
+    border-radius: 15px;
+}
+#two {
+    border: 1px solid rgb(243, 237, 237);
+    width: 30%;
+    margin: 20px;
+    padding: 20px;
+    margin-top: 40px;
+}
+.buttonpay {
+    border: 1px solid black;
+    display: flex;
+    width: 40%;
+    height: 40px;
+    margin: auto;
+    margin-top: 30px;
+    background-color: #ffc439;
+    padding-left: 20px;
+    padding-top: 5px;
+    border-radius: 50px;
+    color: black;
+    font-weight: lighter;
+}
+#phone {
+    border: 0px solid red;
+    width: 40%;
+    margin: 20px auto;
+}
+#phone img {
+    width: 60%;
+    border-radius: 5px;
+    margin-left: 80px;
+}
+.buttonpay:hover {
+    background-color: #9b96f3;
+}
+#span {
+    margin-left: 250px;
+    font-weight: 100;
+    font-size: 15px;
+}
+
+.bookbtn {
+    background-color: #17274a;
+    border: 2px solid transparent;
+
+    /* height: 60px; */
+    width: 40%;
+    display: block;
+    padding: 20px 25px;
+    color: white;
+    font-weight: bold;
+    margin: 20px auto;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.bookbtn:hover {
+    background-color: white;
+    color: #17274a;
+    border: 2px solid #17274a;
+    border-radius: 15px;
+}
+
+.bookbtn2 {
+        background-color: #17274a;
+    border: 2px solid transparent;
+
+    /* height: 60px; */
+    width: 20%;
+    display: block;
+    padding: 20px 25px;
+    color: white;
+    font-weight: bold;
+    margin: 20px auto;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.bookbtn2:hover {
+    background-color: white;
+    color: #17274a;
+    border: 2px solid #17274a;
+    border-radius: 15px;
+}
+.fourth {
+    border: 1px solid rgb(243, 237, 237);
+    height: auto;
+    padding: 20px;
+}
+
+#third {
+    border: 0px solid yellow;
+    height: auto;
+    padding: 20px;
+}
+
+#otp {
+    border: 0px solid rgb(207, 30, 210);
+    margin-right: 1px;
+    margin-top: 20px;
+    width: 90%;
+    padding: 5px;
+}
+#date {
+    border: 0px solid green;
+    margin-right: 0px;
+    margin-top: 40px;
+    width: 90%;
+    padding: 5px;
+}
+#name {
+    border: 0px solid black;
+    width: 90%;
+    padding: 5px;
+}
+#check {
+    border: 0px solid black;
+    align-items: left;
+    width: 85%;
+    margin: 20px auto;
+}
+
+.Order_summmary_div p:nth-child(1) {
+    margin: 5px 0 15px 0;
+    padding: 0;
+    font: normal normal bold 24px/28px "Visuelt Pro", sans-serif;
+    letter-spacing: 1.2px;
+    color: #1e3352;
+    text-transform: uppercase;
+}
+.Order_summmary_div p:nth-child(2),
+.Order_summmary_div p:nth-child(3),
+.Order_summmary_div p:nth-child(4) {
+    text-align: left;
+    padding: 10px 0;
+    font: normal normal normal 14px/14px "Visuelt Pro", sans-serif;
+    color: #0d49efbd;
+}
+.Order_summmary_div p:nth-child(5) {
+    font: normal normal normal 14px/14px "Visuelt Pro", sans-serif;
+    color: #08045d;
+    padding: 10px 0;
+    font-weight: bold;
+}
+.Order_summmary_div button {
+    text-align: center;
+    letter-spacing: 0.8px;
+    color: #fff;
+    text-transform: uppercase;
+    width: 100%;
+    height: 60px;
+    background: #1e3352;
+    transition: 0.2s ease-in-out all;
+    margin: 0 0 30px 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    font-family: "Visuelt Pro";
+    box-sizing: border-box;
+    cursor: pointer;
+    overflow: visible;
+    margin-top: 20px;
+}
+.Order_summmary_div {
+    border: 0px solid green;
+}
+#address {
+    width: 30%;
+    margin: 20px auto;
+    /* padding: 20px; */
+}
+#method {
+    border: 0px solid rgb(147, 150, 145);
+    width: 60%;
+    height: auto;
+    margin-left: 50px;
+    margin: 20px auto;
+    border-radius: 15px;
+
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+#container {
+    border: 0px solid rgb(106, 105, 105);
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: auto;
+}
+.single_card_address {
+    border: 2px solid transparent;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 15px 20px;
+    margin: 20px auto;
+    border-radius: 15px;
+    transition: all 0.2s ease-in-out;
+}
+.single_card_address:hover {
+    border: 2px solid #17274a;
+    transform: scale(1.01);
+}
+
+.bookbtn3 {
+        background-color: #17274a;
+    border: 2px solid transparent;
+
+    /* height: 60px; */
+    width: 40%;
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    font-weight: bold;
+    /* margin: 40px auto; */
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.bookbtn3:hover {
+    background-color: white;
+    color: #17274a;
+    border: 2px solid #17274a;
+    border-radius: 15px;
+}
