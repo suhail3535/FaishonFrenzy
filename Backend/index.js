@@ -7,7 +7,8 @@ const { cartRouter } = require("./Routes/cart.route");
 const { dressRouter } = require("./Routes/dress.routes");
 const { adminRouter } = require("./Routes/admin.route")
 const{shippingRouter} =require("./Routes/shippingRoute")
-const cors=require("cors")
+const cors=require("cors");
+const { shoesRouter } = require("./Routes/shoes.routes");
 // const { auth } = require("./middlewere/auth.middleware");
 const app = express();
 app.use(express.json());
@@ -23,6 +24,7 @@ app.use("/carts", cartRouter);
 app.use("/address",shippingRouter);
 // app.use(auth);
 app.use("/dress", dressRouter);
+app.use("/shoes", shoesRouter); 
 
 app.listen(process.env.port, async () => {
   try {
