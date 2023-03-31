@@ -55,11 +55,11 @@ const AdminCard = ({ _id,image, title, price, rating }) => {
   };
 
   return (
-    <div id ={styles.component}>
+    <div id={styles.Admincart_component}>
       <div className="paymentCard-cont">
         <div className="paymentCard-info">
           <div className="paymentCard-info-img-div">
-            <img  src={image} alt="" />
+            <img src={image} alt="" />
           </div>
           <div className="paymentCard-info-cont">
             <p>{title}</p>
@@ -82,10 +82,20 @@ const AdminCard = ({ _id,image, title, price, rating }) => {
         <div>${price}</div>
         <div>{rating}</div>
 
-        <div className="paymentCard-info-qty"></div>
-        <div>${price}</div>
+      
+          <Link to={`/edit/${_id}`}>
+            <button id={styles.edit} onClick={handleClick}>
+              Edit
+            </button>
+          </Link>
+    
+        <div>
+       
+          <button id={styles.delete} onClick={() => handleDelete(_id)}>
+            Delete
+          </button>
+        </div>
       </div>
-      <hr style={{ border: "1px solid #5c5c5f" }} />
     </div>
   );
 };

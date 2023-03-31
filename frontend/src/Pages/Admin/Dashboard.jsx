@@ -23,20 +23,12 @@ const Dashboard = () => {
           spacing={4}
           align="center"
         >
-          <Link to="/orders">
+          <Link to="/manage">
             <Button size="lg" colorScheme="green">
-              Manage Orders
+              Click To Proceed
             </Button>
-          </Link>
-          <Link to="/customers">
-            <Button size="lg" colorScheme="purple">
-              Manage Customers
-            </Button>
-          </Link>
-          <Link to="/admin">
-            <Button size="lg" colorScheme="pink">
-              Manage Products
-            </Button>
+         
+        
           </Link>
         </Stack>
       </Flex>

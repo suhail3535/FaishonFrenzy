@@ -10,6 +10,7 @@ import Dresses from '../Dresses/Dresses'
 import ShippingAdresss from '../Shipping/ShippingAdress'
 import ShippingDetails from '../Shipping/ShippingDetails'
 import Dashboard from '../Admin/Dashboard'
+import Manage from '../Admin/Manage'
 
 const MainRoutes = () => {
     return (
@@ -25,6 +26,7 @@ const MainRoutes = () => {
           <Route path="/:name/:id" element={<SingleProduct />} />
           <Route path="/shipping_address" element={<ShippingDetails />} />
           <Route path="/admin_Dashboard" element={<Dashboard/>} />
+          <Route path="/manage" element={<Manage />} />
           {/* <Route path="/top" element={<top/>} />
           <Route path="/dress/:id" element={<SingleProduct />} />
 

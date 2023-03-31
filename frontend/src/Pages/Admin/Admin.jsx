@@ -36,8 +36,10 @@ const Admin = () => {
     dispatch(postRequest(data));
     setdata(initialState);
     Swal.fire("", "Product added!", "success");
+      window.location.reload();
   };
   // console.log(data)
+
 
   useEffect(() => {
     dispatch(getProduct());
@@ -60,11 +62,20 @@ const Admin = () => {
               <div>Item</div>
               <div>Item Price</div>
               <div>Rating</div>
-              <div>Total Price</div>
+              <div
+                style={{
+                  border: "0px solid green",
+                  backgroundColor: "rgb(23,39,74)",
+                  color: "white",
+               fontWeight:"bold"
+                }}
+              >
+                Action
+              </div>
             </div>
             <hr style={{ border: "1px solid #5c5c5f" }} />
           </div>
-          {product.reverse().map((ele) => {
+          {product.map((ele) => {
             return (
               <div>
                 <AdminCard key={ele.id} {...ele} />
@@ -112,7 +123,7 @@ const Admin = () => {
                 size="md"
               />
 
-              <button onClick={handleSubmit} id={styles.btn}>
+              <button onClick={handleSubmit} id={styles.add_product}>
                 Add-Product
               </button>
             </Stack>
