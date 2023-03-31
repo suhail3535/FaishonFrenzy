@@ -1,12 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./CartPage.css";
 import PaymentCard from "../../components/PaymentCard/PaymentCard";
+import { useDispatch, useSelector } from "react-redux";
+import axios from "axios";
 
 const CartPage = () => {
+  // const [allCart, setAllCart] = React.useState([]);
+  const store = useSelector((store) => store.cartReducer.cart);
+  const dispatch = useDispatch();
 
-  const handleCheckout = () => {
+  const handleCheckout = () => { };
 
-  }
+  // const getAllCartItem = () => {
+  //   axios
+  //     .get(`http://localhost:7700/carts/`)
+  //     .then((res) => {
+  //       setAllCart(res.data);
+  //       console.log("allCart", allCart)
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // };
+  useEffect(() => {
+    // getAllCartItem();
+    console.log("cartstore", store)
+  }, []);
   return (
     <div>
       <div className="cartPage-wrapper">
@@ -33,7 +52,7 @@ const CartPage = () => {
               </div>
             </div>
             <div className="cartpage-right-cont">
-               <div className="cartpage-right-heading">
+              <div className="cartpage-right-heading">
                 <span> ORDER SUMMARY</span>
                 <span>800.01.123</span>
               </div>

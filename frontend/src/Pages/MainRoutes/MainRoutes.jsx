@@ -22,7 +22,7 @@ const MainRoutes = () => {
           <Route path="/authpage" element={<AuthPage />} />
           <Route path="/dress" element={<Dresses />} />
           <Route path="/ship" element={<ShippingAdresss />} />
-          <Route path="/dress/:id" element={<SingleProduct />} />
+          <Route path="/:name/:id" element={<SingleProduct />} />
           <Route path="/shipping_address" element={<ShippingDetails />} />
           <Route path="/admin_Dashboard" element={<Dashboard/>} />
           {/* <Route path="/top" element={<top/>} />

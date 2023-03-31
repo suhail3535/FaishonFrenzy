@@ -2,6 +2,8 @@
     display: grid; 
     gap: 14px; 
     font-weight: 100; 
+ 
+    padding-top: 25px;
 }
 
 .head *{
@@ -34,8 +36,10 @@
 
 .sortbox{
     display: grid; 
-    gap: 10px;  
-    margin: 10px 0;
+    gap: 5px;  
+    margin: 0px 0px;
+    /* border: 1px solid red; */
+    /* padding-top: 20px; */
 } 
 
 
