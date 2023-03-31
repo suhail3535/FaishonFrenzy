@@ -47,7 +47,6 @@ const Edit = () => {
 
     navigate("/admin");
   };
-
   useEffect(() => {
     const productData = product.find((item) => item._id === id);
     console.log(productData);

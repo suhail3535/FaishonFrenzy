@@ -8,6 +8,8 @@ import Edit from '../Admin/Edit'
 import AuthPage from '../AuthPage/AuthPage'
 import Dresses from '../Dresses/Dresses'
 import ShippingAdresss from '../Shipping/ShippingAdress'
+import ShippingDetails from '../Shipping/ShippingDetails'
+import Dashboard from '../Admin/Dashboard'
 
 const MainRoutes = () => {
     return (
@@ -21,6 +23,8 @@ const MainRoutes = () => {
           <Route path="/dress" element={<Dresses />} />
           <Route path="/ship" element={<ShippingAdresss />} />
           <Route path="/dress/:id" element={<SingleProduct />} />
+          <Route path="/shipping_address" element={<ShippingDetails />} />
+          <Route path="/admin_Dashboard" element={<Dashboard/>} />
           {/* <Route path="/top" element={<top/>} />
           <Route path="/dress/:id" element={<SingleProduct />} />
 
