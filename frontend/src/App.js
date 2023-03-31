@@ -1,6 +1,6 @@
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
-import Navbartepm from "./components/Navbartemp/Navbartemp";
+import Footer from "./components/Footer/Footer";
 
 import MainRoutes from "./Pages/MainRoutes/MainRoutes";
 
@@ -8,9 +8,9 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Navbartepm />
+   
       <MainRoutes />
-
+<Footer/>
 
     </div>
   );
