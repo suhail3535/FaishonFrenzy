@@ -10,7 +10,7 @@
   display: flex;
   justify-content: space-evenly;
   height: fit-content;
-  align-items: center;
+  /* align-items: center; */
   background-color: #fdfdf9;
   /* width: 80%; */
   margin: auto;
@@ -19,15 +19,15 @@
 }
 
 .singleProd-imgDiv > img {
-  width: 320px;
+  width: 600px;
   /* border: 1px solid black; */
 }
 
 .right-cont {
-  width: 320px;
+  width: 420px;
   /* border: 1px solid red; */
   background-color: #fdfdf9;
-  padding: 20px;
+  padding: 25px;
   border: 1px solid rgb(218, 210, 210);
   margin: auto;
 }
@@ -35,6 +35,9 @@
   /* text-align: center; */
   margin: auto;
   /* padding: 20px; */
+}
+.right-top > *{
+  margin-bottom: 10px;
 }
 
 .right-top > p:nth-child(1) {
@@ -45,6 +48,8 @@
 }
 .right-top > a:nth-child(1) {
   text-align: left;
+  color: blue;
+  text-decoration: underline;
 }
 .right-top > p:nth-child(2) {
   font-size: 22px;
@@ -73,6 +78,8 @@
   /* text-align: center; */
   margin: auto;
   /* padding: 20px; */
+  /* padding: 10px 10px; */
+  padding: 10px;
 }
 .rht-li {
   display: flex;
@@ -80,13 +87,16 @@
   /* border: 1px solid blue; */
   list-style: none;
   margin: auto;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
+}
+.right-middle-size > * {
+  margin-bottom: 10px;
 }
 .right-middle-size > div > li {
   list-style: none;
   border: 1px solid rgb(235, 229, 229);
   padding: 7px;
-  width: 14px;
+  width: 35px;
   margin: auto;
   text-align: center;
   background-color: rgb(235, 229, 229);
@@ -96,13 +106,13 @@
   border: 1px solid blue;
 }
 .right-middle-size > select {
-  padding: 10px 30px;
+  padding: 9px 25px;
   border: 1px solid black;
   margin-bottom: 20px;
   border-radius: 10px;
 }
 .right-middle-size > button {
-  padding: 16px 90px;
+  padding: 13px 90px;
   margin: auto;
   text-align: center;
   font-weight: 500;
@@ -129,6 +139,8 @@
 }
 .right-middle-size > span > a {
   font-size: 15px;
+  color: blue;
+  text-decoration: underline;
 }
 .right-top > a:hover {
   border: none;
@@ -158,10 +170,10 @@
 }
 .singleProd-accordian {
   border: 1px solid black;
-  width: 320px;
+  width: 420px;
   /* border: 1px solid red; */
   background-color: #fdfdf9;
-  padding: 20px;
+  padding: 25px;
   border: 1px solid rgb(218, 210, 210);
 
   margin: auto;
@@ -212,6 +224,7 @@
 .singleProd-right {
   /* border: 1px solid blue; */
   justify-content: center;
+  padding-top: 25px;
 }
 .singleProd-right-main {
   /* background-color: aqua; */
@@ -263,8 +276,9 @@
 }
 .singleProd-lower > p {
   text-align: center;
-  padding: 40px;
+  padding: 26px;
   background-color: #F7F6F2;
+  margin-bottom: 20px;
   /* border: 1px solid black; */
 }
 .singleProd-lower-btn > button {

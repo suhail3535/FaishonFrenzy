@@ -53,7 +53,7 @@ const Sorting = ({ pageon, price }) => {
                 <hr />  
                 <div className={style.sortbox}>
                     <Checkbox
-                        size="lg"
+                        size="13px"
                         onChange={handleChange} 
                         defaultChecked={category.includes("Pilcro")}
                         value={"Pilcro"}
@@ -62,7 +62,7 @@ const Sorting = ({ pageon, price }) => {
                         Pilcro
                     </Checkbox>
                     <Checkbox
-                        size="lg"
+                        size="13px"
                         onChange={handleChange} 
                         defaultChecked={category.includes("By Anthropologie")}
                         value={"By Anthropologie"}
@@ -71,7 +71,7 @@ const Sorting = ({ pageon, price }) => {
                         By Anthropologie
                     </Checkbox>
                     <Checkbox
-                        size="lg"
+                        size="13px"
                         onChange={handleChange} 
                         defaultChecked={category.includes("Maeve")}
                         value={"Maeve"}
@@ -80,7 +80,7 @@ const Sorting = ({ pageon, price }) => {
                         Maeve
                     </Checkbox>
                     <Checkbox
-                        size="lg"
+                        size="13px"
                         onChange={handleChange} 
                         defaultChecked={category.includes("Sloggi")}
                         value={"Sloggi"}
@@ -93,44 +93,44 @@ const Sorting = ({ pageon, price }) => {
             <div className={style.sortbox}>
                     <h2>Size </h2>
                     <hr />
-                    <Checkbox size="lg" colorScheme="messenger">
+                    <Checkbox size="13px" colorScheme="messenger">
                         Extra Small (XS)
                     </Checkbox>
-                    <Checkbox size="lg" colorScheme="messenger">
+                    <Checkbox size="13px" colorScheme="messenger">
                         Small (S)
                     </Checkbox>
-                    <Checkbox size="lg" colorScheme="messenger">
+                    <Checkbox size="13px" colorScheme="messenger">
                         medium (M)
                     </Checkbox>
-                    <Checkbox size="lg" colorScheme="messenger">
+                    <Checkbox size="13px" colorScheme="messenger">
                         Large (L)
                     </Checkbox>
-                    <Checkbox size="lg" colorScheme="messenger">
+                    <Checkbox size="13px" colorScheme="messenger">
                         Extra Large (XL)
                     </Checkbox>
-                    <Checkbox size="lg" colorScheme="messenger">
+                    <Checkbox size="13px" colorScheme="messenger">
                         2X Large (2XL)
                     </Checkbox>
                 </div>
                 <div className={style.sortbox}>
                     <h2>Discount </h2>
                     <hr />
-                    <Checkbox size="lg" colorScheme="messenger">
+                    <Checkbox size="13px" colorScheme="messenger">
                         10% Off or more
                     </Checkbox>
-                    <Checkbox size="lg" colorScheme="messenger">
+                    <Checkbox size="13px" colorScheme="messenger">
                         15% Off or more
                     </Checkbox>
-                    <Checkbox size="lg" colorScheme="messenger">
+                    <Checkbox size="13px" colorScheme="messenger">
                         20% Off or more
                     </Checkbox>
-                    <Checkbox size="lg" colorScheme="messenger">
+                    <Checkbox size="13px" colorScheme="messenger">
                         25% Off or more
                     </Checkbox>
-                    <Checkbox size="lg" colorScheme="messenger">
+                    <Checkbox size="13px" colorScheme="messenger">
                         30% Off or more
                     </Checkbox>
-                    <Checkbox size="lg" colorScheme="messenger">
+                    <Checkbox size="13px" colorScheme="messenger">
                         35% Off or more
                     </Checkbox>
                 </div>

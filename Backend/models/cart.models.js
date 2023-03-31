@@ -5,6 +5,8 @@ const cartSchema = mongoose.Schema(
     title: String,
     image: String,
     price: String,
+    name:String,
+    rating:String
   },
   {
     versionKey: false,

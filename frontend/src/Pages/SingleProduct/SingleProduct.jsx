@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./SingleProduct.css";
 import {
   Accordion,
@@ -6,7 +6,12 @@ import {
   AccordionItemButton,
   AccordionItemHeading,
   AccordionItemPanel,
-} from "react-accessible-accordion"; 
+} from "react-accessible-accordion";
+import { Swiper } from "../HomePage/Swiper";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../../Redux/Cart/action";
+import { useParams } from "react-router-dom";
+import axios from "axios";
 
 // {
 //   "_id": {
@@ -21,9 +26,62 @@ import {
 // }
 
 export const SingleProduct = () => {
-  
+  const [prodDetail, setProdDetail] = React.useState({});
+  const store = useSelector((store) => store.cartReducer.cart);
+  const dispatch = useDispatch();
+
+  const param = useParams();
+  console.log("prodid", param);
+
+  // title: String,
+  //   image: String,
+  //   price: String,
+  //   name:String,
+  //   rating:String
+  //   Spise: 6834.13
+  // ​​
+  // _id: "6423dfeadf544fb0d4049f87"
+  // ​​
+  // brand: "Maeve"
+  // ​​
+  // id: 15
+  // ​​
+  // img: "https://images.urbndata.com/is/image/Anthropologie/413064642…?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=540"
+  // ​​
+  // name: "The Somerset Mini Dress"
+  // ​​
+  // price: 6659.52
+  // ​​
+  // rating: 4.4
 
 
+  const handleCart = () => {
+    const { img, name, brand, price, rating } = prodDetail
+    const payload = {
+      title: brand,
+      image: img,
+      price: price,
+      name: name,
+      rating: rating,
+    }
+    dispatch(addToCart(payload));
+    console.log("store", store)
+  };
+
+  const fetchSigleProd = async () => {
+    try {
+      const details = await axios.get(
+        `http://localhost:7700/${param.name}/${param.id}`
+      );
+      console.log("singleDetail", details.data);
+      setProdDetail(details.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  useEffect(() => {
+    fetchSigleProd();
+  }, []);
 
   return (
     <div>
@@ -96,7 +154,8 @@ export const SingleProduct = () => {
                         <option value="">9</option>
                       </select>
                       <br />
-                      <button>ADD TO BASKET</button>
+
+                      <button onClick={handleCart}>ADD TO BASKET</button>
                       <br />
 
                       <span>
@@ -174,30 +233,7 @@ export const SingleProduct = () => {
             <div className="singleProd-mid-cont">
               <div className="singleProd-mid-heading">Recommended for you</div>
               <hr />
-
-              <div className="singleProd-mid-products">
-                <div className="singleProd-mid-prod">
-                  <img
-                    src="https://images.urbndata.com/is/image/Anthropologie/80258601_014_b2?$an-category$&qlt=80&fit=constrain"
-                    alt=""
-                  />
-                  <p>Lorem ipsum dolor sit amet, consectetur .</p>
-                </div>
-                <div className="singleProd-mid-prod">
-                  <img
-                    src="https://images.urbndata.com/is/image/Anthropologie/80258601_014_b2?$an-category$&qlt=80&fit=constrain"
-                    alt=""
-                  />
-                  <p>Lorem ipsum dolor sit amet, consectetur .</p>
-                </div>
-                <div className="singleProd-mid-prod">
-                  <img
-                    src="https://images.urbndata.com/is/image/Anthropologie/80258601_014_b2?$an-category$&qlt=80&fit=constrain"
-                    alt=""
-                  />
-                  <p>Lorem ipsum dolor sit amet, consectetur </p>
-                </div>
-              </div>
+              <Swiper />
             </div>
           </div>
 
