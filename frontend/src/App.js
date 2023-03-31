@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 
 import MainRoutes from "./Pages/MainRoutes/MainRoutes";
+import Mangage from "./Pages/Admin/Manage";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <MainRoutes />
 <Footer/>
 
-
+ 
     </div>
   );
 }
