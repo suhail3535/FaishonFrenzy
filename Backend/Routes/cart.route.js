@@ -36,7 +36,7 @@ cartRouter.post("/add", async (req, res) => {
     await cartitem.save();
     res.status(200).send(cartitem);
   } catch (error) {
-    res.status(400).send({ message: error.message });
+    res.status(400).send({ message: error.message })
   }
 });
 
