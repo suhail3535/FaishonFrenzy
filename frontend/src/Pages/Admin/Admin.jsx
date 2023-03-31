@@ -47,19 +47,24 @@ const Admin = () => {
       <Heading size="lg" style={{ textAlign: "center", margin: "20px" }}>
         Welcome Admin
       </Heading>
-      <div id={styles.container}>
-        <Box id={styles.first}>
+      <div id={styles.main_container}>
+        <Box id={styles.product_list_div}>
+          <Heading id={styles.heading} as={"h4"} size="md">
+            Product List
+          </Heading>
           {product.reverse().map((ele) => {
             return (
+            
+            
               <div>
                 <AdminCard key={ele.id} {...ele} />
-              </div>
+              </div> 
             );
           })}
         </Box>
-        <Box id={styles.second}>
+        <Box id={styles.add_new_product_div}>
           <Heading id={styles.heading} as={"h4"} size="md">
-            Add Product
+            Add New Product
           </Heading>
           <form>
             <Stack spacing={4}>

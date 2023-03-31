@@ -1,17 +1,27 @@
-#second {
+#main_container {
+    border: 2px solid green;
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin: 5px auto;
+}
+
+
+#add_new_product_div {
     border: 0px solid gray;
     padding: 10px 20px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     width: 30%;
     margin: 20px auto;
     border-radius: 15px;
+    height: 100%;
 }
-#first {
-    border: 0px solid rgb(0, 47, 255);
+#product_list_div {
+    border: 2px solid rgb(0, 47, 255);
     padding: 10px 20px;
     gap: 10px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     width: 60%;
     border-radius: 15px;
     margin: 20px auto;
@@ -84,13 +94,7 @@
     border: 2px solid tomato;
     border-radius: 15px;
 }
-#container {
-    border: 0px solid green;
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    margin: 5px auto;
-}
+
 #heading {
     border: 0px solid red;
     padding: 5px;
@@ -111,11 +115,16 @@
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 } */
 
-#card {
-    border: 0px solid green;
+#admin_card {
+    border: 2px solid green;
     padding: 10px;
+    display: flex;
     border-radius: 15px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+#image_div{
+    border: 1px solid red;
 }
 /* edit&delete button */
 #button {

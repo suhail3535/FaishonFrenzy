@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { deletedata, getProduct } from "../../Redux/Admin/action";
+import { Table, Tbody, Th, Thead, Tr } from "@chakra-ui/react";
 
 const AdminCard = ({ _id,image, title, price, rating }) => {
   const dispatch = useDispatch();
@@ -54,12 +55,13 @@ const AdminCard = ({ _id,image, title, price, rating }) => {
   };
 
   return (
-    <div id={styles.card}>
-      <div>
+    <div id={styles.admin_card}>
+    
+      <div id={styles.image_div}>
         <img
           style={{
             border: "0px solid green",
-            width: "100%",
+            width: "20%",
             textAlign: "center",
             borderRadius: "15px",
           }}

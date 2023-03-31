@@ -52,10 +52,10 @@ export const getRequestAddress = () => (dispatch) => {
     });
 };
 
-export const deletedataAdd = (id) => (dispatch) => {
+export const deletedataAdd = (_id) => (dispatch) => {
   dispatch(getpostRequest());
   return axios
-    .delete(`http://localhost:7700/address/${id}`)
+    .delete(`http://localhost:7700/address/delete/${_id}`)
     .then((res) => {
       console.log(res.data);
       dispatch(deldatasuccess());
