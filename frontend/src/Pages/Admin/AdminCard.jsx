@@ -55,35 +55,37 @@ const AdminCard = ({ _id,image, title, price, rating }) => {
   };
 
   return (
-    <div id={styles.admin_card}>
-    
-      <div id={styles.image_div}>
-        <img
-          style={{
-            border: "0px solid green",
-            width: "20%",
-            textAlign: "center",
-            borderRadius: "15px",
-          }}
-          src={image}
-          alt="title"
-        />
-      </div>
-      <div style={{ textAlign: "center" }}>
-        <h1>Title : {title} </h1>
-        <p>Price : {price} $/-</p>
-        <p>Rating : {rating}</p>
-        <div id={styles.button}>
-          <Link to={`/edit/${_id}`}>
-            <button id={styles.edit} onClick={handleClick}>
-              Edit
-            </button>
-          </Link>
-          <button id={styles.delete} onClick={() => handleDelete(_id)}>
-            Delete
-          </button>
+    <div id ={styles.component}>
+      <div className="paymentCard-cont">
+        <div className="paymentCard-info">
+          <div className="paymentCard-info-img-div">
+            <img  src={image} alt="" />
+          </div>
+          <div className="paymentCard-info-cont">
+            <p>{title}</p>
+
+            <p>
+              <span>Style:</span># 4130318350035
+            </p>
+            <p>
+              <span>Color:</span>GREEN
+            </p>
+            <p>
+              <span>Size:</span>XS
+            </p>
+            <p>
+              {" "}
+              <span>Fit</span> Standard
+            </p>
+          </div>
         </div>
+        <div>${price}</div>
+        <div>{rating}</div>
+
+        <div className="paymentCard-info-qty"></div>
+        <div>${price}</div>
       </div>
+      <hr style={{ border: "1px solid #5c5c5f" }} />
     </div>
   );
 };

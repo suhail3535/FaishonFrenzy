@@ -33,7 +33,7 @@ const CartPage = () => {
               </div>
             </div>
             <div className="cartpage-right-cont">
-              <div className="cartpage-right-heading">
+               <div className="cartpage-right-heading">
                 <span> ORDER SUMMARY</span>
                 <span>800.01.123</span>
               </div>

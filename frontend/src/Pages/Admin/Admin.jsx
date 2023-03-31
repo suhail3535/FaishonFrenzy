@@ -9,6 +9,7 @@ import Swal from "sweetalert2";
 import AdminCard from "./AdminCard";
 import { getProduct, postRequest } from "../../Redux/Admin/action";
 import { store } from "../../Redux/Store";
+import PaymentCard from "../../components/PaymentCard/PaymentCard";
 const initialState = {
   image: "",
   title: "",
@@ -52,16 +53,26 @@ const Admin = () => {
           <Heading id={styles.heading} as={"h4"} size="md">
             Product List
           </Heading>
+          <div className="cartpage-left-cont">
+            <div className="cartpage-left-heading"></div>
+            <hr style={{ border: "1px solid #5c5c5f" }} />
+            <div className="cartpage-left-title">
+              <div>Item</div>
+              <div>Item Price</div>
+              <div>Rating</div>
+              <div>Total Price</div>
+            </div>
+            <hr style={{ border: "1px solid #5c5c5f" }} />
+          </div>
           {product.reverse().map((ele) => {
             return (
-            
-            
               <div>
                 <AdminCard key={ele.id} {...ele} />
-              </div> 
+              </div>
             );
           })}
         </Box>
+
         <Box id={styles.add_new_product_div}>
           <Heading id={styles.heading} as={"h4"} size="md">
             Add New Product
