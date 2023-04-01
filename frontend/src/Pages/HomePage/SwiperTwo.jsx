@@ -1,4 +1,4 @@
-import styless from "./SwiperTwo.module.css";
+import styles from "./SwiperTwo.module.css";
 import { Link } from "react-router-dom";
 
 export function MyCard({ src, cap }) {
@@ -19,10 +19,10 @@ export function MyCard({ src, cap }) {
       <img
         src={src}
         alt="i"
-        style={{ height: "100%", width:"100%", margin: "auto" }}
+        style={{  height: "100%", width:"100%", margin: "auto" }}
       />
-      <div className={styless.myCardCaption}>
-        <Link to="/"><p style={{fontStyle:"10px"}}>{cap}</p></Link>
+      <div className={styles.myCardCaption}>
+        <Link to="/">{cap}</Link>
       </div>
     </div>
   );
@@ -30,26 +30,26 @@ export function MyCard({ src, cap }) {
 
 export function SwiperTwo() {
   const btnpressprev = () => {
-    let box = document.querySelector(".productContainer");
+    let box = document.querySelector(".productContainerrrr");
     box.scrollLeft -= 300;
   };
 
   const btnpressnext = () => {
-    let box = document.querySelector(".productContainer");
+    let box = document.querySelector(".productContainerrrr");
     box.scrollLeft += 300;
   };
 
   return (
     <div>
-      <div className={styless.productCarousal}>
-        <button onClick={btnpressprev} className={styless.preBtn}>
+      <div className={styles.productCarousal}>
+        <button onClick={btnpressprev} className={styles.preBtn}>
           <p>⇐</p>
         </button>
-        <button onClick={btnpressnext} className={styless.nextBtn}>
+        <button onClick={btnpressnext} className={styles.nextBtn}>
           <p>⇒</p>
         </button>
         <div
-          className="productContainer"
+          className="productContainerrrr"
           style={{
             padding: "0 10px",
             display: "flex",
@@ -57,7 +57,7 @@ export function SwiperTwo() {
             scrollBehavior: "smooth",
           }}
         >
-          <Link to="/store?filter=MacBook+Air&filter=MacBook+Pro">
+         <Link to="/store?filter=MacBook+Air&filter=MacBook+Pro">
             <MyCard
               src="https://images.urbndata.com/is/image/Anthropologie/4139952400010_000_b?$an-category$&qlt=80&fit=constrain"
               cap="Reformation Silk Dress"
