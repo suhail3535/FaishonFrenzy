@@ -31,7 +31,7 @@ app.use("/cloths", clotingRouter);
 app.use("/admin", adminRouter);
   //this route is for admin site.
   //  app.use(auth)
-app.use("/adminsdetails", admin_Details_Router); //this route is for admin login and details.
+app.use("/adminsdetails", adminRouter); //this route is for admin login and details.
 
 
 

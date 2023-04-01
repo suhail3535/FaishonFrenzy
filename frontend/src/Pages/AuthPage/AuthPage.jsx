@@ -16,7 +16,7 @@ const AuthPage = () => {
   const [name, setName] = React.useState("");
   const [confirm, setPasswordcon] = React.useState("");
   const [active, setActive] = React.useState(false);
-  const navigate = useNavigate();
+ 
   const toast = useToast();
   const Navigate = useNavigate();
 
@@ -38,9 +38,9 @@ const AuthPage = () => {
             toast({
               title: "Register Succesfully",
               description: "",
-              status: "warning",
+              status: "success",
               variant: "left-accent",
-              duration: 1100,
+              duration: 600,
               isClosable: true,
               position: "top",
             });

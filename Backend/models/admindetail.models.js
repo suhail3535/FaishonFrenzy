@@ -5,15 +5,15 @@ const admindetailsSchema = mongoose.Schema(
     name: String,
     email: String,
     password: String,
-    userID: String,
+ 
   },
   {
     versionKey: false,
   }
 );
 
-const AdminDetails = mongoose.model("admindetails", admindetailsSchema);
+const AdminModel = mongoose.model("admindetails", admindetailsSchema);
 
 module.exports = {
-  AdminDetails,
+  AdminModel,
 };

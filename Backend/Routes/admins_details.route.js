@@ -1,48 +1,63 @@
-
-
-const { AdminDetails } = require("../models/admindetail.models");
+const express = require("express");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
-const express = require("express");
-const admin_Details_Router = express.Router();
+const { AdminModel } = require("../models/user.models");
+const adminRouter = express.Router();
 
-//register
-admin_Details_Router.post("/register", async (req, res) => {
-  const { email, password, name } = req.body;
-  try {
-    bcrypt.hash(password, 5, async (err, hash) => {
-      const user = new AdminDetails({ email, password: hash, name });
-      await user.save();
-
-      res.status(200).send({ message: "Admin Registered" });
-    });
-  } catch (error) {
-    res.status(400).send({ message: error.message });
+adminRouter.get("/", async (req, res) => {
+  const data = await AdminModel.find();
+  res.send(data);
+});
+adminRouter.post("/register", async (req, res) => {
+  const { name, email, password } = req.body;
+  const userPresent = await AdminModel.findOne({ email: email });
+  // console.log(req.body);
+  if (userPresent?.email) {
+    res.send({ msg: "User already exists" });
+  } else {
+    try {
+      bcrypt.hash(password, 5, async (err, secure_password) => {
+        if (err) {
+          console.log(err);
+        } else {
+          const user = new AdminModel({
+            email,
+            password: secure_password,
+            name,
+          });
+          await user.save();
+          res.send({ msg: "Registered SucessFully" });
+        }
+      });
+    } catch (e) {
+      res.send({ msg: "Error in registering the user" });
+      console.log(e);
+    }
   }
 });
 
-admin_Details_Router.post("/login", async (req, res) => {
+adminRouter.post("/login", async (req, res) => {
   const { email, password } = req.body;
   try {
-    const user = await AdminDetails.findOne({ email: email });
-    if (user) {
-      bcrypt.compare(password, user.password, (err, result) => {
+    const user = await AdminModel.find({ email });
+    if (user.length > 0) {
+      bcrypt.compare(password, user[0].password, (err, result) => {
         if (result) {
-          res.status(200).send({
-            message: "Admin Login Successfull",
-            token: jwt.sign({ userID: user._id }, "project"), //we can pass information also in jwt like userID
-          });
+          const token = jwt.sign({ userID: user[0]._id }, "project");
+          // console.log(token);
+          res.send({ msg: "Logged in SuccessFull", token: token });
         } else {
-          res.status(400).send({ message: "Wrong Credentials! " });
+          res.send({ msg: "Wrong Credentials" });
         }
       });
     } else {
-      res.status(400).send({ message: "User Not Found. Plz Register" });
+      res.send({ msg: "Wrong Credentials" });
     }
-  } catch (error) {
-    res.status(400).send({ message: error.message });
+  } catch (e) {
+    res.send({ msg: "Logged In Failed" });
+    console.log(e);
   }
 });
 module.exports = {
-  admin_Details_Router,
+  adminRouter,
 };

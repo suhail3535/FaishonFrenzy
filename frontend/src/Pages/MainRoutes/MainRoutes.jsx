@@ -13,6 +13,7 @@ import ShippingDetails from '../Shipping/ShippingDetails'
 import Dashboard from '../Admin/Dashboard'
 import Manage from '../Admin/Manage'
 import Shoes from '../Shoes/Shoes'
+import Clothing from "../Clothing/Clothing";
 import AdminLogin from '../AdminRegister/Adminlogin'
 
 
