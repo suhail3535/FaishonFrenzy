@@ -6,10 +6,10 @@ const userRouter = express.Router();
 
 //register
 userRouter.post("/register", async (req, res) => {
-  const { email, password, location, age } = req.body;
+  const { email, password, name } = req.body;
   try {
-    bcrypt.hash(password, 4, async (err, hash) => {
-      const user = new UserModel({ email, password: hash, location, age });
+    bcrypt.hash(password, 5, async (err, hash) => {
+      const user = new UserModel({ email, password: hash, name });
       await user.save();
 
       res.status(200).send({ message: "User Registered" });
@@ -18,7 +18,7 @@ userRouter.post("/register", async (req, res) => {
     res.status(400).send({ message: error.message });
   }
 });
-//login
+
 userRouter.post("/login", async (req, res) => {
   const { email, password } = req.body;
   try {
@@ -28,7 +28,7 @@ userRouter.post("/login", async (req, res) => {
         if (result) {
           res.status(200).send({
             message: "Login Successfull",
-            token: jwt.sign({ userID: user._id }, "project"),
+            token: jwt.sign({ userID: user._id }, "project"), //we can pass information also in jwt like userID
           });
         } else {
           res.status(400).send({ message: "Wrong Credentials! " });
@@ -41,7 +41,6 @@ userRouter.post("/login", async (req, res) => {
     res.status(400).send({ message: error.message });
   }
 });
-
 module.exports = {
   userRouter,
 };

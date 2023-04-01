@@ -36,6 +36,7 @@ const MainRoutes = () => {
       </Routes>
     </div>
   );
+     
 }
 
 export default MainRoutes

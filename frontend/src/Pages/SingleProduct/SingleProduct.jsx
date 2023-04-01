@@ -13,17 +13,6 @@ import { addToCart } from "../../Redux/Cart/action";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
-// {
-//   "_id": {
-//     "$oid": "6423db95bc2a4d45539224fd"
-//   },
-//   "name": "Pilcro The Romy Relaxed Buttondown",
-//   "img": "https://images.urbndata.com/is/image/Anthropologie/4110907290003_019_b2?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720",
-//   "price": 7399.47,
-//   "Spise": 8057.2,
-//   "brand": "Pilcro",
-//   "rating": 4.2
-// }
 
 export const SingleProduct = () => {
   const [prodDetail, setProdDetail] = React.useState({});
@@ -31,41 +20,50 @@ export const SingleProduct = () => {
   const dispatch = useDispatch();
 
   const param = useParams();
-  console.log("prodid", param);
+  console.log("prod Id", param);
+
+  // Spise
+  // :
+  // 8057.2
+  // brand
+  // :
+  // "Pilcro"
+  // img
+  // :
+  // "https://images.urbndata.com/is/image/Anthropologie/4110907290003_019_b2?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720"
+  // name
+  // :
+  // "Pilcro The Romy Relaxed Buttondown"
+  // price
+  // :
+  // 7399.47
+  // rating
+  // :
+  // 4.2
+  // _id
+  // :
+  // "6423db95bc2a4d45539224fd"
 
   // title: String,
-  //   image: String,
-  //   price: String,
-  //   name:String,
-  //   rating:String
-  //   Spise: 6834.13
-  // ​​
-  // _id: "6423dfeadf544fb0d4049f87"
-  // ​​
-  // brand: "Maeve"
-  // ​​
-  // id: 15
-  // ​​
-  // img: "https://images.urbndata.com/is/image/Anthropologie/413064642…?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=540"
-  // ​​
-  // name: "The Somerset Mini Dress"
-  // ​​
-  // price: 6659.52
-  // ​​
-  // rating: 4.4
+  // image: String,
+  // price: String,
+  // name:String,
+  // rating:String,
+  //brand:String
 
 
-  const handleCart = () => {
-    const { img, name, brand, price, rating } = prodDetail
+  const handleCart = (data) => {
+    console.log("single", data)
+    const { img, name, brand, price, rating } = data
     const payload = {
-      title: brand,
+      title: name,
       image: img,
       price: price,
-      name: name,
+      name:brand ,
       rating: rating,
     }
     dispatch(addToCart(payload));
-    console.log("store", store)
+    // console.log("store", store)
   };
 
   const fetchSigleProd = async () => {
@@ -74,7 +72,7 @@ export const SingleProduct = () => {
         `http://localhost:7700/${param.name}/${param.id}`
       );
       console.log("singleDetail", details.data);
-      setProdDetail(details.data);
+      setProdDetail(details.data[0]);
     } catch (err) {
       console.log(err);
     }
@@ -92,7 +90,7 @@ export const SingleProduct = () => {
               <div className="singleProd-left">
                 <div className="singleProd-imgDiv">
                   <img
-                    src="https://images.urbndata.com/is/image/Anthropologie/4139952400010_000_b14?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=640"
+                    src={prodDetail.img}
                     alt=""
                   />
                 </div>
@@ -102,7 +100,7 @@ export const SingleProduct = () => {
                       src="https://images.urbndata.com/is/image/Anthropologie/80258601_014_b2?$an-category$&qlt=80&fit=constrain"
                       alt=""
                     />
-                    Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit.
                   </div>
                   <div className="singleProd-extra-div">
                     <img
@@ -119,9 +117,9 @@ export const SingleProduct = () => {
               <div className="singleProd-right">
                 <div className="right-cont">
                   <div className="right-top">
-                    <p>Reformation Juliette Dress </p>
+                    <p>{prodDetail.title} </p>
                     <a href="/#">Reformation</a>
-                    <p>$ 256</p>
+                    <p>$ {prodDetail.price}</p>
                     <p>
                       Or 4 interest-free installments of $62.00 with <br />
                       <span>Kalrna or Afterpay</span>
@@ -155,7 +153,7 @@ export const SingleProduct = () => {
                       </select>
                       <br />
 
-                      <button onClick={handleCart}>ADD TO BASKET</button>
+                      <button onClick={() => handleCart(prodDetail)}>ADD TO BASKET</button>
                       <br />
 
                       <span>
