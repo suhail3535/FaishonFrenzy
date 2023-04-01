@@ -26,6 +26,20 @@ export const getProduct = () => async (dispatch) => {
   }
 };
 
+export const getProduct_user_details = () => async (dispatch) => {
+  try {
+    dispatch({ type: PRODUCT_DATA_LOADING });
+    let res = await axios.get("http://localhost:7700/user").then((res) => {
+      dispatch({ type: PRODUCT_DATA_SUCCESS, payload: res.data });
+       
+      return res.data;
+  
+    });
+    console.log(res);
+  } catch (err) {
+    dispatch({ type: PRODUCT_DATA_ERROR });
+  }
+};
 
 export const getpostRequest = () => {
   return { type: POST_REQUEST };

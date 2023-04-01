@@ -86,10 +86,12 @@ grid-template-columns: repeat(2,1fr);
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 #edit:hover {
-    background-color: white;
+    background-color: rgba(80, 177, 6, 0.875);
     /* color: #17274a; */
-     border: 2px solid #17274a; 
+     border: 2px solid #f8f8f8; 
     border-radius: 15px;
+    color: white;
+    
 }
 #delete {
   
@@ -107,10 +109,12 @@ grid-template-columns: repeat(2,1fr);
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 #delete:hover {
-    background-color: white;
-    color: tomato;
+    background-color: rgb(229, 14, 14);
+    color: white;
     border: 2px solid tomato;
     border-radius: 15px;
+ 
+
 }
 
 #heading {
@@ -121,7 +125,9 @@ grid-template-columns: repeat(2,1fr);
     color: #17274a;
     font-family: "Visuelt Pro", sans-serif;
 }
-
+#tab1{
+    border: 5px solid green;
+}
 
 #admin_card {
     border: 0px solid green;
@@ -174,6 +180,7 @@ grid-template-columns: repeat(2,1fr);
 }
 
 /* <------------component--------------> */
+
 .paymentCard-cont {
     display: flex;
     /* border: 1px solid blue; */
@@ -239,4 +246,5 @@ grid-template-columns: repeat(2,1fr);
   .paymentCard-info-img-div{
     margin-right: 20px;
   }
+
   /* <------------------------> */
