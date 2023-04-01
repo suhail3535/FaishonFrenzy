@@ -38,10 +38,30 @@ const handleSubmit = async () => {
   setName("")
   setPassword("")
   setPasswordcon("")
-  navigate("/authpage");
+ setActive(false)
 };
 
+    const handleSubmitlogin = async () => {
+      const payload = {
+        email,
+        password,
+   
+      };
+      let res = await fetch("http://localhost:7700/users/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+      let data = await res.json();
+      console.log(data);
+      localStorage.setItem("token", data.token);
+      navigate("/")
+  };
   
+
+
   const login = useGoogleLogin({
     onSuccess: async tokenResponse => {
       const data = axios.get("https://www.googleapis.com/oauth2/v3/userinfo", {
@@ -79,6 +99,8 @@ const handleSubmit = async () => {
                     <input
                       className="login_email"
                       type="text"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                       placeholder="Enter your email"
                       required
                     />
@@ -87,6 +109,7 @@ const handleSubmit = async () => {
                   <div className="input-field">
                     <input
                       type="password"
+                      onChange={(e) => setPassword(e.target.value)}
                       className="login_pass"
                       placeholder="Enter your password"
                       required
@@ -107,7 +130,10 @@ const handleSubmit = async () => {
                     </a>
                   </div>
 
-                  <div className="input-field button">
+                  <div
+                    onClick={handleSubmitlogin}
+                    className="input-field button"
+                  >
                     <input className="login_Btn" type="button" value="Login" />
                   </div>
                   <div>
