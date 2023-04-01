@@ -7,8 +7,10 @@ const { cartRouter } = require("./Routes/cart.route");
 const { dressRouter } = require("./Routes/dress.routes");
 const { adminRouter } = require("./Routes/admin.route")
 const{shippingRouter} =require("./Routes/shippingRoute")
-const cors=require("cors")
-// const { auth } = require("./middlewere/auth.middleware");
+const cors=require("cors");
+const { shoesRouter } = require("./Routes/shoes.routes");
+const { clotingRouter } = require("./Routes/cloting.routes");
+// const { auth } = require("./middlewere/auth.middleware"); 
 const app = express();
 app.use(express.json());
 app.use(cors())
@@ -16,14 +18,19 @@ app.get("/", (req, res) => {
   res.status(200).send("Welcome To HomePage");
 });
 
-app.use("/admin",adminRouter)
+
 app.use("/users", userRouter);
 app.use("/pages", pageRouter);
 app.use("/carts", cartRouter);
 app.use("/address",shippingRouter);
-// app.use(auth);
-app.use("/dress", dressRouter);
 
+app.use("/dress", dressRouter);
+app.use("/shoes", shoesRouter); 
+app.use("/cloths", clotingRouter); 
+
+
+// app.use(auth())
+app.use("/admin", adminRouter);
 app.listen(process.env.port, async () => {
   try {
     await connection;

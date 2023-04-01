@@ -20,7 +20,11 @@ const Admin = () => {
   const [data, setdata] = useState(initialState);
   console.log(store);
   const product = useSelector((store) => store.adminReducer.product);
-
+  // const user = useSelector((store) => store.adminReducer.user);
+  // // console.log(user)
+  // console.log(product)
+      const x = product.length;
+      console.log("line27", x);
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
@@ -35,11 +39,12 @@ const Admin = () => {
     e.preventDefault();
     dispatch(postRequest(data));
     setdata(initialState);
+     
     Swal.fire("", "Product added!", "success");
-      window.location.reload();
+ 
   };
   // console.log(data)
-
+  dispatch(getProduct());
 
   useEffect(() => {
     dispatch(getProduct());
@@ -47,43 +52,41 @@ const Admin = () => {
  
   return (
     <div>
-      <Heading size="lg" style={{ textAlign: "center", margin: "20px" }}>
-        Welcome Admin
-      </Heading>
       <div id={styles.main_container}>
         <Box id={styles.product_list_div}>
           <Heading id={styles.heading} as={"h4"} size="md">
             Product List
           </Heading>
+          <h6 style={{fontWeight:"bold"}}>Total product is: {x}</h6>
           <div className="cartpage-left-cont">
             <div className="cartpage-left-heading"></div>
-            <hr style={{ border: "1px solid #5c5c5f" }} />
+            <hr style={{ border: "1px doted #5c5c5f" }} />
             <div className="cartpage-left-title">
-              <div>Item</div>
-              <div>Item Price</div>
-              <div>Rating</div>
+              <div style={{ fontWeight: "bold" }}>Item</div>
+              <div style={{ fontWeight: "bold" }}>Item Price</div>
+              <div style={{ fontWeight: "bold" }}>Rating</div>
               <div
                 style={{
                   border: "0px solid green",
                   backgroundColor: "rgb(23,39,74)",
                   color: "white",
-               fontWeight:"bold"
+                  fontWeight: "bold",
                 }}
               >
                 Action
               </div>
             </div>
-            <hr style={{ border: "1px solid #5c5c5f" }} />
+            <hr style={{ border: "1px doted #5c5c5f" }} />
           </div>
           {product.map((ele) => {
             return (
               <div>
-                <AdminCard key={ele.id} {...ele} />
+                <AdminCard key={ele._id} {...ele} />
               </div>
             );
           })}
         </Box>
-
+    
         <Box id={styles.add_new_product_div}>
           <Heading id={styles.heading} as={"h4"} size="md">
             Add New Product

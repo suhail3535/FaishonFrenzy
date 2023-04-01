@@ -3,7 +3,6 @@ import { PRODUCT_DATA_ERROR, PRODUCT_DATA_LOADING, PRODUCT_DATA_SUCCESS } from "
 const initialState = {
   isLoading: false,
   isError: false,
-  product: [],
   user:[]
 };
 
@@ -13,7 +12,7 @@ export const reducer = (state = initialState, { type, payload }) => {
       return { ...state, isLoading: true };
     case PRODUCT_DATA_SUCCESS:
       return {
-        ...state, isLoading: false, product: payload,user:payload
+        ...state, isLoading: false,user:payload
       };
 
     case PRODUCT_DATA_ERROR:
