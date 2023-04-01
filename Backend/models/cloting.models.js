@@ -16,6 +16,6 @@ const clotingSchema = mongoose.Schema(
 
 const ClotingModel = mongoose.model("cloting", clotingSchema);
 
-module.exports = {
+module.exports = { 
   ClotingModel,
 };
