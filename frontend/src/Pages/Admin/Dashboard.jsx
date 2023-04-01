@@ -6,7 +6,9 @@ const Dashboard = () => {
   return (
     <Box
       style={{
-        backgroundImage: `url("https://media.istockphoto.com/id/494350434/vector/thin-shopping-retail-line-white-seamless-pattern.jpg?s=612x612&w=0&k=20&c=XZ5G1qrghaNlovv4kw5ZtHKPYYETR-LDqRAGafDs5LA=")`,
+        backgroundImage: `url("https://i.gifer.com/OyH3.gif")`,
+        width: "97%",
+        margin: "auto",
       }}
     >
       <Flex direction="column" align="center" justify="center" h="100vh">
@@ -14,7 +16,12 @@ const Dashboard = () => {
           <Heading as="h1" size="3xl" textAlign="center" mb={3}>
             Welcome to Admin Dashboard
           </Heading>
-          <Text textAlign="center" fontSize="xl" color="gray.500">
+          <Text
+            textAlign="center"
+            fontSize="xl"
+            color="#607D8B"
+            fontWeight={"bold"}
+          >
             Manage your FashionFrenzy store easily.
           </Text>
         </Box>
@@ -24,11 +31,9 @@ const Dashboard = () => {
           align="center"
         >
           <Link to="/manage">
-            <Button size="lg" colorScheme="green">
+            <Button size="lg" backgroundColor="#E91E63" color={"white"}>
               Click To Proceed
             </Button>
-         
-        
           </Link>
         </Stack>
       </Flex>

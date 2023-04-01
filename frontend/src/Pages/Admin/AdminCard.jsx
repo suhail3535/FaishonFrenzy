@@ -80,17 +80,18 @@ const AdminCard = ({ _id,image, title, price, rating }) => {
           </div>
         </div>
         <div>${price}</div>
-        <div>{rating}</div>
-
-      
-          <Link to={`/edit/${_id}`}>
-            <button id={styles.edit} onClick={handleClick}>
-              Edit
-            </button>
-          </Link>
-    
         <div>
-       
+          {rating} ⭐
+          
+        </div>
+
+        <Link to={`/edit/${_id}`}>
+          <button id={styles.edit} onClick={handleClick}>
+            Edit
+          </button>
+        </Link>
+
+        <div>
           <button id={styles.delete} onClick={() => handleDelete(_id)}>
             Delete
           </button>
