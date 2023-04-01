@@ -22,35 +22,10 @@ export const SingleProduct = () => {
   const param = useParams();
   console.log("prod Id", param);
 
-  // Spise
-  // :
-  // 8057.2
-  // brand
-  // :
-  // "Pilcro"
-  // img
-  // :
-  // "https://images.urbndata.com/is/image/Anthropologie/4110907290003_019_b2?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720"
-  // name
-  // :
-  // "Pilcro The Romy Relaxed Buttondown"
-  // price
-  // :
-  // 7399.47
-  // rating
-  // :
-  // 4.2
-  // _id
-  // :
-  // "6423db95bc2a4d45539224fd"
 
-  // title: String,
-  // image: String,
-  // price: String,
-  // name:String,
-  // rating:String,
-  //brand:String
 
+
+ 
 
   const handleCart = (data) => {
     console.log("single", data)

@@ -50,7 +50,7 @@ const Shoes = () => {
         <div>
           <div className={style.datatop}>
             <div>
-              <h1> Dresses </h1>
+              <h1> Shoes </h1>
               <h6>28 products</h6>
             </div>
             <div>
@@ -81,7 +81,7 @@ const Shoes = () => {
             {isLoading ? emptybox.map((e)=>(
               <Skeletonbox key={e} /> 
             )) : shoes.map((e) => (
-              <ProductBox key={e.id} {...e} />
+              <ProductBox key={e.id} {...e} category="shoes" />
             ))}  
           </div>
         </div>

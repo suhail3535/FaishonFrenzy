@@ -20,6 +20,7 @@ const AuthPage = () => {
   const toast = useToast();
   const Navigate = useNavigate();
 
+
   const handleSubmit = () => {
     if (name && email && password) {
       axios
@@ -31,6 +32,7 @@ const AuthPage = () => {
         .then((res) => {
           console.log(res);
           // console.log(res.data.token);
+
 
           setTimeout(() => {
             toast({
@@ -106,12 +108,18 @@ const AuthPage = () => {
   });
 
   const signin = useGoogleLogin({
+
     onSuccess: async (credentialResponse) => {
       console.log(credentialResponse);
       const decoded = jwt_decode(credentialResponse.credential);
       console.log(decoded);
     },
   });
+
+  
+
+
+
 
   return (
     <div>

@@ -82,9 +82,21 @@ const Dresses = () => {
             {isLoading ? emptybox.map((e)=>(
               <Skeletonbox key={e} /> 
             )) : dress.map((e) => (
-              <ProductBox key={e.id} {...e} />
+              <ProductBox key={e.id} category="dress" {...e} />
             ))} 
-          </div>
+          </div> 
+          <div className={style.pageboxbottom}>
+                <button
+                  disabled={page <= 1}
+                  onClick={() => setPage((prev) => prev - 1)}
+                >
+                  <MdArrowBackIosNew size={"30px"} />
+                </button>
+                <h2>{page}</h2>
+                <button onClick={() => setPage((prev) => prev + 1)}>
+                  <MdArrowForwardIos size={"30px"} />
+                </button>
+              </div>
         </div>
       </div>
     </div>

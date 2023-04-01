@@ -32,8 +32,8 @@ clotingRouter.get("/", async (req, res) => {
     const dressitem = await ClotingModel.find(obj)
       .skip(skip)
       .limit(limit)
-      .sort(sortprice);
-    res.status(200).send(dressitem);
+      .sort(sortprice);  
+    res.status(200).send(dressitem); 
   } catch (error) {
     res.status(400).send({ msg: "can not fetch a data" });
   }

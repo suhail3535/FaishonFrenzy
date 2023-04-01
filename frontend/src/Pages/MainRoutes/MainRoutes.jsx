@@ -1,3 +1,4 @@
+
 import React from 'react'
 import HomePage from '../HomePage/HomePage'
 import { Route, Routes } from 'react-router-dom'
@@ -16,6 +17,7 @@ import AdminLogin from '../AdminRegister/Adminlogin'
 
 
 
+
 const MainRoutes = () => {
   return (
     <div>
@@ -25,7 +27,6 @@ const MainRoutes = () => {
         <Route path="/admin" element={<Admin />} />
         <Route path="/edit/:id" element={<Edit />} />
         <Route path="/authpage" element={<AuthPage />} />
-        <Route path="/dress" element={<Dresses />} />
         <Route path="/ship" element={<ShippingAdresss />} />
         <Route path="/:name/:id" element={<SingleProduct />} />
         <Route path="/shipping_address" element={<ShippingDetails />} />
@@ -33,15 +34,14 @@ const MainRoutes = () => {
         <Route path="/manage" element={<Manage />} />
         <Route path="/adminlogin" element={<AdminLogin />} />
         <Route path="/top" element={<top />} />
-        <Route path="/dress/:id" element={<SingleProduct />} />
-    
+
+        <Route path="/dress" element={<Dresses />} />
 
         <Route path="/shoes" element={<Shoes />} />
-        <Route path="/shoes/:id" element={<SingleProduct />} />
+        <Route path="/cloths" element={<Clothing />} />
       </Routes>
     </div>
   );
-     
-}
+};
 
-export default MainRoutes
+export default MainRoutes;
