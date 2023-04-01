@@ -3,30 +3,32 @@ import "./CartPage.css";
 import PaymentCard from "../../components/PaymentCard/PaymentCard";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
+import { getAllCart } from "../../Redux/Cart/action";
+import { Link, useNavigate } from "react-router-dom"
 
 const CartPage = () => {
-  // const [allCart, setAllCart] = React.useState([]);
+  const [allCart, setAllCart] = React.useState([]);
   const store = useSelector((store) => store.cartReducer.cart);
   const dispatch = useDispatch();
+  const navigate = useNavigate()
+  const handleCheckout = () => {
+    navigate("/ship")
 
-  const handleCheckout = () => { };
+  };
 
   // "https://buy.stripe.com/test_28o6qF8JD0lp4XS9AA"
 
-  // const getAllCartItem = () => {
-  //   axios
-  //     .get(`http://localhost:7700/carts/`)
-  //     .then((res) => {
-  //       setAllCart(res.data);
-  //       console.log("allCart", allCart)
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // };
+  const getAllCartItem = async () => {
+    dispatch(getAllCart())
+    if (store) {
+      setAllCart(store)
+    }
+    console.log("AllcartItem", allCart)
+
+  };
   useEffect(() => {
-    // getAllCartItem();
-    console.log("cartstore", store)
+    getAllCartItem();
+    // console.log("cartstore", store)
   }, []);
   return (
     <div>
@@ -47,10 +49,10 @@ const CartPage = () => {
               </div>
               <hr style={{ border: "1px solid #5c5c5f" }} />
               <div>
-                <PaymentCard />
-                <PaymentCard />
-                <PaymentCard />
-                <PaymentCard />
+                {allCart && allCart.map((item) => {
+                  return <PaymentCard {...item} />
+                })}
+
               </div>
             </div>
             <div className="cartpage-right-cont">
@@ -74,17 +76,19 @@ const CartPage = () => {
                   </div>
                   <div>
                     <span style={{ color: "black" }}>Total</span>
-                    <span>$ 220.00</span>
+                    <span>$ 220.00 </span>
                   </div>
                 </div>
                 <div>
                   <div>Or 4 interest-free installments of $55.00 with </div>
                   <div>Klarna or afterpay</div>
                 </div>
-                <a href="#/">
-                  <button onClick={handleCheckout}>PROCEED TO CHECKOUT</button>
-                </a>
 
+
+                <span>
+                  <button onClick={handleCheckout}>PROCEED TO CHECKOUT</button>
+
+                </span>
                 <div className="paypal-btn">
                   <button>
                     <img

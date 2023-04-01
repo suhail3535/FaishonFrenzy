@@ -30,10 +30,11 @@ cartRouter.get("/", async (req, res) => {
 
 cartRouter.post("/add", async (req, res) => {
   const payload = req.body;
-  console.log(payload)
+  console.log("from BE",payload)
   try {
     const cartitem = new CartModel(payload);
     await cartitem.save();
+    console.log("saved")
     res.status(200).send(cartitem);
   } catch (error) {
     res.status(400).send({ message: error.message });
