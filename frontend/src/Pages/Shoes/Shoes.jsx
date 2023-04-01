@@ -7,15 +7,17 @@ import { useLocation, useSearchParams } from "react-router-dom";
 import { getShoes } from "../../Redux/shoes/action";
 import Sorting from "../Sorting/Sorting";
 import ProductBox from "../ProduxtBox/ProductBox";
+import Skeletonbox from "../Skeleton/Skeleton";
 
 const Shoes = () => {
-  const store = useSelector((store) => store.shoesReducer.shoes);
+  const {shoes, isLoading} = useSelector((store) => store.shoesReducer);
   const dispatch = useDispatch();
   const [page, setPage] = useState(1);
   const [price, setPrice] = useState("");
   const location = useLocation();
   const [serchParams] = useSearchParams();
-  const limit = 12;
+  const limit = 12;  
+  const emptybox = [1,2,3,4,5,6,7,8,9];
 
   let obj = {
     params: {
@@ -35,14 +37,14 @@ const Shoes = () => {
   return (
     <div>
       <div className={style.static}>
-        <h3> WEDDING DRESSES </h3>
-        <h3> CASUAL DRESSES </h3>
-        <h3> PARTY DRESSES </h3>
-        <h3> WORK DRESSES </h3>
-        <h3> VACATION DRESSES </h3>
+        <h3> 5-5.5 </h3>
+        <h3> 6-6.5 </h3>
+        <h3> 7-7.5 </h3>
+        <h3> 8-8.5 </h3>
+        <h3> 9-9.5 </h3>
       </div>
       <div className={style.container}>
-        <div>
+        <div className={style.sortbox}>
           <Sorting pageon={"Dresses"} price={price} page={page} limit={limit} />
         </div>
         <div>
@@ -73,12 +75,14 @@ const Shoes = () => {
                   <MdArrowForwardIos size={"30px"} />
                 </button>
               </div>
-            </div>
-          </div>
+            </div> 
+          </div> 
           <div className={style.mydress}>
-            {store.map((e) => (
+            {isLoading ? emptybox.map((e)=>(
+              <Skeletonbox key={e} /> 
+            )) : shoes.map((e) => (
               <ProductBox key={e.id} {...e} />
-            ))}
+            ))}  
           </div>
         </div>
       </div>
