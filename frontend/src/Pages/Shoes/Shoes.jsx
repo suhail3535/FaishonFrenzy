@@ -37,11 +37,11 @@ const Shoes = () => {
   return (
     <div>
       <div className={style.static}>
-        <h3> WEDDING DRESSES </h3>
-        <h3> CASUAL DRESSES </h3>
-        <h3> PARTY DRESSES </h3>
-        <h3> WORK DRESSES </h3>
-        <h3> VACATION DRESSES </h3>
+        <h3> 5-5.5 </h3>
+        <h3> 6-6.5 </h3>
+        <h3> 7-7.5 </h3>
+        <h3> 8-8.5 </h3>
+        <h3> 9-9.5 </h3>
       </div>
       <div className={style.container}>
         <div className={style.sortbox}>
