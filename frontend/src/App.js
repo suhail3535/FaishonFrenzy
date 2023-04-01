@@ -4,6 +4,7 @@ import Footer from "./components/Footer/Footer";
 
 import MainRoutes from "./Pages/MainRoutes/MainRoutes";
 import Mangage from "./Pages/Admin/Manage";
+import BackToTop from "./Pages/HomePage/BacktoTop";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
    
       <MainRoutes />
 
-
+<BackToTop/>
 
 
       

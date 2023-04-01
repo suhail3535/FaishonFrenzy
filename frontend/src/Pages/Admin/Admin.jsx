@@ -78,7 +78,7 @@ const Admin = () => {
             </div>
             <hr style={{ border: "1px doted #5c5c5f" }} />
           </div>
-          {product.map((ele) => {
+          {product.reverse().map((ele) => {
             return (
               <div>
                 <AdminCard key={ele._id} {...ele} />
