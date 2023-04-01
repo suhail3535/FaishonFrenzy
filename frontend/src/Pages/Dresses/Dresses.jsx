@@ -7,15 +7,18 @@ import Sorting from "../Sorting/Sorting";
 import style from "./Dresses.module.css";
 import { MdArrowBackIosNew, MdArrowForwardIos } from "react-icons/md";
 import { useLocation, useSearchParams } from "react-router-dom";
+import Skeletonbox from "../Skeleton/Skeleton";
 
 const Dresses = () => {
-  const store = useSelector((store) => store.dressManager.dress);
+  const {isLoading,dress} = useSelector((store) => store.dressManager);
   const dispatch = useDispatch();
   const [page, setPage] = useState(1);
   const [price, setPrice] = useState("");
   const location = useLocation();
   const [serchParams] = useSearchParams();
-  const [limit, setLimit] = useState(12);
+  const limit = 12; 
+  const emptybox = [1,2,3,4,5,6,7,8,9];
+
 
   let obj = {
     params: {
@@ -42,7 +45,7 @@ const Dresses = () => {
         <h3> VACATION DRESSES </h3>
       </div>
       <div className={style.container}>
-        <div>
+        <div className={style.sortbox}>
           <Sorting pageon={"Dresses"} price={price} page={page} limit={limit} />
         </div>
         <div>
@@ -76,9 +79,11 @@ const Dresses = () => {
             </div>
           </div>
           <div className={style.mydress}>
-            {store.map((e) => (
+            {isLoading ? emptybox.map((e)=>(
+              <Skeletonbox key={e} /> 
+            )) : dress.map((e) => (
               <ProductBox key={e.id} {...e} />
-            ))}
+            ))} 
           </div>
         </div>
       </div>

@@ -1,0 +1,140 @@
+.container {
+  display: flex;
+  /* border: 1px solid black; */
+  padding: 2px;
+  font-family: sans-serif;
+  width: 96%;
+  margin: auto;
+  gap: 20px;
+}
+
+h4 {
+  font-weight: 400;
+}
+
+.container > div:nth-child(1) {
+  flex: 2;
+  /* border: 1px solid rgb(255, 0, 0); */
+  padding: 10px;
+}
+.container > div:nth-child(2) {
+  flex: 8;
+  padding: 4px;
+}
+
+.mydress {
+  /* border: 1px solid rgb(0, 42, 255); */
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.datatop {
+  display: flex;
+  margin: 20px 0;
+  justify-content: space-between;
+}
+
+.datatop > div:nth-child(1) {
+  display: flex;
+  align-items: center;
+}
+
+.sort {
+  font-size: small;
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+}
+
+.datatop h6 {
+  color: rgb(166, 166, 166);
+  font-size: small;
+}
+
+.datatop > div:nth-child(1) {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.datatop > div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.datatop h1 {
+  font-size: x-large;
+}
+
+.pagebox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.static {
+  display: flex;
+  width: 95%;
+  justify-content: space-around;
+  margin: 30px auto 20px auto;
+  text-align: center;
+}
+
+.static h3 {
+  width: 18%;
+  padding: 14px 0;
+  color: white;
+}
+
+.static > h3:nth-child(1) {
+  background-image: url("https://images.ctfassets.net/5de70he6op10/54JigepSuZ2XyUc23wRjO3/b28c3fc1698914dd898dbe7ebcbd88c1/Dress_Toppers_Casual_Live_Text.jpg?w=630&q=80&fm=webp");
+}
+
+.static > h3:nth-child(2) {
+  background-image: url("https://images.ctfassets.net/5de70he6op10/6IfiRiqCR8n6Qtx499wHhk/045c88beb8c368c4ea7fa3c40174b796/Dress_Toppers_Wedding_Live_Text.jpg?w=630&q=80&fm=webp");
+}
+
+.static > h3:nth-child(3) {
+  background-image: url("https://images.ctfassets.net/5de70he6op10/4IFhnhWQZpy0mGYEQeDwyZ/7f5135fc723f65cebb8463a4a2d677b8/Dress_Toppers_Party_Live_Text.jpg?w=630&q=80&fm=webp");
+}
+
+.static > h3:nth-child(4) {
+  background-image: url("https://images.ctfassets.net/5de70he6op10/2ELHKaXeyUADzPjC50Pvwb/f2d5b7b073cbdadb782a81677da28c4f/Dress_Toppers_White_Live_Text.jpg?w=630&q=80&fm=webp");
+}
+
+.static > h3:nth-child(5) {
+  background-image: url("https://images.ctfassets.net/5de70he6op10/3QIqqv5gyl0Fn7LnO3AOw3/89ea89e1fb2fbadf64fa35da2a0ecdd8/Dress_Toppers_Black_Live_Text.jpg?w=630&q=80&fm=webp");
+}
+
+@media screen and (min-width: 100px) and (max-width: 980px) {
+  .container {
+    display: grid;
+  }
+  .mydress {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sortbox {
+    display: none;
+  }
+
+  .static h3 {
+    width: 30%;
+  }
+
+  .static > h3:nth-child(4) {
+    display: none;
+  }
+
+  .static > h3:nth-child(5) {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 420px) { 
+    .static h3 {
+        width: 42%;
+      }
+  .static > h3:nth-child(3) {
+    display: none;
+  }
+}
