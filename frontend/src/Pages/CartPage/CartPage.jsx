@@ -11,6 +11,8 @@ const CartPage = () => {
 
   const handleCheckout = () => { };
 
+  // "https://buy.stripe.com/test_28o6qF8JD0lp4XS9AA"
+
   // const getAllCartItem = () => {
   //   axios
   //     .get(`http://localhost:7700/carts/`)
@@ -79,7 +81,7 @@ const CartPage = () => {
                   <div>Or 4 interest-free installments of $55.00 with </div>
                   <div>Klarna or afterpay</div>
                 </div>
-                <a href="https://buy.stripe.com/test_28o6qF8JD0lp4XS9AA">
+                <a href="#/">
                   <button onClick={handleCheckout}>PROCEED TO CHECKOUT</button>
                 </a>
 
