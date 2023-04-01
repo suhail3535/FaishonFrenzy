@@ -79,7 +79,7 @@ const handleSubmit = async () => {
 
   const signin = useGoogleLogin({
     onSuccess: async credentialResponse => {
-      console.log(credentialResponse);
+      console.log(credentialResponse)
       const decoded = jwt_decode(credentialResponse.credential)
       console.log(decoded)
     }
