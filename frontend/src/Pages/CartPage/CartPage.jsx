@@ -76,7 +76,7 @@ const CartPage = () => {
                   </div>
                   <div>
                     <span style={{ color: "black" }}>Total</span>
-                    <span>$ 220.00</span>
+                    <span>$ 220.00 </span>
                   </div>
                 </div>
                 <div>
