@@ -38,7 +38,7 @@ const handleSubmit = async () => {
   setName("")
   setPassword("")
   setPasswordcon("")
-  navigate("/authpage");
+  setActive(false)
 };
 
   

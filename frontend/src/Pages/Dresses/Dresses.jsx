@@ -82,7 +82,7 @@ const Dresses = () => {
             {isLoading ? emptybox.map((e)=>(
               <Skeletonbox key={e} /> 
             )) : dress.map((e) => (
-              <ProductBox key={e.id} {...e} />
+              <ProductBox key={e.id} category="dress" {...e} />
             ))} 
           </div>
         </div>
