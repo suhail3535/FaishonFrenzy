@@ -339,7 +339,7 @@ export default function Navbar() {
                     <RouterLink to="/authpage">Login</RouterLink>
                   </MenuItem>
                   <MenuItem>
-                    <RouterLink to="/">Admin login</RouterLink>
+                    <RouterLink to="/adminlogin">Admin login</RouterLink>
                   </MenuItem>
                   <MenuItem>LogOut</MenuItem>
                   {/* <MenuItem>SignUP</MenuItem> */}

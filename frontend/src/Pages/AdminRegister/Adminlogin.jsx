@@ -1,117 +1,88 @@
-import React from "react";
-import "./AuthPage.css";
+import React from 'react';
+import './Admin_Login.css';
 import jwt_decode from "jwt-decode";
-import Swal from "sweetalert2";
-// const clientID = 559548995076-sohrprkhs7n88k53f4casrqisqk9otfs.apps.googleusercontent.com
-// const clientSecret = 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
-import { GoogleLogin } from "@react-oauth/google";
-import { useGoogleLogin } from "@react-oauth/google";
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
-import { useToast } from "@chakra-ui/react";
 
-const AuthPage = () => {
-  const [email, setEmail] = React.useState("");
-  const [password, setPassword] = React.useState("");
-  const [name, setName] = React.useState("");
+
+import { GoogleLogin } from '@react-oauth/google';
+import { useGoogleLogin } from '@react-oauth/google';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+
+
+
+export const Adminlogin = () => {
+  const [email, setEmail] = React.useState("")
+  const [password, setPassword] = React.useState("")
+  const [name, setName] = React.useState("")
   const [confirm, setPasswordcon] = React.useState("");
-  const [active, setActive] = React.useState(false);
-  const navigate = useNavigate();
-  const toast = useToast();
-  const Navigate = useNavigate();
+  const [active, setActive] = React.useState(false)
+const navigate=useNavigate()
 
-  const handleSubmit = () => {
-    if (name && email && password) {
-      axios
-        .post(`http://localhost:7700/users/register`, {
-          name: name,
-          email: email,
-          password: password,
-        })
-        .then((res) => {
-          console.log(res);
-          // console.log(res.data.token);
+const handleSubmit = async () => {
+  const payload = {
+    name,
+    email,
+    password,
+  }
+  let res = await fetch("http://localhost:7700/adminsdetails/register", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
+  });
+  let data = await res.json();
+  console.log(data);
+  setEmail("")
+  setName("")
+  setPassword("")
+  setPasswordcon("")
+ setActive(false)
+};
 
-          setTimeout(() => {
-            toast({
-              title: "Register Succesfully",
-              description: "",
-              status: "warning",
-              variant: "left-accent",
-              duration: 1100,
-              isClosable: true,
-              position: "top",
-            });
-
-            // navigate("/login");
-            setActive(false);
-          }, 2000);
-          
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    } else {
-      Swal.fire("Please Fill Details");
-    }
-    setEmail("");
-    setName("");
-    setPassword("");
-    setPasswordcon("");
-    // 
+    const handleSubmitlogin = async () => {
+      const payload = {
+        email,
+        password,
+   
+      };
+      let res = await fetch("http://localhost:7700/adminsdetails/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+      let data = await res.json();
+      console.log(data);
+      localStorage.setItem("token", data.token);
+      navigate("/admin_Dashboard");
   };
+  
 
-  const handleSubmitlogin = () => {
-    if (email && password) {
-      axios
-        .post(`http://localhost:7700/users/login`, {
-          email: email,
-          password: password,
-        })
-        .then((res) => {
-          console.log(res);
-
-         Swal.fire({
-           position: "center",
-           icon: "success",
-           title: "Login Success",
-           showConfirmButton: false,
-           timer: 1500,
-         });
-
-          if (res.data.token) {
-            localStorage.setItem("Token", res.data.token);
-            Navigate("/");
-          } else {
-            Swal.fire("Please Fill Details");
-          }
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    } else {
-       Swal.fire("Please Fill Details");
-    }
-  };
 
   const login = useGoogleLogin({
-    onSuccess: async (tokenResponse) => {
+    onSuccess: async tokenResponse => {
       const data = axios.get("https://www.googleapis.com/oauth2/v3/userinfo", {
         headers: {
-          Autorization: `Bearer ${tokenResponse.access_token}`,
-        },
-      });
-      console.log(data);
+          "Autorization": `Bearer ${tokenResponse.access_token}`
+        }
+      })
+      console.log(data)
     },
   });
 
+
   const signin = useGoogleLogin({
-    onSuccess: async (credentialResponse) => {
+    onSuccess: async credentialResponse => {
       console.log(credentialResponse);
-      const decoded = jwt_decode(credentialResponse.credential);
-      console.log(decoded);
-    },
-  });
+      const decoded = jwt_decode(credentialResponse.credential)
+      console.log(decoded)
+    }
+  })
+
+
+
 
   return (
     <div>
@@ -324,6 +295,6 @@ const AuthPage = () => {
       </div>
     </div>
   );
-};
+}
 
-export default AuthPage;
+export default Adminlogin

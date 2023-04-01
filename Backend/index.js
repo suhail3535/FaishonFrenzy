@@ -10,7 +10,8 @@ const{shippingRouter} =require("./Routes/shippingRoute")
 const cors=require("cors");
 const { shoesRouter } = require("./Routes/shoes.routes");
 const { clotingRouter } = require("./Routes/cloting.routes");
-// const { auth } = require("./middlewere/auth.middleware"); 
+const { admin_Details_Router } = require("./Routes/admins_details.route");
+const { auth } = require("./middlewere/auth.middleware"); 
 const app = express();
 app.use(express.json());
 app.use(cors())
@@ -19,7 +20,7 @@ app.get("/", (req, res) => {
 });
 
 
-app.use("/users", userRouter);
+app.use("/users", userRouter);  //this route is for users login and details.
 app.use("/pages", pageRouter);
 app.use("/carts", cartRouter);
 app.use("/address",shippingRouter);
@@ -27,10 +28,13 @@ app.use("/address",shippingRouter);
 app.use("/dress", dressRouter);
 app.use("/shoes", shoesRouter); 
 app.use("/cloths", clotingRouter); 
-
-
-// app.use(auth())
 app.use("/admin", adminRouter);
+  //this route is for admin site.
+  //  app.use(auth)
+app.use("/adminsdetails", admin_Details_Router); //this route is for admin login and details.
+
+
+
 app.listen(process.env.port, async () => {
   try {
     await connection;

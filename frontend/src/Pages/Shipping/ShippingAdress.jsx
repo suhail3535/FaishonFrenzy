@@ -285,6 +285,7 @@ const ShippingAdresss = () => {
                   <FormLabel>Mobile*</FormLabel>
                   <Input
                     name="phone"
+                    type="number"
                     value={data.phone}
                     onChange={handleChange}
                     style={{
