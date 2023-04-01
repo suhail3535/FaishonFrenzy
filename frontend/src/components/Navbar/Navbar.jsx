@@ -362,13 +362,27 @@ export default function Navbar() {
             display={["block", "block", "block", "none", "none"]}
           >
             <Box w={"100%"} height={"auto"}>
-              <Collapseble Filter={LoginSignUp} filterBy={"Login/SignUp"} />
+
+            <Link href="/authpage">
+            <Collapseble Filter={LoginSignUp} filterBy={"Login/SignUp"} />
+            </Link>
+              
               <Divider borderColor={"gray"} />
 
+              <Link href="/admin">
               <Collapseble Filter={FilterPrice} filterBy={"New!"} />
+              </Link>
+             
               <Collapseble Filter={FilterSizeType} filterBy={"Top-Rated"} />
+
+              <Link href="dress">
               <Collapseble Filter={FilterBySizeNo} filterBy={"Dresses"} />
-              <Collapseble Filter={FilterByBrand} filterBy={"Shoes"} />
+              </Link>
+
+              <Link href='shoes'>  <Collapseble Filter={FilterByBrand} filterBy={"Shoes"} />
+              </Link>
+             
+            
               <Collapseble Filter={FilteByColor} filterBy={"Accessories"} />
             </Box>
           </Box>
