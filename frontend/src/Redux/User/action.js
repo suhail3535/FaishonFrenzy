@@ -15,7 +15,7 @@ export const getProduct = () => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_DATA_LOADING });
     let res = await axios
-      .get("http://localhost:7700/admin")
+      .get("http://localhost:7700/user")
       .then((res) => {
         dispatch({ type: PRODUCT_DATA_SUCCESS, payload: res.data });
         return res.data;
@@ -26,20 +26,8 @@ export const getProduct = () => async (dispatch) => {
   }
 };
 
-export const getProduct_user_details = () => async (dispatch) => {
-  try {
-    dispatch({ type: PRODUCT_DATA_LOADING });
-    let res = await axios.get("http://localhost:7700/user").then((res) => {
-      dispatch({ type: PRODUCT_DATA_SUCCESS, payload: res.data });
-       
-      return res.data;
-  
-    });
-    console.log(res);
-  } catch (err) {
-    dispatch({ type: PRODUCT_DATA_ERROR });
-  }
-};
+
+
 
 export const getpostRequest = () => {
   return { type: POST_REQUEST };
@@ -55,10 +43,12 @@ export const getpostSuccess = (payload) => {
 export const deldatasuccess = () => {
   return { type: DELETE_SUCCESS };
 };
+
+
 export const postRequest = (payload) => (dispatch) => {
   dispatch(getpostRequest());
   axios
-    .post("http://localhost:7700/admin/add", payload)
+    .post("http://localhost:7700/user/register", payload)
     .then((res) => {
       console.log(res.data);
       dispatch(getpostSuccess(res.data));

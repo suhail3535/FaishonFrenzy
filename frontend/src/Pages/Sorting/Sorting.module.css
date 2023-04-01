@@ -2,13 +2,12 @@
     display: grid; 
     gap: 14px; 
     font-weight: 100; 
- 
-    padding-top: 25px;
 }
 
 .head *{
     font-weight: 100; 
-    color: rgb(41, 42, 43); 
+    color: rgb(41, 42, 43);  
+    text-align: left;  
 }
 
 .browse{
@@ -36,12 +35,16 @@
 
 .sortbox{
     display: grid; 
-    gap: 5px;  
-    margin: 0px 0px;
-    /* border: 1px solid red; */
-    /* padding-top: 20px; */
+    gap: 10px;  
+    margin: 10px 0;
 } 
 
+
+.star{
+    color: gold; 
+    font-size: 20px; 
+    margin: 0 1px;
+}
 
 
 

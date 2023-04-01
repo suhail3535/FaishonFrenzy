@@ -11,8 +11,7 @@ import {
     Link,
 } from "@chakra-ui/react";
 import { useContext } from "react";
-// import { CartContext } from "../Contexts/CartContext";
-// import SwiperImage from "../../components/Navbar/Swiper";
+
 import styles from "./HomePage.module.css";
 import { Navigate } from "react-router-dom";
 import { useEffect } from "react";

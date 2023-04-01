@@ -1,11 +1,11 @@
 const express = require("express");
 const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
-const { DressModel } = require("../models/dress.models");
+const jwt = require("jsonwebtoken"); 
+const { ShoesModel } = require("../models/shoes.models");
 
-const dressRouter = express.Router();
+const shoesRouter = express.Router();
 
-dressRouter.get("/", async (req, res) => {
+shoesRouter.get("/", async (req, res) => {
   const { rating, sort, limit, page } = req.query;
 
   const skip = (page - 1) * limit;
@@ -29,7 +29,7 @@ dressRouter.get("/", async (req, res) => {
     sortprice = { price: -1 };
   }
   try {
-    const dressitem = await DressModel.find(obj)
+    const dressitem = await ShoesModel.find(obj)
       .skip(skip)
       .limit(limit)
       .sort(sortprice);
@@ -39,7 +39,7 @@ dressRouter.get("/", async (req, res) => {
   }
 });
 
-dressRouter.get("/:id", async (req, res) => {
+shoesRouter.get("/:id", async (req, res) => {
   const { id } = req.params;
 
   console.log(id);
@@ -47,7 +47,7 @@ dressRouter.get("/:id", async (req, res) => {
   // console.log(data);
   // let obj;
   try {
-    const dressDetail = await DressModel.find({ _id: id });
+    const dressDetail = await ShoesModel.find({ _id: id });
     if (dressDetail) {
       res.status(200).send(dressDetail);
     } else {
@@ -59,10 +59,10 @@ dressRouter.get("/:id", async (req, res) => {
   }
 });
 
-dressRouter.post("/add", async (req, res) => {
+shoesRouter.post("/add", async (req, res) => {
   const payload = req.body;
   try {
-    const dressitem = new DressModel(payload);
+    const dressitem = new ShoesModel(payload);
     await dressitem.save();
     res.status(200).send({ message: "item has been Added" });
   } catch (error) {
@@ -71,5 +71,5 @@ dressRouter.post("/add", async (req, res) => {
 });
 
 module.exports = {
-  dressRouter,
+  shoesRouter,
 };
