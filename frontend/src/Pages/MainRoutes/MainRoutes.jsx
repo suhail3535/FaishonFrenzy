@@ -29,10 +29,10 @@ const MainRoutes = () => {
           <Route path="/admin_Dashboard" element={<Dashboard/>} />
           <Route path="/manage" element={<Manage />} />
          <Route path="/top" element={<top/>} />
-          <Route path="/dress/:id" element={<SingleProduct />} />
+          {/* <Route path="/dress/:id" element={<SingleProduct />} /> */}
 
           <Route path="/shoes" element={<Shoes/>} /> 
-        <Route path="/shoes/:id" element={<SingleProduct/>} /> 
+        {/* <Route path="/shoes/:id" element={<SingleProduct/>} />  */}
         </Routes>
       </div>
     );
