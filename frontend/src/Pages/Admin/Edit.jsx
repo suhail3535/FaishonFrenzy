@@ -22,7 +22,7 @@ const Edit = () => {
     const newData = {
       price: price,
       title: title,
-      image: image,
+      img: image,
       rating: rating,
     };
     dispatch(editProduct(id, newData));
@@ -45,14 +45,14 @@ const Edit = () => {
       }
     });
 
-    navigate("/admin");
+    navigate("/manage");
   };
   useEffect(() => {
     const productData = product.find((item) => item._id === id);
     console.log(productData);
     productData && setPrice(productData.price);
     productData && setTitle(productData.title);
-    productData && setImage(productData.image);
+    productData && setImage(productData.img);
     productData && setRating(productData.rating);
   }, []);
 

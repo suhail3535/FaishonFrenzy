@@ -2,7 +2,8 @@ import { Checkbox, FormControl, FormLabel, HStack, Input, PinInput, PinInputFiel
 import React from 'react'
 
 import Admin from './Admin';
-import CostumersloginDetails from './CostumersloginDetails';
+import CostumersloginDetails from './AllProduct';
+import AllProduct from './AllProduct';
 
 const Manage = () => {
   return (
@@ -28,7 +29,8 @@ const Manage = () => {
                 width: "25%",
                 fontWeight: "bold",
                 border: "0px solid green",
-                boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+                boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
+                // box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
               }}
               _selected={{
                 color: "white",
@@ -37,7 +39,7 @@ const Manage = () => {
                 fontWeight: "bold",
               }}
             >
-              Costumers Credentials
+              ALL Products Details
             </Tab>
             <Tab
               style={{
@@ -47,7 +49,8 @@ const Manage = () => {
                 border: "0px solid red",
                 width: "25%",
                 fontWeight: "bold",
-                boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+                // boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+                boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
               }}
               _selected={{
                 bg: "#17274a",
@@ -65,7 +68,7 @@ const Manage = () => {
                 width: "25%",
                 fontWeight: "bold",
                 border: "0px solid blue",
-                boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+                boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px"
                 // backgroundColor: "rgb(237,242,247)",
               }}
               _selected={{
@@ -87,7 +90,7 @@ const Manage = () => {
                 margin: "20px",
               }}
             >
-              <CostumersloginDetails />
+              <AllProduct />
             </TabPanel>
             <TabPanel
               style={{

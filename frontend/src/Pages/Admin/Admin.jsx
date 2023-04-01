@@ -11,18 +11,16 @@ import { getProduct, postRequest } from "../../Redux/Admin/action";
 import { store } from "../../Redux/Store";
 import PaymentCard from "../../components/PaymentCard/PaymentCard";
 const initialState = {
-  image: "",
+  img: "",
   title: "",
   price: "",
   rating: "",
 };
 const Admin = () => {
   const [data, setdata] = useState(initialState);
-  console.log(store);
+
   const product = useSelector((store) => store.adminReducer.product);
-  // const user = useSelector((store) => store.adminReducer.user);
-  // // console.log(user)
-  // console.log(product)
+
       const x = product.length;
       console.log("line27", x);
   const dispatch = useDispatch();
@@ -41,7 +39,7 @@ const Admin = () => {
     setdata(initialState);
      
     Swal.fire("", "Product added!", "success");
- 
+ dispatch(getProduct());
   };
   // console.log(data)
   dispatch(getProduct());
@@ -95,8 +93,8 @@ const Admin = () => {
             <Stack spacing={4}>
               <Input
                 type="url"
-                name="image"
-                value={data.image}
+                name="img"
+                value={data.img}
                 onChange={handleChange}
                 placeholder="image"
                 size="md"
