@@ -18,12 +18,12 @@ import {
   Center,
   Divider,
 } from '@chakra-ui/react';
-import { MoonIcon, SunIcon,ChevronDownIcon } from '@chakra-ui/icons';
+import { MoonIcon, SunIcon, ChevronDownIcon } from '@chakra-ui/icons';
 import {
-    MenuItemOption,
-    MenuGroup,
-    MenuOptionGroup,
-  } from '@chakra-ui/react'
+  MenuItemOption,
+  MenuGroup,
+  MenuOptionGroup,
+} from '@chakra-ui/react'
 import Prop from './Onhover';
 import OnhoverProp from './Onhover';
 const NavLink = ({ children }) => (
@@ -40,10 +40,10 @@ const NavLink = ({ children }) => (
   </Link>
 );
 
-const Toprated = ["Shop All Top-Rated","Top-Rated Dresses","Top-Rated Clothing","Top-Rated Shoes","Top-Rated Accessories","Top-Rated Wedding","Top-Rated Home & Furniture","Top-Rated Beauty",,"Mini & Tunic Dresses","Cocktail & Party Dresses","Petite Dresses","Plus Dresses","Wedding Dresses","Wedding Guest Dresses","Bold & Bright Dresses","Shirt Dresses","Trending: Tulle & Sheer","Little Black Dresses","Little White Dresses"];
-const Dresses = ["Shop All Dresses","New!","Top-Rated Dresses","Bridesmaid Dresses","Formal Dresses","Jumpsuits","Lounge & Casual Dresses","Maxi Dresses","Midi Dresses","Mini & Tunic Dresses","Cocktail & Party Dresses","Petite Dresses","Plus Dresses","Wedding Dresses","Wedding Guest Dresses","Bold & Bright Dresses","Shirt Dresses","Trending: Tulle & Sheer","Little Black Dresses","Little White Dresses"];
-const Shoes = ["Shop All Shoes","New!","Top-Rated","Boots & Booties","Cold Weather Boots","Flats","Heels & Wedges","Mules & Clogs","Sandals","Slippers","Sneakers","Socks & Tights","It's Here! The Reformation Shop","Rainbow Brights : Shoes &","Accessories","Thong Sandals","Embellished Shoes","Party Shoes","Platform Shoes",""];
-const Accessories = ["Shop All Accessories","New!","Top-Rated","Bags & Small Accessories","Belts","Fashion Gloves","Hair Accessories","Hats","Jewelry","Scarves","Socks & Tights","Sunglasses & Reading Glasses","Travel & Tech","Necklaces","Earrings","Bracelets","Rings","Hoop Shop","Fine & Demi-Fine Jewelry","Shop All Jewelry"];
+const Toprated = ["Shop All Top-Rated", "Top-Rated Dresses", "Top-Rated Clothing", "Top-Rated Shoes", "Top-Rated Accessories", "Top-Rated Wedding", "Top-Rated Home & Furniture", "Top-Rated Beauty", , "Mini & Tunic Dresses", "Cocktail & Party Dresses", "Petite Dresses", "Plus Dresses", "Wedding Dresses", "Wedding Guest Dresses", "Bold & Bright Dresses", "Shirt Dresses", "Trending: Tulle & Sheer", "Little Black Dresses", "Little White Dresses"];
+const Dresses = ["Shop All Dresses", "New!", "Top-Rated Dresses", "Bridesmaid Dresses", "Formal Dresses", "Jumpsuits", "Lounge & Casual Dresses", "Maxi Dresses", "Midi Dresses", "Mini & Tunic Dresses", "Cocktail & Party Dresses", "Petite Dresses", "Plus Dresses", "Wedding Dresses", "Wedding Guest Dresses", "Bold & Bright Dresses", "Shirt Dresses", "Trending: Tulle & Sheer", "Little Black Dresses", "Little White Dresses"];
+const Shoes = ["Shop All Shoes", "New!", "Top-Rated", "Boots & Booties", "Cold Weather Boots", "Flats", "Heels & Wedges", "Mules & Clogs", "Sandals", "Slippers", "Sneakers", "Socks & Tights", "It's Here! The Reformation Shop", "Rainbow Brights : Shoes &", "Accessories", "Thong Sandals", "Embellished Shoes", "Party Shoes", "Platform Shoes", ""];
+const Accessories = ["Shop All Accessories", "New!", "Top-Rated", "Bags & Small Accessories", "Belts", "Fashion Gloves", "Hair Accessories", "Hats", "Jewelry", "Scarves", "Socks & Tights", "Sunglasses & Reading Glasses", "Travel & Tech", "Necklaces", "Earrings", "Bracelets", "Rings", "Hoop Shop", "Fine & Demi-Fine Jewelry", "Shop All Jewelry"];
 
 
 export default function BelowNavbar() {
@@ -62,7 +62,9 @@ export default function BelowNavbar() {
             <Link href="/dress">
               <OnhoverProp NewArray={Dresses} title={"Dresses"} />
             </Link>
-            <OnhoverProp NewArray={Toprated} title={"Clothing"} />
+            <Link href="/cloths">
+              <OnhoverProp NewArray={Toprated} title={"Clothing"} />
+            </Link>
             <Link href="/shoes">
               <OnhoverProp NewArray={Shoes} title={"Shoes"} />{" "}
             </Link>

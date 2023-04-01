@@ -12,6 +12,7 @@ import ShippingDetails from '../Shipping/ShippingDetails'
 import Dashboard from '../Admin/Dashboard'
 import Manage from '../Admin/Manage'
 import Shoes from '../Shoes/Shoes'
+import Clothing from '../Clothing/Clothing'
 
 const MainRoutes = () => {
   return (
@@ -22,17 +23,21 @@ const MainRoutes = () => {
         <Route path="/admin" element={<Admin />} />
         <Route path="/edit/:id" element={<Edit />} />
         <Route path="/authpage" element={<AuthPage />} />
-        <Route path="/dress" element={<Dresses />} />
         <Route path="/ship" element={<ShippingAdresss />} />
         <Route path="/:name/:id" element={<SingleProduct />} />
         <Route path="/shipping_address" element={<ShippingDetails />} />
         <Route path="/admin_Dashboard" element={<Dashboard />} />
         <Route path="/manage" element={<Manage />} />
         <Route path="/top" element={<top />} />
+        <Route path="/dress" element={<Dresses />} />
         <Route path="/dress/:id" element={<SingleProduct />} />
 
-        <Route path="/shoes" element={<Shoes />} />
+        <Route path="/shoes" element={<Shoes />} /> 
         <Route path="/shoes/:id" element={<SingleProduct />} />
+
+        <Route path="/cloths" element={<Clothing />} />
+        <Route path="/cloths/:id" element={<SingleProduct />} />
+
       </Routes>
     </div>
   );

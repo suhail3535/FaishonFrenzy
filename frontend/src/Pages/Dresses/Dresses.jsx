@@ -84,7 +84,19 @@ const Dresses = () => {
             )) : dress.map((e) => (
               <ProductBox key={e.id} {...e} />
             ))} 
-          </div>
+          </div> 
+          <div className={style.pageboxbottom}>
+                <button
+                  disabled={page <= 1}
+                  onClick={() => setPage((prev) => prev - 1)}
+                >
+                  <MdArrowBackIosNew size={"30px"} />
+                </button>
+                <h2>{page}</h2>
+                <button onClick={() => setPage((prev) => prev + 1)}>
+                  <MdArrowForwardIos size={"30px"} />
+                </button>
+              </div>
         </div>
       </div>
     </div>

@@ -50,7 +50,7 @@ const Clothing = () => {
         <div>
           <div className={style.datatop}>
             <div>
-              <h1> Dresses </h1>
+              <h1> Cloting </h1>
               <h6>28 products</h6>
             </div>
             <div>
