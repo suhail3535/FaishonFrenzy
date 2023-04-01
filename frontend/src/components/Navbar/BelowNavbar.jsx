@@ -59,11 +59,11 @@ export default function BelowNavbar() {
             </Link>
 
             <OnhoverProp NewArray={Toprated} title={"Top-Rated"} />
-            <Link href="dress">
+            <Link href="/dress">
               <OnhoverProp NewArray={Dresses} title={"Dresses"} />
             </Link>
             <OnhoverProp NewArray={Toprated} title={"Clothing"} />
-            <Link href='shoes'>
+            <Link href="/shoes">
               <OnhoverProp NewArray={Shoes} title={"Shoes"} />{" "}
             </Link>
             <OnhoverProp NewArray={Accessories} title={"Accessories"} />

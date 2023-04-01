@@ -82,7 +82,7 @@ const AuthPage = () => {
 
                 <div className="login-signup">
                   <span onClick={() => setActive(!active)} className="text">Not a member?
-                    <a href="/#" className="text signup-link">Signup Now</a>
+                    <a href="#/" className="text signup-link">Signup Now</a>
                   </span>
                 </div>
               </div>
