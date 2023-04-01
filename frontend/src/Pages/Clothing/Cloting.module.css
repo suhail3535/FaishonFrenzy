@@ -1,0 +1,141 @@
+.container {
+    display: flex;
+    /* border: 1px solid black; */
+    padding: 2px;
+    font-family: sans-serif;
+    width: 96%;
+    margin: auto;
+    gap: 20px;
+  }
+  
+  h4 {
+    font-weight: 400;
+  }
+  
+  .container > div:nth-child(1) {
+    flex: 2;
+    /* border: 1px solid rgb(255, 0, 0); */
+    padding: 10px;
+  }
+  .container > div:nth-child(2) {
+    flex: 8;
+    padding: 4px;
+  }
+  
+  .mydress {
+    /* border: 1px solid rgb(0, 42, 255); */
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .datatop {
+    display: flex;
+    margin: 20px 0;
+    justify-content: space-between;
+  }
+  
+  .datatop > div:nth-child(1) {
+    display: flex;
+    align-items: center;
+  }
+  
+  .sort {
+    font-size: small;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+  }
+  
+  .datatop h6 {
+    color: rgb(166, 166, 166);
+    font-size: small;
+  }
+  
+  .datatop > div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .datatop > div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .datatop h1 {
+    font-size: x-large;
+  }
+  
+  .pagebox {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .static {
+    display: flex;
+    width: 95%;
+    justify-content: space-around;
+    margin: 30px auto 20px auto;
+    text-align: center;
+  }
+  
+  .static h3 {
+    width: 18%;
+    padding: 14px 0;
+    color: white;
+  }
+  
+  .static > h3:nth-child(1) {
+    background-image: url("https://images.ctfassets.net/5de70he6op10/2fzUgZMXWUPrC84rgBxaSY/9193a3ee06dc32835f6707ca130b9999/5_Shoe_Topper.jpg?w=630&q=80&fm=webp");
+  }
+  
+  .static > h3:nth-child(2) {
+    background-image: url("https://images.ctfassets.net/5de70he6op10/2qYKuPxJVyKb7n60A4xu6T/25a590f8599449559c65b0daec39eb8b/6_Shoe_Topper.jpg?w=630&q=80&fm=webp");
+  }
+  
+  .static > h3:nth-child(3) {
+    background-image: url("https://images.ctfassets.net/5de70he6op10/4mYgaZvDjiMO0ogglhyGvJ/46fdad07bb955e7ecbb14acc7e045581/7_Shoe_Topper.jpg?w=630&q=80&fm=webp");
+  }
+  
+  .static > h3:nth-child(4) {
+    background-image: url("https://images.ctfassets.net/5de70he6op10/3iNdIE0LZbZPDYuR6nD8Ez/03c286802421cd10b65eed004a59c0a3/8_Shoe_Topper.jpg?w=630&q=80&fm=webp");
+  }
+  
+  .static > h3:nth-child(5) {
+    background-image: url("https://images.ctfassets.net/5de70he6op10/61AjzQ71WgOAQfYooxFzaQ/59d06b09fb9334e99c0db1f02f5fb16c/10-11_Shoe_Topper.jpg?w=630&q=80&fm=webp");
+  }
+  
+  @media screen and (min-width: 100px) and (max-width: 980px) {
+    .container {
+      display: grid;
+    }
+    .mydress {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .sortbox {
+      display: none;
+    }
+  
+    .static h3 {
+      width: 30%;
+    }
+  
+    .static > h3:nth-child(4) {
+      display: none;
+    }
+  
+    .static > h3:nth-child(5) {
+      display: none;
+    }
+  }
+  
+  @media screen and (min-width: 100px) and (max-width: 420px) { 
+      .static h3 {
+          width: 42%;
+        }
+    .static > h3:nth-child(3) {
+      display: none;
+    }
+  }
+  
