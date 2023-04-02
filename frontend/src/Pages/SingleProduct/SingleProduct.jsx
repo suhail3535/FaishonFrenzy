@@ -19,11 +19,11 @@ import { Spinner } from "@chakra-ui/react";
 
 export const SingleProduct = () => {
   const [prodDetail, setProdDetail] = React.useState({});
-   const [isButLoading, setIsButLoading] = useState(false);
-  const [btnDisabled,setDisabled] = React.useState(true)
+  const [isButLoading, setIsButLoading] = useState(false);
+  const [btnDisabled, setDisabled] = React.useState(true)
   const store = useSelector((store) => store.cartReducer.cart);
   const dispatch = useDispatch();
-  const navigate=useNavigate()
+  const navigate = useNavigate()
 
   const param = useParams();
   console.log("prod Id", param);
@@ -39,22 +39,22 @@ export const SingleProduct = () => {
 
   const handleCart = (data) => {
     console.log("single", data)
-    console.log("proddetail",prodDetail)
+    console.log("proddetail", prodDetail)
     console.log("store", store)
     const duplicate = store.filter((el) => el.title === data.name)
-    console.log("duplicate",duplicate)
+    console.log("duplicate", duplicate)
     if (duplicate.length > 0) {
-       setTimeout(() => {
-          Swal.fire("Product Added!", "Please Wait!", "success");
-       
-        }, 1000);
-   
-          setIsButLoading(true);
-          setTimeout(() => {
-            setIsButLoading(false);
-            navigate("/cart");
-          }, 3000);
-  
+      setTimeout(() => {
+        Swal.fire("Product Added!", "Please Wait!", "success");
+
+      }, 1000);
+
+      setIsButLoading(true);
+      setTimeout(() => {
+        setIsButLoading(false);
+        navigate("/cart");
+      }, 3000);
+
 
 
 
@@ -74,7 +74,7 @@ export const SingleProduct = () => {
 
 
 
-  
+
 
     // console.log("store", store)
   };
@@ -248,10 +248,10 @@ export const SingleProduct = () => {
               </div>
             </div>
           </div>
-          <div className="singleProd-mid">
+          <div className="singleProd-mid" id="dis-none" >
+            <div className="singleProd-mid-heading">Recommended for you</div>
+            <hr />
             <div className="singleProd-mid-cont">
-              <div className="singleProd-mid-heading">Recommended for you</div>
-              <hr />
               <Swiper />
             </div>
           </div>

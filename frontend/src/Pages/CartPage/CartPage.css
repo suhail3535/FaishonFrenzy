@@ -1,17 +1,20 @@
 .cartpage-lr {
-  display: flex;
+  display: flex;     
 }
-.cartpage-container{
-    width: 90%;
-    margin: auto;
+.cartpage-container { 
+  width: 90%;
+  margin: 20px auto; 
 }
+
 .cartpage-left-cont {
-  flex: 2;
+  flex: 2; 
+  padding: 20px ;  
   /* background-color: aqua; */
   /* border: 1px solid black; */
 }
 .cartpage-right-cont {
   flex: 1;
+  padding: 10px;  
   /* background-color: aquamarine; */
   /* border: 1px solid black; */
 }
@@ -52,13 +55,11 @@
   justify-content: space-between;
   align-items: center;
 }
-.cartpage-left-heading > h3{
-    color: #26262C;
-    font-size: 22px;
-    line-height: 28.6px;
-    font-weight: 400;
-
-
+.cartpage-left-heading > h3 {
+  color: #26262c;
+  font-size: 22px;
+  line-height: 28.6px;
+  font-weight: 400;
 }
 .cartpage-right-container {
   border: 1px solid grey;
@@ -74,7 +75,7 @@
   margin: auto;
   padding: 20px;
 }
-.cartpage-right-container> span > button {
+.cartpage-right-container > span > button {
   padding: 16px 60px;
   margin: auto;
   text-align: center;
@@ -82,8 +83,8 @@
   font-size: 16px;
   width: 100%;
   justify-content: center;
- transition: all 0.2s ease-in-out;
-    cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
   background-color: #3b475b;
   color: white;
   margin-bottom: 20px;
@@ -92,11 +93,10 @@
   /* border: 1px solid black; */
 }
 
-.cartpage-right-container> span > button:hover {
-    background-color: white;
-    color: #17274a;
-    border: 1px solid #17274a;
-    
+.cartpage-right-container > span > button:hover {
+  background-color: white;
+  color: #17274a;
+  border: 1px solid #17274a;
 }
 .cartpage-right-top > div {
   color: #5c5c5f;
@@ -172,3 +172,42 @@
   margin: auto;
 }
 
+@media screen and (max-width: 920px) {
+  .cartpage-lr { 
+    display: grid;   
+  }
+  /* .proced-btn{
+    position: fixed;  
+    bottom: -20px; 
+    left: 0;
+    right: 0;
+  } */ 
+
+  .cartpage-left-cont{
+    width: 96%;  
+    margin: auto; 
+  }
+
+  .cartpage-right-cont{
+    width: 96%; 
+    margin: auto; 
+  }
+
+.cartpage-right-heading {
+  width: 96%;
+}
+
+.cartpage-right-container{
+  margin: auto; 
+  width: 100%; 
+} 
+
+.proced-btn{
+  position: fixed; 
+  bottom: -20px; 
+  right: 0; 
+  left: 0; 
+}
+
+
+}
