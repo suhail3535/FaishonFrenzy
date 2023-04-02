@@ -14,8 +14,10 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 
 
+
 export const SingleProduct = () => {
   const [prodDetail, setProdDetail] = React.useState({});
+  const [btnDisabled,setDisabled] = React.useState(true)
   const store = useSelector((store) => store.cartReducer.cart);
   const dispatch = useDispatch();
 
@@ -23,21 +25,41 @@ export const SingleProduct = () => {
   console.log("prod Id", param);
 
 
+  // const cartValidate = (newCartProd) => {
+
+  //   return duplicate
+
+  // }
 
 
- 
 
   const handleCart = (data) => {
     console.log("single", data)
-    const { img, name, brand, price, rating } = data
-    const payload = {
-      title: name,
-      image: img,
-      price: price,
-      name:brand ,
-      rating: rating,
+    console.log("proddetail",prodDetail)
+    console.log("store", store)
+    const duplicate = store.filter((el) => el.title === data.name)
+    console.log("duplicate",duplicate)
+    if (duplicate.length > 0) {
+      alert("Product already present")
+
+    } else {
+      const { img, name, brand, price, rating } = data
+      const payload = {
+        title: name,
+        image: img,
+        price: price,
+        name: brand,
+        rating: rating,
+      }
+      dispatch(addToCart(payload));
+
     }
-    dispatch(addToCart(payload));
+
+
+
+
+  
+
     // console.log("store", store)
   };
 
@@ -63,7 +85,7 @@ export const SingleProduct = () => {
           <div className="singleProd-cont">
             <div className="singleProd-left-main">
 
-              
+
               <div className="singleProd-left">
                 <div className="singleProd-imgDiv">
                   <img

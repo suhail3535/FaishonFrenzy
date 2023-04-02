@@ -16,7 +16,7 @@ export const addToCart = (payload) => async (dispatch) => {
     );
     dispatch({ type: CART_DATA_POST, payload: res.data });
 
-    console.log("fromRedux",res.data);
+    // console.log("fromRedux",res.data);
   } catch (err) {
     dispatch({ type: CART_DATA_ERROR });
   }
