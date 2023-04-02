@@ -3,7 +3,7 @@ import { POST_FAILURE } from "../ShippingReducer/actiontype";
 import {
   DELETE_SUCCESS,
   GET_ADDRESS_SUCCESS,
-  PATCH_SUCCESS,
+
   POST_ADDRESS_SUCCESS,
   POST_REQUEST,
 } from "./actiontype";
@@ -29,7 +29,7 @@ export const deldatasuccess = () => {
 export const postRequestAddress = (payload) => (dispatch) => {
   dispatch(getpostRequest());
   axios
-    .post("http://localhost:7700/address/add", payload)
+    .post("https://sleepy-pear-toga.cyclic.app/address/add", payload)
     .then((res) => {
       console.log("post", res.data);
       dispatch(getpostSuccessAddress(res.data));
@@ -42,7 +42,7 @@ export const postRequestAddress = (payload) => (dispatch) => {
 export const getRequestAddress = () => (dispatch) => {
   dispatch(getpostRequest());
   axios
-    .get("http://localhost:7700/address")
+    .get("https://sleepy-pear-toga.cyclic.app/address")
     .then((res) => {
       //   console.log("get",res.data);
       dispatch(getdataSuccessAddress(res.data));
@@ -55,7 +55,7 @@ export const getRequestAddress = () => (dispatch) => {
 export const deletedataAdd = (_id) => (dispatch) => {
   dispatch(getpostRequest());
   return axios
-    .delete(`http://localhost:7700/address/delete/${_id}`)
+    .delete(`https://sleepy-pear-toga.cyclic.app/address/delete/${_id}`)
     .then((res) => {
       console.log(res.data);
       dispatch(deldatasuccess());
