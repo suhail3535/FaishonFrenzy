@@ -1,3 +1,5 @@
+
+
 .singlePage-wrapper {
   height: 100vh;
   /* border: 1px solid blue; */
@@ -116,6 +118,7 @@
   margin: auto;
   text-align: center;
   font-weight: 500;
+
   font-size: 16px;
   background-color: rgb(23,39,74);
   color: white;

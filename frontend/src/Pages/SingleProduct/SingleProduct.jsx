@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./SingleProduct.css";
+
 import {
   Accordion,
   AccordionItem,
@@ -15,19 +16,16 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import { Spinner } from "@chakra-ui/react";
 
-
-
 export const SingleProduct = () => {
   const [prodDetail, setProdDetail] = React.useState({});
-   const [isButLoading, setIsButLoading] = useState(false);
-  const [btnDisabled,setDisabled] = React.useState(true)
+  const [isButLoading, setIsButLoading] = useState(false);
+  const [btnDisabled, setDisabled] = React.useState(true);
   const store = useSelector((store) => store.cartReducer.cart);
   const dispatch = useDispatch();
-  const navigate=useNavigate()
+  const navigate = useNavigate();
 
   const param = useParams();
   console.log("prod Id", param);
-
 
   // const cartValidate = (newCartProd) => {
 
@@ -35,46 +33,33 @@ export const SingleProduct = () => {
 
   // }
 
-
-
   const handleCart = (data) => {
-    console.log("single", data)
-    console.log("proddetail",prodDetail)
-    console.log("store", store)
-    const duplicate = store.filter((el) => el.title === data.name)
-    console.log("duplicate",duplicate)
+    console.log("single", data);
+    console.log("proddetail", prodDetail);
+    console.log("store", store);
+    const duplicate = store.filter((el) => el.title === data.name);
+    console.log("duplicate", duplicate);
     if (duplicate.length > 0) {
-       setTimeout(() => {
-          Swal.fire("Product Added!", "Please Wait!", "success");
-       
-        }, 1000);
-   
-          setIsButLoading(true);
-          setTimeout(() => {
-            setIsButLoading(false);
-            navigate("/cart");
-          }, 3000);
-  
+      setTimeout(() => {
+        Swal.fire("Product Added!", "Please Wait!", "success");
+      }, 1000);
 
-
-
+      setIsButLoading(true);
+      setTimeout(() => {
+        setIsButLoading(false);
+        navigate("/cart");
+      }, 3000);
     } else {
-      const { img, name, brand, price, rating } = data
+      const { img, name, brand, price, rating } = data;
       const payload = {
         title: name,
         image: img,
         price: price,
         name: brand,
         rating: rating,
-      }
+      };
       dispatch(addToCart(payload));
-
     }
-
-
-
-
-  
 
     // console.log("store", store)
   };
