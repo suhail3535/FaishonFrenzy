@@ -62,6 +62,8 @@ export const SingleProduct = () => {
         <div className="singleProd-container">
           <div className="singleProd-cont">
             <div className="singleProd-left-main">
+
+              
               <div className="singleProd-left">
                 <div className="singleProd-imgDiv">
                   <img
