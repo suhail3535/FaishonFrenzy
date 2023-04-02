@@ -97,8 +97,26 @@ Anthropologie is a unique, full-lifestyle shopping destination, with a mostly ex
 
 
 # External CSS Library
--Chakra UI
+-Chakra UI 
 
 #Front-End Deployment - netlify
-#Back-End Deployment - Cyclic  
+#Back-End Deployment - Cyclic   
+
+## Note
+
+This website is fully mobile friendly. You can use this website in mobile, tablet either desktop as well as. You feels very nice when you are using this website.
+
+Things Used
+We using different kinds of the technologies to make this website. These things are as follows:
+
+- Javascript, React, Readux, Chakra UI, CSS, HTML etc.
+
+## Contributers
+
+ Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+
+- [x] Suhail Khan - [GitHub Profile](https://github.com/suhail3535)
+- [x] Namrata Awasthi - [GitHub Profile](https://github.com/Namrata0407) 
+- [x] Tushit Saxena - [GitHub Profile](https://github.com/tushit99) 
+- [x] Shagun Sharma - [GitHub Profile](https://github.com/shagunsharma6677)
 
