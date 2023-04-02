@@ -6,14 +6,16 @@ const Dashboard = () => {
   return (
     <Box
       style={{
-        backgroundImage: `url("https://vilmanunez.com/wp-content/uploads/2014/02/content.png")`,
+        backgroundImage: `url("https://as2.ftcdn.net/v2/jpg/01/55/45/27/500_F_155452784_ZovaHKAvYMGgESybijVC5EzE45WgJdOj.jpg")`,
         width: "97%",
-        margin: "auto",
+     
+   
+        objectFit: "contain",
       }}
     >
       <Flex direction="column" align="center" justify="center" h="100vh">
         <Box mb={6}>
-          <Heading as="h1" size="3xl" textAlign="center" mb={3} color={"black"}>
+          <Heading as="h1" size="3xl" textAlign="center" mb={3} color={"white"}>
             Welcome to Admin Dashboard
           </Heading>
           <Text

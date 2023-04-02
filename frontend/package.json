@@ -28,6 +28,7 @@
     "redux": "^4.2.1",
     "redux-thunk": "^2.4.2",
     "source-map-loader": "^4.0.1",
+    "styled-components": "^5.3.9",
     "sweetalert2": "^10.3.5",
     "web-vitals": "^2.1.4"
   },

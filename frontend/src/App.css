@@ -1,9 +1,8 @@
 
 
-@import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
+* {
 
-
-*{
-font-family: 'Fasthand', cursive;
-
+ 
+font-family: sans-serif;
+  
 }

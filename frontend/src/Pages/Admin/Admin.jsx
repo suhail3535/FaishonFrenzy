@@ -1,13 +1,12 @@
-
-
 import React, { useEffect, useState } from "react";
 import styles from "./Admin.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { Input,  Stack, Box, Heading } from "@chakra-ui/react";
+import { Input, Stack, Box, Heading } from "@chakra-ui/react";
 import Swal from "sweetalert2";
 
 import AdminCard from "./AdminCard";
 import { getProduct, postRequest } from "../../Redux/Admin/action";
+import Skell from "./Skell";
 
 const initialState = {
   image: "",
@@ -17,11 +16,11 @@ const initialState = {
 };
 const Admin = () => {
   const [data, setdata] = useState(initialState);
+  const empty = [1,2,3,4]; 
+  const { product, isLoading } = useSelector((store) => store.adminReducer);
 
-  const product = useSelector((store) => store.adminReducer.product);
-
-      const x = product.length;
-      console.log("line27", x);
+  const x = product.length;
+  console.log("line27", x);
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
@@ -38,15 +37,13 @@ const Admin = () => {
     setdata(initialState);
 
     Swal.fire("", "Product added!", "success");
-    dispatch(getProduct())
+    dispatch(getProduct());
   };
-
-;
 
   useEffect(() => {
     dispatch(getProduct());
   }, []);
- 
+
   return (
     <div>
       <div id={styles.main_container}>
@@ -60,29 +57,33 @@ const Admin = () => {
             <hr style={{ border: "1px doted #5c5c5f" }} />
             <div className="cartpage-left-title">
               <div style={{ fontWeight: "bold", fontSize: "15px" }}>Item</div>
-              <div style={{ fontWeight: "bold", fontSize: "15px"}}>Item Price</div>
-              <div style={{ fontWeight: "bold" ,fontSize: "15px"}}>Rating</div>
+              <div style={{ fontWeight: "bold", fontSize: "15px" }}>
+                Item Price
+              </div>
+              <div style={{ fontWeight: "bold", fontSize: "15px" }}>Rating</div>
               <div
                 style={{
                   border: "0px solid green",
                   backgroundColor: "rgb(23,39,74)",
                   color: "white",
                   fontWeight: "bold",
-                   fontSize: "15px"
+                  fontSize: "15px",
                 }}
               >
                 Action
               </div>
             </div>
             <hr style={{ border: "1px doted #5c5c5f" }} />
-          </div>
-          {product.map((ele) => {
-            return (
-              <div>
-                <AdminCard key={ele._id} {...ele} />
-              </div>
-            );
-          })}
+          </div> 
+          {isLoading
+            ? empty.map((e) => <Skell key={e} />)
+            : product.map((ele) => {
+                return (
+                  <div>
+                    <AdminCard key={ele._id} {...ele} />
+                  </div>
+                );
+              })}
         </Box>
 
         <Box id={styles.add_new_product_div}>
