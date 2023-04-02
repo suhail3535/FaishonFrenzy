@@ -300,6 +300,7 @@ export default function Navbar() {
                 style={{ width: "100%", border: "1px solid grey" }}
                 _focus={"none"}
                 borderRadius={"none"}
+                padding={"5px"}
               />
               <Button
                 _hover={"#167a92"}
