@@ -200,6 +200,9 @@ export default function Navbar() {
     getAllCartItem();
   }, []);
 
+
+  
+
   return (
     <>
       <Image src={Source2} alt={"Error"} />
