@@ -15,7 +15,7 @@ export const getProduct = () => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_DATA_LOADING });
     let res = await axios
-      .get("https://sleepy-pear-toga.cyclic.app/user")
+      .get("https://sleepy-pear-toga.cyclic.app/users")
       .then((res) => {
         dispatch({ type: PRODUCT_DATA_SUCCESS, payload: res.data });
         return res.data;

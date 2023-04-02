@@ -39,14 +39,14 @@ const AuthPage = () => {
               description: "",
               status: "success",
               variant: "left-accent",
-              duration: 600,
+              duration: 500,
               isClosable: true,
               position: "top",
             });
 
             // navigate("/login");
             setActive(false);
-          }, 2000);
+          }, 500);
         })
         .catch((err) => {
           console.log(err);
@@ -105,7 +105,7 @@ const AuthPage = () => {
     },
   });
 
-  
+
 
   const signin = useGoogleLogin({
 

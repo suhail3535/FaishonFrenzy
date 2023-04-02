@@ -12,9 +12,12 @@ import { Spinner } from "@chakra-ui/react";
 import ShippingDetailsCard from "./ShippingDetailsCard";
 
 import ShippingFooter from "./ShippingFooter";
+import { getAllCart } from "../../Redux/Cart/action";
 
 const ShippingDetails = () => {
   const [isButLoading, setIsButLoading] = useState(false);
+     const [total, setTotal] = React.useState(0);
+    const [allCart, setAllCart] = React.useState([]);
 
   const navigate = useNavigate();
 
@@ -29,11 +32,30 @@ const ShippingDetails = () => {
 
   const dispatch = useDispatch();
   const address = useSelector((store) => store.shippingReducer.address);
+    const store = useSelector((store) => store.cartReducer.cart);
 
   useEffect(() => {
     dispatch(getRequestAddress());
+     getAllCartItem();
   }, []);
   // console.log(newData)
+
+
+
+      const getAllCartItem = async () => {
+        dispatch(getAllCart());
+        if (store) {
+          setAllCart(store);
+          let total = 0;
+
+          for (let i = 0; i < store.length; i++) {
+            total += +store[i].price;
+          }
+          setTotal(total);
+        }
+        console.log("AllcartItem", allCart);
+      };
+
   return (
     <>
       <div id={styles.container}>
@@ -48,12 +70,29 @@ const ShippingDetails = () => {
         </div>
         <div id={styles.second}>
           <div id={styles.third}>
-            <div className={styles.Order_summmary_div}>
-              <p>ORDER SUMMARY</p>
-              <p>Subtotal :100</p>
-              <p>Shipping Economy Ground : $ 5.00</p>
-              <p>Sales Tax : $ 0.65</p>
-              <p>Estimated Total:$ 120</p>
+            <div className="cartpage-right-container">
+              <div className="cartpage-right-top">
+                <div>
+                  <span>Subtotal</span>
+                  <span>$ {total}</span>
+                </div>
+                <div>
+                  <span>Shipping</span>
+                  <span>TBD</span>
+                </div>
+                <div>
+                  <span>Estimated Tax</span>
+                  <span>$ 0.00</span>
+                </div>
+                <div>
+                  <span style={{ color: "black" }}>Total</span>
+                  <span>$ {total} </span>
+                </div>
+              </div>
+              <div>
+                <div>Or 4 interest-free installments of $55.00 with </div>
+                <div>Klarna or afterpay</div>
+              </div>
             </div>
           </div>
           <div>

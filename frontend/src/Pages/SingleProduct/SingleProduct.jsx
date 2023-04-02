@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./SingleProduct.css";
 import {
   Accordion,
@@ -10,16 +10,20 @@ import {
 import { Swiper } from "../HomePage/Swiper";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../Redux/Cart/action";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
+import Swal from "sweetalert2";
+import { Spinner } from "@chakra-ui/react";
 
 
 
 export const SingleProduct = () => {
   const [prodDetail, setProdDetail] = React.useState({});
+   const [isButLoading, setIsButLoading] = useState(false);
   const [btnDisabled,setDisabled] = React.useState(true)
   const store = useSelector((store) => store.cartReducer.cart);
   const dispatch = useDispatch();
+  const navigate=useNavigate()
 
   const param = useParams();
   console.log("prod Id", param);
@@ -40,7 +44,19 @@ export const SingleProduct = () => {
     const duplicate = store.filter((el) => el.title === data.name)
     console.log("duplicate",duplicate)
     if (duplicate.length > 0) {
-      alert("Product already present")
+       setTimeout(() => {
+          Swal.fire("Product Added!", "Please Wait!", "success");
+       
+        }, 1000);
+   
+          setIsButLoading(true);
+          setTimeout(() => {
+            setIsButLoading(false);
+            navigate("/cart");
+          }, 3000);
+  
+
+
 
     } else {
       const { img, name, brand, price, rating } = data
@@ -84,14 +100,9 @@ export const SingleProduct = () => {
         <div className="singleProd-container">
           <div className="singleProd-cont">
             <div className="singleProd-left-main">
-
-
               <div className="singleProd-left">
                 <div className="singleProd-imgDiv">
-                  <img
-                    src={prodDetail.img}
-                    alt=""
-                  />
+                  <img src={prodDetail.img} alt="" />
                 </div>
                 <div className="singleProd-left-extra">
                   <div className="singleProd-extra-div">
@@ -152,7 +163,18 @@ export const SingleProduct = () => {
                       </select>
                       <br />
 
-                      <button onClick={() => handleCart(prodDetail)}>ADD TO BASKET</button>
+                      <button onClick={() => handleCart(prodDetail)}>
+                        {!isButLoading && ` ADD TO BASKET `}
+                        {isButLoading && (
+                          <Spinner
+                            thickness="4px"
+                            speed="0.55s"
+                            emptyColor="gray.200"
+                            color="#17274a"
+                            size="md"
+                          />
+                        )}
+                      </button>
                       <br />
 
                       <span>

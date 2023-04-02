@@ -13,7 +13,7 @@ import {
   useToast,
   VStack,
 } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { postRequestAddress } from "../../Redux/ShippingReducer/action";
@@ -23,6 +23,8 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { store } from "../../Redux/Store";
 import ShippingFooter from "./ShippingFooter";
+import { getAllCart } from "../../Redux/Cart/action";
+import PaymentCard from "../../components/PaymentCard/PaymentCard";
 
 const initialState = {
   firstname: "",
@@ -36,10 +38,14 @@ const initialState = {
 const ShippingAdresss = () => {
   const [isButLoading, setIsButLoading] = useState(false);
   const [data, setdata] = useState(initialState);
+   const [allCart, setAllCart] = React.useState([]);
+   const [total, setTotal] = React.useState(0);
   let dispatch = useDispatch();
   const toast = useToast();
   const navigate = useNavigate();
   const address = useSelector((store) => store.shippingReducer.address);
+  const store = useSelector((store) => store.cartReducer.cart);
+
   console.log(address)
   console.log(store)
   
@@ -101,6 +107,23 @@ const ShippingAdresss = () => {
 
     //  Swal.fire("", "Product added!", "success");
   };
+    const getAllCartItem = async () => {
+      dispatch(getAllCart());
+      if (store) {
+        setAllCart(store);
+        let total = 0;
+
+        for (let i = 0; i < store.length; i++) {
+          total += +store[i].price;
+        }
+        setTotal(total);
+      }
+      console.log("AllcartItem", allCart);
+    };
+ useEffect(() => {
+   getAllCartItem();
+   
+ }, []);
 
   return (
     <div>
@@ -295,42 +318,60 @@ const ShippingAdresss = () => {
         </div>
         <div id={styles.main_container_inside_second_div}>
           <div id={styles.third}>
-            <div className={styles.Order_summmary_div}>
-              <p>ORDER SUMMARY</p>
-              <p>Subtotal :100</p>
-              <p>Shipping Economy Ground : $ 5.00</p>
-              <p>Sales Tax : $ 0.65</p>
-              <p>Estimated Total:$ 120</p>
+        
+            <div className="cartpage-right-container">
+              <div className="cartpage-right-top">
+                <div>
+                  <span>Subtotal</span>
+                  <span>$ {total}</span>
+                </div>
+                <div>
+                  <span>Shipping</span>
+                  <span>TBD</span>
+                </div>
+                <div>
+                  <span>Estimated Tax</span>
+                  <span>$ 0.00</span>
+                </div>
+                <div>
+                  <span style={{ color: "black" }}>Total</span>
+                  <span>$ {total} </span>
+                </div>
+              </div>
+              <div>
+                <div>Or 4 interest-free installments of $55.00 with </div>
+                <div>Klarna or afterpay</div>
+              </div>
             </div>
-          </div>
-          <div>
-            <button
-              onClick={handleSubmit}
-              className={styles.ship_to_this_add_btn}
-            >
-              {!isButLoading && `  SHIP TO THIS ADDRESS `}
-              {isButLoading && (
-                <Spinner
-                  thickness="4px"
-                  speed="0.55s"
-                  emptyColor="gray.200"
-                  color="#17274a"
-                  size="md"
-                />
-              )}
-            </button>
-            <Divider />
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                marginTop: "10px",
-                fontSize: "15px",
-                fontWeight: "bold",
-              }}
-            >
-              <h6>Promo Code</h6>
-              <h6>+</h6>
+            <div>
+              <button
+                onClick={handleSubmit}
+                className={styles.ship_to_this_add_btn}
+              >
+                {!isButLoading && `  SHIP TO THIS ADDRESS `}
+                {isButLoading && (
+                  <Spinner
+                    thickness="4px"
+                    speed="0.55s"
+                    emptyColor="gray.200"
+                    color="#17274a"
+                    size="md"
+                  />
+                )}
+              </button>
+              <Divider />
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  marginTop: "10px",
+                  fontSize: "15px",
+                  fontWeight: "bold",
+                }}
+              >
+                <h6>Promo Code</h6>
+                <h6>+</h6>
+              </div>
             </div>
           </div>
         </div>
