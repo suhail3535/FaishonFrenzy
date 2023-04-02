@@ -1,25 +1,24 @@
 import React from "react";
-import "./AuthPage.css";
+import "./Admin_Login.css";
 import jwt_decode from "jwt-decode";
-import Swal from "sweetalert2";
-// const clientID = 559548995076-sohrprkhs7n88k53f4casrqisqk9otfs.apps.googleusercontent.com
-// const clientSecret = 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
+
+// import "react-toastify/dist/ReactToastify.css";
+
 import { GoogleLogin } from "@react-oauth/google";
 import { useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { useToast } from "@chakra-ui/react";
+import { Spinner, useToast } from "@chakra-ui/react";
+import Swal from "sweetalert2";
 
-const AuthPage = () => {
+export const Adminlogin = () => {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [name, setName] = React.useState("");
   const [confirm, setPasswordcon] = React.useState("");
   const [active, setActive] = React.useState(false);
- 
-  const toast = useToast();
   const Navigate = useNavigate();
-
+  const toast = useToast();
 
   const handleSubmit = () => {
     if (name && email && password) {
@@ -33,22 +32,28 @@ const AuthPage = () => {
           console.log(res);
           // console.log(res.data.token);
 
-
           setTimeout(() => {
             toast({
-              title: "Register Succesfully",
+              title: "Admin Register Succesfully",
               description: "",
               status: "success",
               variant: "left-accent",
-              duration: 600,
+              duration: 500,
               isClosable: true,
               position: "top",
             });
 
+            <Spinner
+              thickness="4px"
+              speed="0.65s"
+              emptyColor="gray.200"
+              color="blue.500"
+              size="xl"
+            />;
+
             // navigate("/login");
             setActive(false);
           }, 2000);
-          
         })
         .catch((err) => {
           console.log(err);
@@ -60,7 +65,7 @@ const AuthPage = () => {
     setName("");
     setPassword("");
     setPasswordcon("");
-    // 
+    //
   };
 
   const handleSubmitlogin = () => {
@@ -73,17 +78,17 @@ const AuthPage = () => {
         .then((res) => {
           console.log(res);
 
-         Swal.fire({
-           position: "center",
-           icon: "success",
-           title: "Login Success",
-           showConfirmButton: false,
-           timer: 1500,
-         });
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Login Success",
+            showConfirmButton: false,
+            timer: 600,
+          });
 
           if (res.data.token) {
             localStorage.setItem("Token", res.data.token);
-            Navigate("/");
+            Navigate("/admin_Dashboard");
           } else {
             Swal.fire("Please Fill Details");
           }
@@ -92,7 +97,12 @@ const AuthPage = () => {
           console.log(err);
         });
     } else {
-       Swal.fire("Please Fill Details");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Login First!",
+        footer: '<a href="">Why do I have this issue?</a>',
+      });
     }
   };
 
@@ -108,18 +118,12 @@ const AuthPage = () => {
   });
 
   const signin = useGoogleLogin({
-
     onSuccess: async (credentialResponse) => {
       console.log(credentialResponse);
       const decoded = jwt_decode(credentialResponse.credential);
       console.log(decoded);
     },
   });
-
-  
-
-
-
 
   return (
     <div>
@@ -171,6 +175,7 @@ const AuthPage = () => {
                     className="input-field button"
                   >
                     <input className="login_Btn" type="button" value="Login" />
+                  
                   </div>
                   <div>
                     <div
@@ -334,4 +339,4 @@ const AuthPage = () => {
   );
 };
 
-export default AuthPage;
+export default Adminlogin;

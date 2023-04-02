@@ -1,16 +1,16 @@
 const express = require("express");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
-const { UserModel } = require("../models/user.models");
-const userRouter = express.Router();
+const { AdminModel } = require("../models/user.models");
+const adminRouter = express.Router();
 
-userRouter.get("/", async (req, res) => {
-  const data = await UserModel.find();
+adminRouter.get("/", async (req, res) => {
+  const data = await AdminModel.find();
   res.send(data);
 });
-userRouter.post("/register", async (req, res) => {
+adminRouter.post("/register", async (req, res) => {
   const { name, email, password } = req.body;
-  const userPresent = await UserModel.findOne({ email: email });
+  const userPresent = await AdminModel.findOne({ email: email });
   // console.log(req.body);
   if (userPresent?.email) {
     res.send({ msg: "User already exists" });
@@ -20,7 +20,7 @@ userRouter.post("/register", async (req, res) => {
         if (err) {
           console.log(err);
         } else {
-          const user = new UserModel({
+          const user = new AdminModel({
             email,
             password: secure_password,
             name,
@@ -36,10 +36,10 @@ userRouter.post("/register", async (req, res) => {
   }
 });
 
-userRouter.post("/login", async (req, res) => {
+adminRouter.post("/login", async (req, res) => {
   const { email, password } = req.body;
   try {
-    const user = await UserModel.find({ email });
+    const user = await AdminModel.find({ email });
     if (user.length > 0) {
       bcrypt.compare(password, user[0].password, (err, result) => {
         if (result) {
@@ -59,5 +59,5 @@ userRouter.post("/login", async (req, res) => {
   }
 });
 module.exports = {
-  userRouter,
+  adminRouter,
 };

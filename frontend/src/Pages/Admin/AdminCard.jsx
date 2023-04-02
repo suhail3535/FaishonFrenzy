@@ -1,15 +1,12 @@
-
 import styles from "./Admin.module.css";
-import React, { useEffect } from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { deletedata, getProduct } from "../../Redux/Admin/action";
-import { Table, Tbody, Th, Thead, Tr } from "@chakra-ui/react";
 
-const AdminCard = ({ _id,image, title, price, rating }) => {
+const AdminCard = ({ _id, image, title, price, rating }) => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   const handleDelete = (_id) => {
     // console.log(id)
@@ -80,10 +77,7 @@ const AdminCard = ({ _id,image, title, price, rating }) => {
           </div>
         </div>
         <div>${price}</div>
-        <div>
-          {rating} ⭐
-          
-        </div>
+        <div>{rating} ⭐</div>
 
         <Link to={`/edit/${_id}`}>
           <button id={styles.edit} onClick={handleClick}>

@@ -82,7 +82,8 @@
   font-size: 16px;
   width: 100%;
   justify-content: center;
-
+ transition: all 0.2s ease-in-out;
+    cursor: pointer;
   background-color: #3b475b;
   color: white;
   margin-bottom: 20px;
@@ -91,6 +92,12 @@
   /* border: 1px solid black; */
 }
 
+.cartpage-right-container> span > button:hover {
+    background-color: white;
+    color: #17274a;
+    border: 1px solid #17274a;
+    
+}
 .cartpage-right-top > div {
   color: #5c5c5f;
   font-size: 13px;
@@ -164,3 +171,4 @@
   width: 370px;
   margin: auto;
 }
+

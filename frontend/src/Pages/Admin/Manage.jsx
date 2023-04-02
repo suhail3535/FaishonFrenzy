@@ -1,8 +1,9 @@
-import { Checkbox, FormControl, FormLabel, HStack, Input, PinInput, PinInputField, Select, Tab, TabList, TabPanel, TabPanels, Tabs, VStack } from '@chakra-ui/react';
-import React from 'react'
+import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
+import React from "react";
 
-import Admin from './Admin';
-import CostumersloginDetails from './CostumersloginDetails';
+import Admin from "./Admin";
+
+import AllProduct from "./AllProduct";
 
 const Manage = () => {
   return (
@@ -28,16 +29,17 @@ const Manage = () => {
                 width: "25%",
                 fontWeight: "bold",
                 border: "0px solid green",
-                boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+                boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
+                // box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
               }}
               _selected={{
                 color: "white",
-                bg: "#167a92",
+                bg: "#17274a",
                 borderRadius: "5px",
                 fontWeight: "bold",
               }}
             >
-              Costumers Credentials
+              ALL Products Details
             </Tab>
             <Tab
               style={{
@@ -47,7 +49,8 @@ const Manage = () => {
                 border: "0px solid red",
                 width: "25%",
                 fontWeight: "bold",
-                boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+                // boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+                boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
               }}
               _selected={{
                 bg: "#17274a",
@@ -65,7 +68,7 @@ const Manage = () => {
                 width: "25%",
                 fontWeight: "bold",
                 border: "0px solid blue",
-                boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+                boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
                 // backgroundColor: "rgb(237,242,247)",
               }}
               _selected={{
@@ -73,7 +76,7 @@ const Manage = () => {
 
                 borderRadius: "5px",
                 fontWeight: "bold",
-                bg: "#167a92",
+                bg: "#17274a",
               }}
             >
               Admin Credentials
@@ -87,7 +90,7 @@ const Manage = () => {
                 margin: "20px",
               }}
             >
-              <CostumersloginDetails />
+              <AllProduct />
             </TabPanel>
             <TabPanel
               style={{
@@ -112,6 +115,6 @@ const Manage = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Manage
+export default Manage;

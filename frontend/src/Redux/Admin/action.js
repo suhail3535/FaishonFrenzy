@@ -10,12 +10,11 @@ import {
   PRODUCT_DATA_SUCCESS,
 } from "./actionType";
 
-
 export const getProduct = () => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_DATA_LOADING });
     let res = await axios
-      .get("http://localhost:7700/admin")
+      .get("https://sleepy-pear-toga.cyclic.app/admin")
       .then((res) => {
         dispatch({ type: PRODUCT_DATA_SUCCESS, payload: res.data });
         return res.data;
@@ -29,12 +28,13 @@ export const getProduct = () => async (dispatch) => {
 export const getProduct_user_details = () => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_DATA_LOADING });
-    let res = await axios.get("http://localhost:7700/user").then((res) => {
-      dispatch({ type: PRODUCT_DATA_SUCCESS, payload: res.data });
-       
-      return res.data;
-  
-    });
+    let res = await axios
+      .get("https://sleepy-pear-toga.cyclic.app/user")
+      .then((res) => {
+        dispatch({ type: PRODUCT_DATA_SUCCESS, payload: res.data });
+
+        return res.data;
+      });
     console.log(res);
   } catch (err) {
     dispatch({ type: PRODUCT_DATA_ERROR });
@@ -58,7 +58,7 @@ export const deldatasuccess = () => {
 export const postRequest = (payload) => (dispatch) => {
   dispatch(getpostRequest());
   axios
-    .post("http://localhost:7700/admin/add", payload)
+    .post("https://sleepy-pear-toga.cyclic.app/admin/add", payload)
     .then((res) => {
       console.log(res.data);
       dispatch(getpostSuccess(res.data));
@@ -68,11 +68,10 @@ export const postRequest = (payload) => (dispatch) => {
     });
 };
 
-
 export const deletedata = (_id) => (dispatch) => {
   dispatch(getpostRequest());
   return axios
-    .delete(`http://localhost:7700/admin/delete/${_id}`)
+    .delete(`https://sleepy-pear-toga.cyclic.app/admin/delete/${_id}`)
     .then((res) => {
       // console.log(res.data);
       dispatch(deldatasuccess());
@@ -80,19 +79,17 @@ export const deletedata = (_id) => (dispatch) => {
     .catch((err) => {
       dispatch(getpostFailure());
     });
-
-}
-
+};
 
 export const editProduct = (_id, newData) => (dispatch) => {
   dispatch(getpostRequest());
   axios
-    .patch(`http://localhost:7700/admin/update/${_id}`, newData)
+    .patch(`https://sleepy-pear-toga.cyclic.app/admin/update/${_id}`, newData)
     .then((res) => {
-      console.log(res.data)
+      console.log(res.data);
       dispatch({ type: PATCH_SUCCESS });
     })
     .catch((err) => {
       dispatch(getpostFailure());
     });
-}
+};

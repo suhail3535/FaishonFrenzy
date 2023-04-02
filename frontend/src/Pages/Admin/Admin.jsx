@@ -3,13 +3,12 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Admin.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { Input, Button, Stack, Box, Heading } from "@chakra-ui/react";
+import { Input,  Stack, Box, Heading } from "@chakra-ui/react";
 import Swal from "sweetalert2";
 
 import AdminCard from "./AdminCard";
 import { getProduct, postRequest } from "../../Redux/Admin/action";
-import { store } from "../../Redux/Store";
-import PaymentCard from "../../components/PaymentCard/PaymentCard";
+
 const initialState = {
   image: "",
   title: "",
@@ -18,11 +17,9 @@ const initialState = {
 };
 const Admin = () => {
   const [data, setdata] = useState(initialState);
-  console.log(store);
+
   const product = useSelector((store) => store.adminReducer.product);
-  // const user = useSelector((store) => store.adminReducer.user);
-  // // console.log(user)
-  // console.log(product)
+
       const x = product.length;
       console.log("line27", x);
   const dispatch = useDispatch();
@@ -39,12 +36,12 @@ const Admin = () => {
     e.preventDefault();
     dispatch(postRequest(data));
     setdata(initialState);
-     
+
     Swal.fire("", "Product added!", "success");
- 
+    dispatch(getProduct())
   };
-  // console.log(data)
-  dispatch(getProduct());
+
+;
 
   useEffect(() => {
     dispatch(getProduct());
@@ -57,20 +54,21 @@ const Admin = () => {
           <Heading id={styles.heading} as={"h4"} size="md">
             Product List
           </Heading>
-          <h6 style={{fontWeight:"bold"}}>Total product is: {x}</h6>
+          <h6 style={{ fontWeight: "bold" }}>Total product is: {x}</h6>
           <div className="cartpage-left-cont">
             <div className="cartpage-left-heading"></div>
             <hr style={{ border: "1px doted #5c5c5f" }} />
             <div className="cartpage-left-title">
-              <div style={{ fontWeight: "bold" }}>Item</div>
-              <div style={{ fontWeight: "bold" }}>Item Price</div>
-              <div style={{ fontWeight: "bold" }}>Rating</div>
+              <div style={{ fontWeight: "bold", fontSize: "15px" }}>Item</div>
+              <div style={{ fontWeight: "bold", fontSize: "15px"}}>Item Price</div>
+              <div style={{ fontWeight: "bold" ,fontSize: "15px"}}>Rating</div>
               <div
                 style={{
                   border: "0px solid green",
                   backgroundColor: "rgb(23,39,74)",
                   color: "white",
                   fontWeight: "bold",
+                   fontSize: "15px"
                 }}
               >
                 Action
@@ -86,13 +84,13 @@ const Admin = () => {
             );
           })}
         </Box>
-    
+
         <Box id={styles.add_new_product_div}>
           <Heading id={styles.heading} as={"h4"} size="md">
             Add New Product
           </Heading>
           <form>
-            <Stack spacing={4}>
+            <Stack spacing={6}>
               <Input
                 type="url"
                 name="image"

@@ -1,3 +1,4 @@
+
 import React from 'react'
 import HomePage from '../HomePage/HomePage'
 import { Route, Routes } from 'react-router-dom'
@@ -12,7 +13,11 @@ import ShippingDetails from '../Shipping/ShippingDetails'
 import Dashboard from '../Admin/Dashboard'
 import Manage from '../Admin/Manage'
 import Shoes from '../Shoes/Shoes'
-import Clothing from '../Clothing/Clothing'
+import Clothing from "../Clothing/Clothing";
+import AdminLogin from '../AdminRegister/Adminlogin'
+
+
+
 
 const MainRoutes = () => {
   return (
@@ -28,20 +33,16 @@ const MainRoutes = () => {
         <Route path="/shipping_address" element={<ShippingDetails />} />
         <Route path="/admin_Dashboard" element={<Dashboard />} />
         <Route path="/manage" element={<Manage />} />
-        <Route path="/top" element={<top />} /> 
+        <Route path="/adminlogin" element={<AdminLogin />} />
+        <Route path="/top" element={<top />} />
+
         <Route path="/dress" element={<Dresses />} />
-        <Route path="/dress/:id" element={<SingleProduct />} /> 
 
-        <Route path="/shoes" element={<Shoes />} /> 
-        <Route path="/shoes/:id" element={<SingleProduct />} />
-
+        <Route path="/shoes" element={<Shoes />} />
         <Route path="/cloths" element={<Clothing />} />
-        <Route path="/cloths/:id" element={<SingleProduct />} />
-
       </Routes>
     </div>
   );
-     
-}
+};
 
-export default MainRoutes
+export default MainRoutes;

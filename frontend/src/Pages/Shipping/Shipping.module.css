@@ -46,7 +46,8 @@
 .ship_to_this_add_btn {
      border: 1px solid #CFD8DC;
     background-color: rgb(75,86,102);
-    font-family: serif;
+    font-weight: bold;
+
     height: 45px;
     width: 100%;
     display: block;
@@ -145,7 +146,7 @@
 .continue_to_payment_btn {
      border: 1px solid #CFD8DC;
     background-color: rgb(75,86,102);
-    font-family: serif;
+font-weight: bold;
     height: 45px;
     width: 100%;
     display: block;

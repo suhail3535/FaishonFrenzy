@@ -3,7 +3,7 @@ import {
   Container,
   Stack,
   Text,
-  Link,
+ 
   useColorModeValue,
 } from "@chakra-ui/react";
 

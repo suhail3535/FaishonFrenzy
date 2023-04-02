@@ -5,7 +5,7 @@ export const getCloting = (param) => async (dispatch) => {
   try {
     dispatch({ type: CLOTING_DATA_LOADING });
     let res = await axios
-      .get("http://localhost:7700/cloths", param)
+      .get("https://sleepy-pear-toga.cyclic.app/cloths", param)
       .then((e) => {
         dispatch({ type: CLOTING_DATA_SUCCESS, payload: e.data });
         return e.data;

@@ -10,10 +10,13 @@ export const addToCart = (payload) => async (dispatch) => {
   try {
     dispatch({ type: CART_DATA_LOADING });
     console.log("reduxPayload", payload);
-    let res = await axios.post(`http://localhost:7700/carts/add`, payload);
+    let res = await axios.post(
+      `https://sleepy-pear-toga.cyclic.app/carts/add`,
+      payload
+    );
     dispatch({ type: CART_DATA_POST, payload: res.data });
 
-    console.log("fromRedux",res.data);
+    // console.log("fromRedux",res.data);
   } catch (err) {
     dispatch({ type: CART_DATA_ERROR });
   }
@@ -22,10 +25,12 @@ export const addToCart = (payload) => async (dispatch) => {
 export const getAllCart = () => async (dispatch) => {
   try {
     dispatch({ type: CART_DATA_LOADING });
-    let res = await axios.get(`http://localhost:7700/carts/`).then((e) => {
-      dispatch({ type: CART_DATA_SUCCESS, payload: e.data });
-      return e.data;
-    });
+    let res = await axios
+      .get(`https://sleepy-pear-toga.cyclic.app/carts/`)
+      .then((e) => {
+        dispatch({ type: CART_DATA_SUCCESS, payload: e.data });
+        return e.data;
+      });
     console.log("fromRedux", res);
   } catch (err) {
     dispatch({ type: CART_DATA_ERROR });

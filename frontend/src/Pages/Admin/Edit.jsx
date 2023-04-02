@@ -45,7 +45,7 @@ const Edit = () => {
       }
     });
 
-    navigate("/admin");
+    navigate("/manage");
   };
   useEffect(() => {
     const productData = product.find((item) => item._id === id);
@@ -101,3 +101,4 @@ const Edit = () => {
 };
 
 export default Edit;
+

@@ -14,55 +14,52 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 
 
+
 export const SingleProduct = () => {
   const [prodDetail, setProdDetail] = React.useState({});
+  const [btnDisabled,setDisabled] = React.useState(true)
   const store = useSelector((store) => store.cartReducer.cart);
   const dispatch = useDispatch();
 
   const param = useParams();
   console.log("prod Id", param);
 
-  // Spise
-  // :
-  // 8057.2
-  // brand
-  // :
-  // "Pilcro"
-  // img
-  // :
-  // "https://images.urbndata.com/is/image/Anthropologie/4110907290003_019_b2?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720"
-  // name
-  // :
-  // "Pilcro The Romy Relaxed Buttondown"
-  // price
-  // :
-  // 7399.47
-  // rating
-  // :
-  // 4.2
-  // _id
-  // :
-  // "6423db95bc2a4d45539224fd"
 
-  // title: String,
-  // image: String,
-  // price: String,
-  // name:String,
-  // rating:String,
-  //brand:String
+  // const cartValidate = (newCartProd) => {
+
+  //   return duplicate
+
+  // }
+
 
 
   const handleCart = (data) => {
     console.log("single", data)
-    const { img, name, brand, price, rating } = data
-    const payload = {
-      title: name,
-      image: img,
-      price: price,
-      name:brand ,
-      rating: rating,
+    console.log("proddetail",prodDetail)
+    console.log("store", store)
+    const duplicate = store.filter((el) => el.title === data.name)
+    console.log("duplicate",duplicate)
+    if (duplicate.length > 0) {
+      alert("Product already present")
+
+    } else {
+      const { img, name, brand, price, rating } = data
+      const payload = {
+        title: name,
+        image: img,
+        price: price,
+        name: brand,
+        rating: rating,
+      }
+      dispatch(addToCart(payload));
+
     }
-    dispatch(addToCart(payload));
+
+
+
+
+  
+
     // console.log("store", store)
   };
 
@@ -87,6 +84,8 @@ export const SingleProduct = () => {
         <div className="singleProd-container">
           <div className="singleProd-cont">
             <div className="singleProd-left-main">
+
+
               <div className="singleProd-left">
                 <div className="singleProd-imgDiv">
                   <img

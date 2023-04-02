@@ -1,15 +1,14 @@
-import { Button, Divider, useToast } from "@chakra-ui/react";
+import { useToast } from "@chakra-ui/react";
 
 import styles from "./Shipping.module.css";
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
-import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
+
 import {
   deletedataAdd,
   getRequestAddress,
 } from "../../Redux/ShippingReducer/action";
-
 
 const ShippingDetailsCard = ({
   _id,
@@ -21,7 +20,7 @@ const ShippingDetailsCard = ({
   zipcode,
 }) => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
+
   const [isButLoading, setIsButLoading] = useState(false);
   const toast = useToast();
   const handleDelete = (_id) => {
@@ -72,7 +71,7 @@ const ShippingDetailsCard = ({
             Remove
           </button>
         </div>
-        <hr style={{ border:"1px solid #CFD8DC;",marginTop:"15px" }} />
+        <hr style={{ border: "1px solid #CFD8DC;", marginTop: "15px" }} />
       </div>
     </div>
   );

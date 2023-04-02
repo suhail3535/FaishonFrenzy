@@ -1,18 +1,27 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./CartPage.css";
 import PaymentCard from "../../components/PaymentCard/PaymentCard";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import { getAllCart } from "../../Redux/Cart/action";
 import { Link, useNavigate } from "react-router-dom"
+import { Spinner } from "@chakra-ui/react";
 
 const CartPage = () => {
   const [allCart, setAllCart] = React.useState([]);
+  const [total,setTotal] = React.useState(0)
+  const [isButLoading, setIsButLoading] = useState(false);
   const store = useSelector((store) => store.cartReducer.cart);
   const dispatch = useDispatch();
   const navigate = useNavigate()
+
   const handleCheckout = () => {
-    navigate("/ship")
+    setIsButLoading(true);
+    setTimeout(() => {
+      setIsButLoading(false);
+      navigate("/ship");
+    }, 2000);
+
 
   };
 
@@ -22,6 +31,14 @@ const CartPage = () => {
     dispatch(getAllCart())
     if (store) {
       setAllCart(store)
+      let total = 0
+
+      for (let i = 0; i < store.length; i++) {
+        total += +store[i].price
+
+      }
+      setTotal(total)
+      
     }
     console.log("AllcartItem", allCart)
 
@@ -30,6 +47,12 @@ const CartPage = () => {
     getAllCartItem();
     // console.log("cartstore", store)
   }, []);
+
+
+
+
+
+
   return (
     <div>
       <div className="cartPage-wrapper">
@@ -49,10 +72,10 @@ const CartPage = () => {
               </div>
               <hr style={{ border: "1px solid #5c5c5f" }} />
               <div>
-                {allCart && allCart.map((item) => {
-                  return <PaymentCard {...item} />
-                })}
-
+                {allCart &&
+                  allCart.map((item) => {
+                    return <PaymentCard {...item} />;
+                  })}
               </div>
             </div>
             <div className="cartpage-right-cont">
@@ -64,7 +87,7 @@ const CartPage = () => {
                 <div className="cartpage-right-top">
                   <div>
                     <span>Subtotal</span>
-                    <span>$ 220.00</span>
+                    <span>$ {total}</span>
                   </div>
                   <div>
                     <span>Shipping</span>
@@ -76,7 +99,7 @@ const CartPage = () => {
                   </div>
                   <div>
                     <span style={{ color: "black" }}>Total</span>
-                    <span>$ 220.00 </span>
+                    <span>$ {total} </span>
                   </div>
                 </div>
                 <div>
@@ -84,10 +107,19 @@ const CartPage = () => {
                   <div>Klarna or afterpay</div>
                 </div>
 
-
                 <span>
-                  <button onClick={handleCheckout}>PROCEED TO CHECKOUT</button>
-
+                  <button onClick={handleCheckout}>
+                    {!isButLoading && ` PROCEED TO CHECKOUT `}
+                    {isButLoading && (
+                      <Spinner
+                        thickness="4px"
+                        speed="0.55s"
+                        emptyColor="gray.200"
+                        color="#17274a"
+                        size="md"
+                      />
+                    )}
+                  </button>
                 </span>
                 <div className="paypal-btn">
                   <button>
