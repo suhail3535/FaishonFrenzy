@@ -69,11 +69,7 @@ Anthropologie is a unique, full-lifestyle shopping destination, with a mostly ex
     <td valign="top"></td>
   </tr>
 </table>
-
-## Tablet View   
-
-## Mobile View  
-
+ 
 
 # Tech Stack
  # Front-End
