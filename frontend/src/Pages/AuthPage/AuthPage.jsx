@@ -24,7 +24,7 @@ const AuthPage = () => {
   const handleSubmit = () => {
     if (name && email && password) {
       axios
-        .post(`http://localhost:7700/users/register`, {
+        .post(`https://sleepy-pear-toga.cyclic.app/users/register`, {
           name: name,
           email: email,
           password: password,
@@ -32,7 +32,6 @@ const AuthPage = () => {
         .then((res) => {
           console.log(res);
           // console.log(res.data.token);
-
 
           setTimeout(() => {
             toast({
@@ -48,7 +47,6 @@ const AuthPage = () => {
             // navigate("/login");
             setActive(false);
           }, 2000);
-          
         })
         .catch((err) => {
           console.log(err);
@@ -66,20 +64,20 @@ const AuthPage = () => {
   const handleSubmitlogin = () => {
     if (email && password) {
       axios
-        .post(`http://localhost:7700/users/login`, {
+        .post(`https://sleepy-pear-toga.cyclic.app/users/login`, {
           email: email,
           password: password,
         })
         .then((res) => {
           console.log(res);
 
-         Swal.fire({
-           position: "center",
-           icon: "success",
-           title: "Login Success",
-           showConfirmButton: false,
-           timer: 1500,
-         });
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Login Success",
+            showConfirmButton: false,
+            timer: 1500,
+          });
 
           if (res.data.token) {
             localStorage.setItem("Token", res.data.token);

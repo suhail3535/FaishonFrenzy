@@ -48,7 +48,7 @@ export const deldatasuccess = () => {
 export const postRequest = (payload) => (dispatch) => {
   dispatch(getpostRequest());
   axios
-    .post("https://sleepy-pear-toga.cyclic.app/user/register", payload)
+    .post("https://sleepy-pear-toga.cyclic.app/users/register", payload)
     .then((res) => {
       console.log(res.data);
       dispatch(getpostSuccess(res.data));

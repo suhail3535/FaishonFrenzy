@@ -23,7 +23,7 @@ export const Adminlogin = () => {
   const handleSubmit = () => {
     if (name && email && password) {
       axios
-        .post(`http://localhost:7700/users/register`, {
+        .post(`https://sleepy-pear-toga.cyclic.app/users/register`, {
           name: name,
           email: email,
           password: password,
@@ -71,7 +71,7 @@ export const Adminlogin = () => {
   const handleSubmitlogin = () => {
     if (email && password) {
       axios
-        .post(`http://localhost:7700/users/login`, {
+        .post(`https://sleepy-pear-toga.cyclic.app/users/login`, {
           email: email,
           password: password,
         })
