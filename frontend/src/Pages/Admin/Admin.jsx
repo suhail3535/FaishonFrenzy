@@ -10,7 +10,7 @@ import AdminCard from "./AdminCard";
 import { getProduct, postRequest } from "../../Redux/Admin/action";
 
 const initialState = {
-  img: "",
+  image: "",
   title: "",
   price: "",
   rating: "",
@@ -36,12 +36,12 @@ const Admin = () => {
     e.preventDefault();
     dispatch(postRequest(data));
     setdata(initialState);
-     
-    Swal.fire("", "Product added!", "success");
 
+    Swal.fire("", "Product added!", "success");
+    dispatch(getProduct())
   };
 
-  dispatch(getProduct());
+;
 
   useEffect(() => {
     dispatch(getProduct());
@@ -54,20 +54,21 @@ const Admin = () => {
           <Heading id={styles.heading} as={"h4"} size="md">
             Product List
           </Heading>
-          <h6 style={{fontWeight:"bold"}}>Total product is: {x}</h6>
+          <h6 style={{ fontWeight: "bold" }}>Total product is: {x}</h6>
           <div className="cartpage-left-cont">
             <div className="cartpage-left-heading"></div>
             <hr style={{ border: "1px doted #5c5c5f" }} />
             <div className="cartpage-left-title">
-              <div style={{ fontWeight: "bold" }}>Item</div>
-              <div style={{ fontWeight: "bold" }}>Item Price</div>
-              <div style={{ fontWeight: "bold" }}>Rating</div>
+              <div style={{ fontWeight: "bold", fontSize: "15px" }}>Item</div>
+              <div style={{ fontWeight: "bold", fontSize: "15px"}}>Item Price</div>
+              <div style={{ fontWeight: "bold" ,fontSize: "15px"}}>Rating</div>
               <div
                 style={{
                   border: "0px solid green",
                   backgroundColor: "rgb(23,39,74)",
                   color: "white",
                   fontWeight: "bold",
+                   fontSize: "15px"
                 }}
               >
                 Action
@@ -75,7 +76,7 @@ const Admin = () => {
             </div>
             <hr style={{ border: "1px doted #5c5c5f" }} />
           </div>
-          {product.reverse().map((ele) => {
+          {product.map((ele) => {
             return (
               <div>
                 <AdminCard key={ele._id} {...ele} />
@@ -83,17 +84,17 @@ const Admin = () => {
             );
           })}
         </Box>
-    
+
         <Box id={styles.add_new_product_div}>
           <Heading id={styles.heading} as={"h4"} size="md">
             Add New Product
           </Heading>
           <form>
-            <Stack spacing={4}>
+            <Stack spacing={6}>
               <Input
                 type="url"
-                name="img"
-                value={data.img}
+                name="image"
+                value={data.image}
                 onChange={handleChange}
                 placeholder="image"
                 size="md"

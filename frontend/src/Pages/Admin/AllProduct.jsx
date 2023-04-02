@@ -19,9 +19,9 @@ const AllProduct = () => {
       <hr style={{ border: "1px doted #5c5c5f" }} />
 
       <div className="cartpage-left-title">
-        <div style={{ fontWeight: "bold" }}>Item</div>
-        <div style={{ fontWeight: "bold" }}>Item Price</div>
-        <div style={{ fontWeight: "bold" }}>Rating</div>
+        <div style={{ fontWeight: "bold",fontSize:"15px" }}>Item</div>
+        <div style={{ fontWeight: "bold",fontSize:"15px"}}>Item Price</div>
+        <div style={{ fontWeight: "bold",fontSize:"15px" }}>Rating</div>
       </div>
       <hr style={{ border: "1px doted #5c5c5f" }} />
       {product.reverse().map((ele) => {
