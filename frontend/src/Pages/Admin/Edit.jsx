@@ -10,9 +10,9 @@ import styles from "./Admin.module.css";
 const Edit = () => {
   const navigate = useNavigate();
     const {id } = useParams();
-    // console.log(typeof id)
+   
     const product = useSelector((store) => store.adminReducer.product);
-    console.log("line",product)
+  
   const [price, setPrice] = useState("");
   const [title, setTitle] = useState([]);
   const [image, setImage] = useState("");
@@ -49,7 +49,7 @@ const Edit = () => {
   };
   useEffect(() => {
     const productData = product.find((item) => item._id === id);
-    console.log(productData);
+   
     productData && setPrice(productData.price);
     productData && setTitle(productData.title);
     productData && setImage(productData.image);

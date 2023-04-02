@@ -29,8 +29,8 @@ export const Adminlogin = () => {
           password: password,
         })
         .then((res) => {
-          console.log(res);
-          // console.log(res.data.token);
+        ;
+          
 
           setTimeout(() => {
             toast({
@@ -76,7 +76,7 @@ export const Adminlogin = () => {
           password: password,
         })
         .then((res) => {
-          console.log(res);
+       
 
           Swal.fire({
             position: "center",
@@ -113,15 +113,15 @@ export const Adminlogin = () => {
           Autorization: `Bearer ${tokenResponse.access_token}`,
         },
       });
-      console.log(data);
+    
     },
   });
 
   const signin = useGoogleLogin({
     onSuccess: async (credentialResponse) => {
-      console.log(credentialResponse);
+  
       const decoded = jwt_decode(credentialResponse.credential);
-      console.log(decoded);
+   
     },
   });
 

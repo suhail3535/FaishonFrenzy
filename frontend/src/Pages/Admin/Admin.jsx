@@ -20,7 +20,7 @@ const Admin = () => {
   const { product, isLoading } = useSelector((store) => store.adminReducer);
 
   const x = product.length;
-  console.log("line27", x);
+
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
@@ -28,7 +28,7 @@ const Admin = () => {
     setdata((prev) => {
       return { ...prev, [name]: name === "price" ? +value : value };
     });
-    console.log(data);
+   
   };
 
   const handleSubmit = (e) => {

@@ -40,12 +40,12 @@ const CartPage = () => {
       setTotal(total)
       
     }
-    console.log("AllcartItem", allCart)
+   
 
   };
   useEffect(() => {
     getAllCartItem();
-    // console.log("cartstore", store)
+   
   }, []);
 
 
