@@ -15,3 +15,5 @@ export const getCloting = (param) => async (dispatch) => {
     dispatch({ type: CLOTING_DATA_ERROR }); 
   }
 };
+
+
