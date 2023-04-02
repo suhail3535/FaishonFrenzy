@@ -59,15 +59,6 @@ Anthropologie is a unique, full-lifestyle shopping destination, with a mostly ex
     <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677481891/samples/mobile_8_j8sue5.png"/></td>
   </tr>
 </table>
-
-
-# Product Detail Page 
-<table>
-  <tr>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677479901/samples/mobile_2_wnfs3h.png"/></td>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677481572/samples/mobile_4_x9chbh.png"/></td>
-  </tr>
-</table>
  
 # Cart Page 
 <table>
