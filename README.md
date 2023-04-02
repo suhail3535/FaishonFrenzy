@@ -19,7 +19,7 @@ Anthropologie is a unique, full-lifestyle shopping destination, with a mostly ex
 # Home Page  
 <table>
   <tr>
-    <td valign="top"><img width="686" alt="image" src="https://user-images.githubusercontent.com/97578587/229338076-c4ae1bf9-feab-43e4-abd0-bb201602ff16.png"></td>
+    <td valign="top">![Getting Started](./frontend/src/Images/home.png)</td>
     <td valign="top"><img width="240" alt="image" src="https://user-images.githubusercontent.com/97578587/229338098-f9188e82-16ee-4844-a0d0-9f27a1e0450e.png"></td>
   </tr>
 </table> 
@@ -69,7 +69,9 @@ Anthropologie is a unique, full-lifestyle shopping destination, with a mostly ex
     <td valign="top"></td>
   </tr>
 </table>
- 
+
+
+
 
 # Tech Stack
  # Front-End
