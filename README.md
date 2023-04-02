@@ -3,12 +3,6 @@ Fashion Frenzy is ECommerce Website & is a clone of Anthropologie. With a vast c
 
 ## Deployed Link 
 Visit:  
- 
-<ul dir="auto">
- <ol dir="auto">◉ JavaScript : 81.9%</ol>
- <ol dir="auto">◉ HTML : 0.8%</ol>
- <ol dir="auto">◉ CSS : 17.3%</ol>
- </ul>
 
 ## Clone of Anthropologie   
 Anthropologie is a unique, full-lifestyle shopping destination, with a mostly exclusive assortment of clothing, shoes, accessories, beauty, furniture, home décor, garden, bridal, and more.
