@@ -108,7 +108,7 @@ const CartPage = () => {
                 </div>
 
                 <span>
-                  <button onClick={handleCheckout}>
+                  <button onClick={handleCheckout} className="proced-btn">
                     {!isButLoading && ` PROCEED TO CHECKOUT `}
                     {isButLoading && (
                       <Spinner

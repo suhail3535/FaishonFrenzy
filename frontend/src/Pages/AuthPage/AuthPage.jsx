@@ -122,7 +122,7 @@ const AuthPage = () => {
 
 
   return (
-    <div>
+    <div className="auth-back-img">
       <div className="authpage-container">
         <div className="authpage-cont">
           <div className={active === true ? "container active" : "container"}>

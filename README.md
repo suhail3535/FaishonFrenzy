@@ -3,12 +3,6 @@ Fashion Frenzy is ECommerce Website & is a clone of Anthropologie. With a vast c
 
 ## Deployed Link 
 Visit:  
- 
-<ul dir="auto">
- <ol dir="auto">◉ JavaScript : 81.9%</ol>
- <ol dir="auto">◉ HTML : 0.8%</ol>
- <ol dir="auto">◉ CSS : 17.3%</ol>
- </ul>
 
 ## Clone of Anthropologie   
 Anthropologie is a unique, full-lifestyle shopping destination, with a mostly exclusive assortment of clothing, shoes, accessories, beauty, furniture, home décor, garden, bridal, and more.
@@ -55,41 +49,30 @@ Anthropologie is a unique, full-lifestyle shopping destination, with a mostly ex
 # SingleProduct Page
 <table>
   <tr>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677481874/samples/mobile_7_lnlhm1.png"/></td>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677481891/samples/mobile_8_j8sue5.png"/></td>
-  </tr>
-</table>
-
-
-# Product Detail Page 
-<table>
-  <tr>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677479901/samples/mobile_2_wnfs3h.png"/></td>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677481572/samples/mobile_4_x9chbh.png"/></td>
+    <td valign="top"></td>
+    <td valign="top"></td>
   </tr>
 </table>
  
 # Cart Page 
 <table>
   <tr>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677479901/samples/mobile_2_wnfs3h.png"/></td>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677481572/samples/mobile_4_x9chbh.png"/></td>
+    <td valign="top"></td>
+    <td valign="top"></td>
   </tr>
 </table>
 
 # SignIn Page
 <table>
   <tr>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677479901/samples/mobile_2_wnfs3h.png"/></td>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677481572/samples/mobile_4_x9chbh.png"/></td>
+    <td valign="top"></td>
+    <td valign="top"></td>
   </tr>
 </table>
 
-## Tablet View  
-<img width="411" alt="image" src="https://user-images.githubusercontent.com/97578587/221416465-0eef639f-fc85-4609-9a6d-4cc0513b7f94.png">
+## Tablet View   
 
-## Mobile View 
-<img width="200" alt="image" src="https://user-images.githubusercontent.com/97578587/221416554-21cc7aa3-0241-4e7e-ac98-2ba0a746d3e8.png"> 
+## Mobile View  
 
 
 # Tech Stack
@@ -106,8 +89,26 @@ Anthropologie is a unique, full-lifestyle shopping destination, with a mostly ex
 
 
 # External CSS Library
--Chakra UI
+-Chakra UI 
 
 #Front-End Deployment - netlify
-#Back-End Deployment - Cyclic  
+#Back-End Deployment - Cyclic   
+
+## Note
+
+This website is fully mobile friendly. You can use this website in mobile, tablet either desktop as well as. You feels very nice when you are using this website.
+
+Things Used
+We using different kinds of the technologies to make this website. These things are as follows:
+
+- Javascript, React, Readux, Chakra UI, CSS, HTML etc.
+
+## Contributers
+
+ Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+
+- [x] Suhail Khan - [GitHub Profile](https://github.com/suhail3535)
+- [x] Namrata Awasthi - [GitHub Profile](https://github.com/Namrata0407) 
+- [x] Tushit Saxena - [GitHub Profile](https://github.com/tushit99) 
+- [x] Shagun Sharma - [GitHub Profile](https://github.com/shagunsharma6677)
 

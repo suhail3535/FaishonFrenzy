@@ -126,13 +126,13 @@ export const Adminlogin = () => {
   });
 
   return (
-    <div>
+    <div className="admin-back-img">
       <div className="authpage-container">
         <div className="authpage-cont">
           <div className={active === true ? "container active" : "container"}>
             <div className="forms">
               <div className="form login">
-                <span className="title">Login</span>
+                <span className="title">Admin Login</span>
 
                 <form action="#">
                   <div className="input-field">

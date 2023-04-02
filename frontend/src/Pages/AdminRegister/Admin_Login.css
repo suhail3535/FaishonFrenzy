@@ -1,155 +1,160 @@
 .container {
-    position: relative;
-    max-width: 430px;
-    width: 100%;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;         /*This will make the signup hidden*/
-    margin: 0 20px;
-  }
-  
-  .container .forms {
-    display: flex;            /*Aligning sigh up login side by side*/
-    align-items: center;
-    height: 540px;           /*Login Form Height also default height of page*/
-    width: 200%;              /*This make whole form width 200%*/
-    transition: height 0.2s ease;    /*This make trasition of heigth smooth*/
-    /* background-color: red; */
-   
-  }
-  
-  .container .form {
-    width: 50%;                /*This make whole form width 100%*/
-    padding: 30px;
-    background-color: #fff;
-    transition: margin-left 0.18s ease;
-    border:"1px solid black"
-  }
-  
-  .container.active .login {            
-    margin-left: -50%;          /*This make trasition slide of login form*/
-    opacity: 0;
-    transition: margin-left 0.18s ease, opacity 0.15s ease;
-  
-    /*Whenever signup classList active it will margin left the login form -50%*/
-  }
-  
-  .container .signup {
-    opacity: 0;
-    transition: opacity 0.09s ease;
-  }
-  .container.active .signup {
-    opacity: 1;
-    transition: opacity 0.2s ease;
-  }
-  
-  .container.active .forms {
-    height: fit-content;         /*This will make signup height 600 on switch*/
-  }
-  .container .form .title {
-    position: relative;
-    font-size: 27px;
-    font-weight: 600;
-  }
-  
-  .form .input-field {
-    position: relative;
-    height: 50px;
-    width: 100%;
-    margin-top: 30px;
-  }
-  
-  .input-field input {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    padding: 0 35px;
-    border: 5px solid green;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    border-bottom: 2px solid #ccc;
-    border-top: 2px solid transparent;
-    transition: all 0.2s ease;
-  }
-  
-  .input-field input:is(:focus, :valid) {
-    border-bottom-color: #4070f4;
-  }
-  
-  .input-field i {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #999;
-    font-size: 23px;
-    transition: all 0.2s ease;
-  }
-  
-  
-  
-  .input-field i.icon {
-    left: 0;
-  }
-  
-  
-  .form .checkbox-text {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 20px;
-  }
-  
-  .checkbox-text .checkbox-content {
-    display: flex;
-    align-items: center;
-  }
-  
-  .checkbox-content input {
-    margin: 0 8px -2px 4px;
-    accent-color: #4070f4;
-  }
-  
-  .form .text {
-    color: #333;
-    font-size: 14px;
-  }
-  
-  .form a.text {
-    color: #4070f4;
-    text-decoration: none;
-  }
-  .form a:hover {
-    text-decoration: underline;
-  }
-  
-  .form .button {
-    margin-top: 35px;
-  }
-  
-  .form .button input {
-    border: none;
-    color: #fff;
-    font-size: 17px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    border-radius: 6px;
-    background-color: #4070f4;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .button input:hover {
-    background-color: #265df2;
-  }
-  
-  .form .login-signup {
-    margin-top: 30px;
-    text-align: center;
-  }
-  .authpage-cont{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  position: relative;
+  max-width: 430px;
+  width: 100%;
+  /* background: rgb(255, 255, 255); */
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /*This will make the signup hidden*/
+  margin: 0 20px;  
+  background: transparent;   
+} 
+
+.container .forms {
+  display: flex; /*Aligning sigh up login side by side*/
+  align-items: center;
+  height: 540px; /*Login Form Height also default height of page*/
+  width: 200%; /*This make whole form width 200%*/
+  transition: height 0.2s ease; /*This make trasition of heigth smooth*/
+  /* background-color: red; */
+}
+
+.container .form {
+  width: 50%; /*This make whole form width 100%*/
+  padding: 30px; 
+  transition: margin-left 0.18s ease;
+  border: "1px solid black"; 
+}
+
+.container.active .login {
+  margin-left: -50%; /*This make trasition slide of login form*/
+  opacity: 0;
+  transition: margin-left 0.18s ease, opacity 0.15s ease;
+
+  /*Whenever signup classList active it will margin left the login form -50%*/
+}
+
+.container .signup {
+  opacity: 0;
+  transition: opacity 0.09s ease;
+}
+.container.active .signup {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.container.active .forms {
+  height: fit-content; /*This will make signup height 600 on switch*/
+}
+.container .form .title {
+  position: relative;
+  font-size: 27px;
+  font-weight: 600;
+}
+
+.form .input-field {
+  position: relative;
+  height: 50px;
+  width: 100%;   
+  margin-top: 30px;
+}
+
+.input-field input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 0 35px;
+  border: 5px solid green;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-bottom: 2px solid #ccc;
+  border-top: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid) {
+  border-bottom-color: #4070f4;
+}
+
+.input-field i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 23px;
+  transition: all 0.2s ease;
+}
+
+.input-field i.icon {
+  left: 0;
+}
+
+.form .checkbox-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.checkbox-text .checkbox-content {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-content input {
+  margin: 0 8px -2px 4px;
+  accent-color: #4070f4;
+}
+
+.form .text {
+  color: #333;
+  font-size: 14px;
+}
+
+.form a.text {
+  color: #4070f4;
+  text-decoration: none;
+}
+.form a:hover {
+  text-decoration: underline;
+}
+
+.form .button {
+  margin-top: 35px;
+}
+
+.form .button input {
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  background-color: #4070f4;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button input:hover {
+  background-color: #265df2;
+}
+
+.form .login-signup {
+  margin-top: 30px;
+  text-align: center;
+}
+.authpage-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.admin-back-img {
+  /* background-image: url("https://img.freepik.com/free-vector/ecommerce-web-store-hand-drawn-illustration_107791-10966.jpg") ; */
+  background-image: url("https://as2.ftcdn.net/v2/jpg/01/55/45/27/500_F_155452784_ZovaHKAvYMGgESybijVC5EzE45WgJdOj.jpg") ;
+  /* background-image: url("https://previews.123rf.com/images/teravector/teravector1904/teravector190401330/122868688-seamless-pattern-with-blue-outline-shopping-icons-on-white-background-online-shop-mobile-shopping.jpg") ; */
+  /* background-image: url("https://media.istockphoto.com/id/187321129/vector/business-and-website-development-doodles-elements.jpg?s=612x612&w=0&k=20&c=WoLiyyKfSP5IG4AWL0nFuSIAJyih1ysdYHFDZjs0j-4=") ;       */
+  /* background-image: url("https://st4.depositphotos.com/26922174/39326/v/1600/depositphotos_393261686-stock-illustration-online-shopping-seamless-pattern.jpg"); */
+  padding: 40px 0; 
+}
