@@ -43,7 +43,7 @@ import { FaUserAlt } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
 import { SlHandbag } from "react-icons/sl";
 import Collapseble from "./Collapseble";
-import { useSelector,useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { getAllCart } from "../../Redux/Cart/action";
 
 const LoginSignUp = ["Login", "SignUpPage"];
@@ -65,7 +65,7 @@ const FilterSizeType = [
   "Top-Rated Accessories",
   "Top-Rated Wedding",
   "Top-Rated Home & Furniture",
-  "Top-Rated Beauty", 
+  "Top-Rated Beauty",
   "Mini & Tunic Dresses",
   "Cocktail & Party Dresses",
   "Petite Dresses",
@@ -174,36 +174,31 @@ const getData = async (val) => {
 };
 
 export default function Navbar() {
- 
-   const cartData = useSelector((res)=>res.cartReducer.cart)
-   console.log(cartData)
-   const [allCart, setAllCart] = useState([]);
-   const dispatch = useDispatch();
+  const cartData = useSelector((res) => res.cartReducer.cart);
+  console.log(cartData);
+  const [allCart, setAllCart] = useState([]);
+  const dispatch = useDispatch();
 
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
 
   const [inputData, setInputData] = useState("");
-  
+
   const fetchedData = async (inputData) => {
     const result = await getData(inputData);
   };
 
-
-
   const getAllCartItem = async () => {
-    dispatch(getAllCart())
+    dispatch(getAllCart());
     if (cartData) {
-      setAllCart(cartData)
+      setAllCart(cartData);
     }
-    console.log("AllcartItem", allCart)
-
+    console.log("AllcartItem", allCart);
   };
 
-  useEffect(()=>{
-    getAllCartItem()
-  },[]);
-
+  useEffect(() => {
+    getAllCartItem();
+  }, []);
 
   return (
     <>
@@ -241,8 +236,6 @@ export default function Navbar() {
               </div>
             </Flex>
           </HStack>
-
-          
         </Box>
         <Box
           bg={useColorModeValue("gray.100", "gray.900")}
@@ -325,22 +318,20 @@ export default function Navbar() {
               <Box
                 // pb={4}
                 display={["block", "block", "block", "block", "block"]}
-
               >
-                
-               {/* <Flex> */}
-               <SlHandbag
+                {/* <Flex> */}
+                <SlHandbag
                   style={{
                     height: "50px",
                     width: "35px",
                     color: "#167a92",
                     marginTop: "-7px",
-                   
                   }}
                 />
-                <h1 style={{ marginTop: "-30px",textAlign:"center" }}>{cartData.length}</h1>
-               {/* </Flex> */}
-                
+                <h1 style={{ marginTop: "-30px", textAlign: "center" }}>
+                  {cartData.length}
+                </h1>
+                {/* </Flex> */}
               </Box>
             </RouterLink>
 
@@ -371,6 +362,8 @@ export default function Navbar() {
                   <MenuItem>
                     <RouterLink to="/adminlogin">Admin login</RouterLink>
                   </MenuItem>
+
+                  
                   <MenuItem>LogOut</MenuItem>
                   {/* <MenuItem>SignUP</MenuItem> */}
                 </MenuList>
@@ -395,27 +388,27 @@ export default function Navbar() {
             display={["block", "block", "block", "none", "none"]}
           >
             <Box w={"100%"} height={"auto"}>
+              <Link href="/authpage">
+                <Collapseble Filter={LoginSignUp} filterBy={"Login/SignUp"} />
+              </Link>
 
-            <Link href="/authpage">
-            <Collapseble Filter={LoginSignUp} filterBy={"Login/SignUp"} />
-            </Link>
-              
               <Divider borderColor={"gray"} />
 
               <Link href="/admin">
-              <Collapseble Filter={FilterPrice} filterBy={"New!"} />
+                <Collapseble Filter={FilterPrice} filterBy={"New!"} />
               </Link>
-             
+
               <Collapseble Filter={FilterSizeType} filterBy={"Top-Rated"} />
 
               <Link href="dress">
-              <Collapseble Filter={FilterBySizeNo} filterBy={"Dresses"} />
+                <Collapseble Filter={FilterBySizeNo} filterBy={"Dresses"} />
               </Link>
 
-              <Link href='shoes'>  <Collapseble Filter={FilterByBrand} filterBy={"Shoes"} />
+              <Link href="shoes">
+                {" "}
+                <Collapseble Filter={FilterByBrand} filterBy={"Shoes"} />
               </Link>
-             
-            
+
               <Collapseble Filter={FilteByColor} filterBy={"Accessories"} />
             </Box>
           </Box>
