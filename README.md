@@ -23,19 +23,15 @@ Anthropologie is a unique, full-lifestyle shopping destination, with a mostly ex
 
 <table>
   <tr>
-    <td valign="top"><img  src="https://i.postimg.cc/t4knX1Mn/mobile.png" alt=" started" /></td> 
+    <td valign="top"><img width="663" alt="image" src="https://user-images.githubusercontent.com/97578587/229366144-2011e707-867e-4874-afb8-55e8ef3ab6c0.png"></td> 
     <td valign="top"><img  alt="image" src="https://user-images.githubusercontent.com/97578587/229338098-f9188e82-16ee-4844-a0d0-9f27a1e0450e.png"></td>
   </tr>
 </table>
 
 # Admin Page (Add,Edit and Delete Product )
 
-<table>
-  <tr>
-    <td valign="top"></td>
-    <td valign="top"></td>
-  </tr>
-</table>
+<img width="691" alt="image" src="https://user-images.githubusercontent.com/97578587/229366206-a9996662-b449-4247-9696-29fabd845eab.png">
+
 
 # Product Page
 
@@ -54,16 +50,20 @@ Anthropologie is a unique, full-lifestyle shopping destination, with a mostly ex
 
 <table>
   <tr>
-    <td valign="top"></td>
-    <td valign="top"></td>
+    <td valign="top"><img width="688" alt="image" src="https://user-images.githubusercontent.com/97578587/229366232-7e71e3f3-9283-43fb-875e-d01c49e2f14c.png">
+</td>
+    <td valign="top"><img width="230" alt="image" src="https://user-images.githubusercontent.com/97578587/229366275-a2407853-5f94-4d09-ba36-6bfc4a22879f.png">
+</td>
   </tr>
 </table>
  
 # Cart Page 
 <table>
   <tr>
-    <td valign="top"></td>
-    <td valign="top"></td>
+    <td valign="top"><img width="707" alt="image" src="https://user-images.githubusercontent.com/97578587/229366313-bc700826-4fcf-4323-900a-37cef1cb4f0a.png">
+</td>
+    <td valign="top"><img width="237" alt="image" src="https://user-images.githubusercontent.com/97578587/229366384-baabdffe-9191-4608-9883-e24e819e84a7.png">
+</td>
   </tr>
 </table>
 
@@ -71,8 +71,10 @@ Anthropologie is a unique, full-lifestyle shopping destination, with a mostly ex
 
 <table>
   <tr>
-    <td valign="top"></td>
-    <td valign="top"></td>
+    <td valign="top"><img width="692" alt="image" src="https://user-images.githubusercontent.com/97578587/229366447-6c2330bf-508c-4416-b50d-1c2e8f3d3ba2.png">
+</td>
+    <td valign="top"><img width="243" alt="image" src="https://user-images.githubusercontent.com/97578587/229366468-91f3148b-09bb-46e6-b3e1-b55a863af56a.png">
+</td>
   </tr>
 </table>
 
