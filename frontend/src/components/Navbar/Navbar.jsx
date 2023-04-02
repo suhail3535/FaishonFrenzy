@@ -175,7 +175,7 @@ const getData = async (val) => {
 
 export default function Navbar() {
   const cartData = useSelector((res) => res.cartReducer.cart);
-  console.log(cartData);
+  // console.log(cartData);
   const [allCart, setAllCart] = useState([]);
   const dispatch = useDispatch();
 
@@ -193,7 +193,7 @@ export default function Navbar() {
     if (cartData) {
       setAllCart(cartData);
     }
-    console.log("AllcartItem", allCart);
+    // console.log("AllcartItem", allCart);
   };
 
   useEffect(() => {
