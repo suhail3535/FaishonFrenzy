@@ -13,7 +13,7 @@ export const addToCart = (payload) => async (dispatch) => {
     let res = await axios.post(`http://localhost:7700/carts/add`, payload);
     dispatch({ type: CART_DATA_POST, payload: res.data });
 
-    console.log("fromRedux",res.data);
+    // console.log("fromRedux",res.data);
   } catch (err) {
     dispatch({ type: CART_DATA_ERROR });
   }
