@@ -49,32 +49,30 @@ Anthropologie is a unique, full-lifestyle shopping destination, with a mostly ex
 # SingleProduct Page
 <table>
   <tr>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677481874/samples/mobile_7_lnlhm1.png"/></td>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677481891/samples/mobile_8_j8sue5.png"/></td>
+    <td valign="top"></td>
+    <td valign="top"></td>
   </tr>
 </table>
  
 # Cart Page 
 <table>
   <tr>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677479901/samples/mobile_2_wnfs3h.png"/></td>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677481572/samples/mobile_4_x9chbh.png"/></td>
+    <td valign="top"></td>
+    <td valign="top"></td>
   </tr>
 </table>
 
 # SignIn Page
 <table>
   <tr>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677479901/samples/mobile_2_wnfs3h.png"/></td>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677481572/samples/mobile_4_x9chbh.png"/></td>
+    <td valign="top"></td>
+    <td valign="top"></td>
   </tr>
 </table>
 
-## Tablet View  
-<img width="411" alt="image" src="https://user-images.githubusercontent.com/97578587/221416465-0eef639f-fc85-4609-9a6d-4cc0513b7f94.png">
+## Tablet View   
 
-## Mobile View 
-<img width="200" alt="image" src="https://user-images.githubusercontent.com/97578587/221416554-21cc7aa3-0241-4e7e-ac98-2ba0a746d3e8.png"> 
+## Mobile View  
 
 
 # Tech Stack
