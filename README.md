@@ -24,7 +24,8 @@ Anthropologie is a unique, full-lifestyle shopping destination, with a mostly ex
 <table>
   <tr>
     <td valign="top"><img width="663" alt="image" src="https://user-images.githubusercontent.com/97578587/229366144-2011e707-867e-4874-afb8-55e8ef3ab6c0.png"></td> 
-    <td valign="top"><img  alt="image" src="https://user-images.githubusercontent.com/97578587/229338098-f9188e82-16ee-4844-a0d0-9f27a1e0450e.png"></td>
+    <td valign="top"><img width="283" alt="image" src="https://user-images.githubusercontent.com/97578587/229366560-8c81396f-4db5-40a8-a995-dbc85d6351ac.png">
+</td>
   </tr>
 </table>
 
