@@ -66,7 +66,7 @@ export const SingleProduct = () => {
   const fetchSigleProd = async () => {
     try {
       const details = await axios.get(
-        `http://localhost:7700/${param.name}/${param.id}`
+        `https://sleepy-pear-toga.cyclic.app/${param.name}/${param.id}`
       );
       console.log("singleDetail", details.data);
       setProdDetail(details.data[0]);

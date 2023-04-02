@@ -24,9 +24,7 @@ import {
   Collapse,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
-// import {Link as }
 import { Link as RouterLink } from "react-router-dom";
-// import source from "../../Images/HomePage/img1.png";
 import Source2 from "../../Images/HomePage/img2.png";
 import {
   MDBContainer,
@@ -39,12 +37,14 @@ import { useContext } from "react";
 
 import { useEffect } from "react";
 import { useState } from "react";
-
+// import { useDispatch } from "react-redux";
 import { Navigate } from "react-router-dom";
 import { FaUserAlt } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
 import { SlHandbag } from "react-icons/sl";
 import Collapseble from "./Collapseble";
+import { useSelector, useDispatch } from "react-redux";
+import { getAllCart } from "../../Redux/Cart/action";
 
 const LoginSignUp = ["Login", "SignUpPage"];
 const FilterPrice = [
@@ -65,7 +65,7 @@ const FilterSizeType = [
   "Top-Rated Accessories",
   "Top-Rated Wedding",
   "Top-Rated Home & Furniture",
-  "Top-Rated Beauty", 
+  "Top-Rated Beauty",
   "Mini & Tunic Dresses",
   "Cocktail & Party Dresses",
   "Petite Dresses",
@@ -174,6 +174,11 @@ const getData = async (val) => {
 };
 
 export default function Navbar() {
+  const cartData = useSelector((res) => res.cartReducer.cart);
+  // console.log(cartData);
+  const [allCart, setAllCart] = useState([]);
+  const dispatch = useDispatch();
+
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
 
@@ -182,6 +187,21 @@ export default function Navbar() {
   const fetchedData = async (inputData) => {
     const result = await getData(inputData);
   };
+
+  const getAllCartItem = async () => {
+    dispatch(getAllCart());
+    if (cartData) {
+      setAllCart(cartData);
+    }
+    // console.log("AllcartItem", allCart);
+  };
+
+  useEffect(() => {
+    getAllCartItem();
+  }, []);
+
+
+  
 
   return (
     <>
@@ -280,6 +300,7 @@ export default function Navbar() {
                 style={{ width: "100%", border: "1px solid grey" }}
                 _focus={"none"}
                 borderRadius={"none"}
+                padding={"5px"}
               />
               <Button
                 _hover={"#167a92"}
@@ -299,17 +320,22 @@ export default function Navbar() {
             <RouterLink to={"/cart"}>
               {/* <Image _hover={"#167a92"} color={"#167a92"} h={"350px"} w={"35px"} size={'sm'} src={"data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjAgMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgYXJpYS1sYWJlbD0iTXkgU2hvcHBpbmcgQ2FydCIgcm9sZT0iaW1nIiBmb2N1c2FibGU9ImZhbHNlIj48cGF0aCBkPSJNMTQuNzggNi40OVY1LjE4NUMxNC43OCAyLjYwMSAxMi42MzcuNSAxMCAuNVM1LjIyIDIuNjAxIDUuMjIgNS4xODR2MS4zMDdIMHY3Ljk3M0MwIDE3LjI0IDIuMzU3IDE5LjUgNS4yNTQgMTkuNWg5LjQ5M2MyLjg5NyAwIDUuMjUzLTIuMjYgNS4yNTMtNS4wMzZWNi40OXpNNi4yMiA1LjE4NUM2LjIyIDMuMTUzIDcuOTE0IDEuNSAxMCAxLjVzMy43OCAxLjY1MyAzLjc4IDMuNjg0djEuMzA3SDYuMjJ6TTE5IDE0LjQ2NGMwIDIuMjI1LTEuOTA4IDQuMDM2LTQuMjUzIDQuMDM2SDUuMjU0QzIuOTA4IDE4LjUgMSAxNi42OSAxIDE0LjQ2NFY3LjQ5aDQuMjJ2Mi40MjdoMVY3LjQ5MWg3LjU2djIuNDI3aDFWNy40OTFIMTl6Ii8+PC9zdmc+"}  alt={"error"}/> */}
               <Box
-                pb={4}
+                // pb={4}
                 display={["block", "block", "block", "block", "block"]}
               >
+                {/* <Flex> */}
                 <SlHandbag
                   style={{
-                    height: "350px",
+                    height: "50px",
                     width: "35px",
                     color: "#167a92",
-                    marginTop: "10px",
+                    marginTop: "-7px",
                   }}
                 />
+                <h1 style={{ marginTop: "-30px", textAlign: "center" }}>
+                  {cartData.length}
+                </h1>
+                {/* </Flex> */}
               </Box>
             </RouterLink>
 
@@ -340,6 +366,8 @@ export default function Navbar() {
                   <MenuItem>
                     <RouterLink to="/adminlogin">Admin login</RouterLink>
                   </MenuItem>
+
+                  
                   <MenuItem>LogOut</MenuItem>
                   {/* <MenuItem>SignUP</MenuItem> */}
                 </MenuList>
@@ -364,27 +392,27 @@ export default function Navbar() {
             display={["block", "block", "block", "none", "none"]}
           >
             <Box w={"100%"} height={"auto"}>
+              <Link href="/authpage">
+                <Collapseble Filter={LoginSignUp} filterBy={"Login/SignUp"} />
+              </Link>
 
-            <Link href="/authpage">
-            <Collapseble Filter={LoginSignUp} filterBy={"Login/SignUp"} />
-            </Link>
-              
               <Divider borderColor={"gray"} />
 
               <Link href="/admin">
-              <Collapseble Filter={FilterPrice} filterBy={"New!"} />
+                <Collapseble Filter={FilterPrice} filterBy={"New!"} />
               </Link>
-             
+
               <Collapseble Filter={FilterSizeType} filterBy={"Top-Rated"} />
 
               <Link href="dress">
-              <Collapseble Filter={FilterBySizeNo} filterBy={"Dresses"} />
+                <Collapseble Filter={FilterBySizeNo} filterBy={"Dresses"} />
               </Link>
 
-              <Link href='shoes'>  <Collapseble Filter={FilterByBrand} filterBy={"Shoes"} />
+              <Link href="shoes">
+                {" "}
+                <Collapseble Filter={FilterByBrand} filterBy={"Shoes"} />
               </Link>
-             
-            
+
               <Collapseble Filter={FilteByColor} filterBy={"Accessories"} />
             </Box>
           </Box>
