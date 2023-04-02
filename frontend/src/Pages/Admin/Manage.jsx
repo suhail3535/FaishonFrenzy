@@ -34,7 +34,7 @@ const Manage = () => {
               }}
               _selected={{
                 color: "white",
-                bg: "#167a92",
+                bg: "#17274a",
                 borderRadius: "5px",
                 fontWeight: "bold",
               }}
@@ -76,7 +76,7 @@ const Manage = () => {
 
                 borderRadius: "5px",
                 fontWeight: "bold",
-                bg: "#167a92",
+                bg: "#17274a",
               }}
             >
               Admin Credentials

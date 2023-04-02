@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { deletedata, getProduct } from "../../Redux/Admin/action";
 
-const AdminCard = ({ _id, img, title, price, rating }) => {
+const AdminCard = ({ _id, image, title, price, rating }) => {
   const dispatch = useDispatch();
 
   const handleDelete = (_id) => {
@@ -56,7 +56,7 @@ const AdminCard = ({ _id, img, title, price, rating }) => {
       <div className="paymentCard-cont">
         <div className="paymentCard-info">
           <div className="paymentCard-info-img-div">
-            <img src={img} alt="" />
+            <img src={image} alt="" />
           </div>
           <div className="paymentCard-info-cont">
             <p>{title}</p>

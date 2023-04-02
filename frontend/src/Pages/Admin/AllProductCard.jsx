@@ -1,13 +1,13 @@
 import styles from "./Admin.module.css";
 import React from "react";
 
-const AllProductCard = ({ _id, img, title, price, rating }) => {
+const AllProductCard = ({ _id, image, title, price, rating }) => {
   return (
     <div id={styles.Admincart_component}>
       <div className="paymentCard-cont">
         <div className="paymentCard-info">
           <div className="paymentCard-info-img-div">
-            <img src={img} alt="" />
+            <img src={image} alt="" />
           </div>
           <div className="paymentCard-info-cont">
             <p>{title}</p>

@@ -13,10 +13,11 @@ export const reducer = (state = initialState, { type, payload }) => {
       return { ...state, isLoading: true };
     case PRODUCT_DATA_SUCCESS:
        return {
-        ...state,
-        isLoading: false,
-         product:payload 
-      };
+         ...state,
+         isLoading: false,
+           product: payload
+          // product: [payload, ...state.product],
+       };
 
     case PRODUCT_DATA_ERROR:
       return { ...state, isLoading: false, isError: true };

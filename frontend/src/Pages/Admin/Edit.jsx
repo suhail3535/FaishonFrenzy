@@ -22,7 +22,7 @@ const Edit = () => {
     const newData = {
       price: price,
       title: title,
-      img: image,
+      image: image,
       rating: rating,
     };
     dispatch(editProduct(id, newData));
@@ -52,7 +52,7 @@ const Edit = () => {
     console.log(productData);
     productData && setPrice(productData.price);
     productData && setTitle(productData.title);
-    productData && setImage(productData.img);
+    productData && setImage(productData.image);
     productData && setRating(productData.rating);
   }, []);
 
