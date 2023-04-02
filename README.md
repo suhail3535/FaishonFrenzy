@@ -69,11 +69,7 @@ Anthropologie is a unique, full-lifestyle shopping destination, with a mostly ex
     <td valign="top"></td>
   </tr>
 </table>
-
-## Tablet View   
-
-## Mobile View  
-
+ 
 
 # Tech Stack
  # Front-End
@@ -112,3 +108,112 @@ We using different kinds of the technologies to make this website. These things 
 - [x] Tushit Saxena - [GitHub Profile](https://github.com/tushit99) 
 - [x] Shagun Sharma - [GitHub Profile](https://github.com/shagunsharma6677)
 
+
+# Folder Structure and Packages
+==>Before you start:
+   - We have already created all the folders which you will need during journey.
+ 
+   - WE have already setup all the things related to `redux`, `.env`, `Chakra UI` and `react-router-dom` 
+     You guys have to just start developments.
+
+   - Also given you sample `Navbar` and `Footer` components so that you get 
+     comfortable about folder components export.
+
+   - You will get all the routing files in `Mainroutes` folder.
+
+   - You can also use context-api if needed.
+
+   - All the end-points and base-url is in env files.  
+   
+<!-- Cloning related and Getting started related stuffs -->
+=> Clone the directory to start work `$git clone https://github.com/suhail3535/alive-run-138`
+
+=> Ok guys here are the some basic instruction before you start , If you are here you are successfully pulled the code and you are ready to type you first command in terminal.
+
+Step-1- Navigate to proeject directory using `$cd alive-run-138`
+
+Step-2- install node_modules using `$cd npm install`
+
+- It will install some common dependencies:- <br />
+    - `$npm install react-router-dom redux react-redux redux-thunk axios`<br />
+    - `$npm install @chakra-ui/react @emotion/react @emotion/styled framer-motion`
+ 
+=> Some helpful Tools during development :<br />
+    - Chakra-UI - https://chakra-ui.com/<br />
+    - Chakra-Templets - https://chakra-templates.dev/#<br />
+    - String Builder - https://codebeautify.org/string-builder<br />
+    - Chat-gpt - https://chat.openai.com/chat<br />
+    - Your-Team-members- https://chat.whatsapp.com/KR80RM0zbWi6agJVFL66Z9<br />
+
+
+# DATABASE SCHEMAS
+
+ # /user
+
+```
+|GET 
+`/user`-------> |POST
+                |-----> `/user/register`  //for registering user
+
+                   {                        
+                      email:"suhail@gmail.com", 
+                      password:"12345", 
+                      name: "suhail"
+                    }
+-------------------------------------------------------------------------------------------------------
+                |POST
+                |-----> `/user/login`
+
+                   {
+                       
+                        email:"suhail@gmail.com",
+                        password:"12234",
+                       
+                    }
+
+-------------------------------------------------------------------------------------------------------
+
+                |GET
+                |---> `/admin` 
+
+                  headers:{
+                    Authorization:`kjxbjbjxsjbxsbdbxbsaodboaodsbdoubdba`
+                    }  
+
+ -----------------------------------------------------------------------------------------------------
+
+ # /product             
+
+```
+|GET/POST
+`/product`---> |GET/PATCH/DELETE
+                |-----------------> `/product/:id`
+
+            |GET -----> /product?category=kurta
+
+               headers:{
+
+                    Authorization:`kjxbjbjxsjbxsbdbxbsaodboaodsbdoubdba`
+                        
+            }
+
+-------------------------------------------------------------------------------------------------------            
+
+            |POST --> /product
+
+                [{
+                    name: "Pilcro The Romy Relaxed Buttondown",  
+                    img: "https://images.urbndata.com/is/image/Anthropologie/4110907290003_019_b2?$a15-pdp-detail-shot$&fit=constrain&fmt=webp&qlt=80&wid=720",  
+                    price: 7399.47,
+                    Spise: 8057.2 , 
+                    brand: "Pilcro" ,
+                    rating: 4.2 
+                }]
+
+                 headers:{
+
+                    Authorization:`kjxbjbjxsjbxsbdbxbsaodboaodsbdoubdba`
+                        
+                    }  
+
+```
