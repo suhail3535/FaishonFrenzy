@@ -65,6 +65,7 @@
     height: 100%;
     width: 100%;
     padding: 0 35px;
+    border: 5px solid green;
     border: none;
     outline: none;
     font-size: 16px;

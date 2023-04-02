@@ -1,15 +1,7 @@
 import styles from "./Admin.module.css";
 import React from "react";
-import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
-import Swal from "sweetalert2";
-import { deletedata, getProduct } from "../../Redux/Admin/action";
 
 const AllProductCard = ({ _id, img, title, price, rating }) => {
- 
-
- 
-
   return (
     <div id={styles.Admincart_component}>
       <div className="paymentCard-cont">
@@ -37,10 +29,6 @@ const AllProductCard = ({ _id, img, title, price, rating }) => {
         </div>
         <div>${price}</div>
         <div>{rating} ⭐</div>
-
-      
-
-       
       </div>
     </div>
   );

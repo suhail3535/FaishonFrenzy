@@ -3,13 +3,12 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Admin.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { Input, Button, Stack, Box, Heading } from "@chakra-ui/react";
+import { Input,  Stack, Box, Heading } from "@chakra-ui/react";
 import Swal from "sweetalert2";
 
 import AdminCard from "./AdminCard";
 import { getProduct, postRequest } from "../../Redux/Admin/action";
-import { store } from "../../Redux/Store";
-import PaymentCard from "../../components/PaymentCard/PaymentCard";
+
 const initialState = {
   img: "",
   title: "",
@@ -39,9 +38,9 @@ const Admin = () => {
     setdata(initialState);
      
     Swal.fire("", "Product added!", "success");
- dispatch(getProduct());
+
   };
-  // console.log(data)
+
   dispatch(getProduct());
 
   useEffect(() => {

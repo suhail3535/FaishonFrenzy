@@ -1,37 +1,26 @@
 import {
-  Box,
-  Button,
-  Center,
+
   Divider,
   FormControl,
   FormLabel,
   Heading,
   HStack,
   Input,
-  PinInput,
-  PinInputField,
-  Radio,
-  RadioGroup,
+
   Select,
   Spinner,
-  Stack,
-  Tab,
-  TabList,
-  TabPanel,
-  TabPanels,
-  Tabs,
+
   useToast,
   VStack,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Swal from "sweetalert2";
+
 import { postRequestAddress } from "../../Redux/ShippingReducer/action";
 
 import styles from "./Shipping.module.css";
-import { useDispatch, useSelector, shallowEqual } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
-import { useEffect } from "react";
 import { store } from "../../Redux/Store";
 import ShippingFooter from "./ShippingFooter";
 

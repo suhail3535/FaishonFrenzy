@@ -1,9 +1,9 @@
-import { Checkbox, FormControl, FormLabel, HStack, Input, PinInput, PinInputField, Select, Tab, TabList, TabPanel, TabPanels, Tabs, VStack } from '@chakra-ui/react';
-import React from 'react'
+import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
+import React from "react";
 
-import Admin from './Admin';
-import CostumersloginDetails from './AllProduct';
-import AllProduct from './AllProduct';
+import Admin from "./Admin";
+
+import AllProduct from "./AllProduct";
 
 const Manage = () => {
   return (
@@ -68,7 +68,7 @@ const Manage = () => {
                 width: "25%",
                 fontWeight: "bold",
                 border: "0px solid blue",
-                boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px"
+                boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
                 // backgroundColor: "rgb(237,242,247)",
               }}
               _selected={{
@@ -115,6 +115,6 @@ const Manage = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Manage
+export default Manage;

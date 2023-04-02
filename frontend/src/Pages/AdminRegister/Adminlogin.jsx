@@ -1,24 +1,23 @@
-import React from 'react';
-import './Admin_Login.css';
+import React from "react";
+import "./Admin_Login.css";
 import jwt_decode from "jwt-decode";
 
+import "react-toastify/dist/ReactToastify.css";
 
-import { GoogleLogin } from '@react-oauth/google';
-import { useGoogleLogin } from '@react-oauth/google';
-import axios from 'axios';
-import { Navigate, useNavigate } from 'react-router-dom';
-import { useToast } from '@chakra-ui/react';
-import Swal from 'sweetalert2';
-
-
+import { GoogleLogin } from "@react-oauth/google";
+import { useGoogleLogin } from "@react-oauth/google";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { Spinner, useToast } from "@chakra-ui/react";
+import Swal from "sweetalert2";
 
 export const Adminlogin = () => {
-  const [email, setEmail] = React.useState("")
-  const [password, setPassword] = React.useState("")
-  const [name, setName] = React.useState("")
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
+  const [name, setName] = React.useState("");
   const [confirm, setPasswordcon] = React.useState("");
-  const [active, setActive] = React.useState(false)
-const Navigate=useNavigate()
+  const [active, setActive] = React.useState(false);
+  const Navigate = useNavigate();
   const toast = useToast();
 
   const handleSubmit = () => {
@@ -43,6 +42,14 @@ const Navigate=useNavigate()
               isClosable: true,
               position: "top",
             });
+
+            <Spinner
+              thickness="4px"
+              speed="0.65s"
+              emptyColor="gray.200"
+              color="blue.500"
+              size="xl"
+            />;
 
             // navigate("/login");
             setActive(false);
@@ -90,38 +97,33 @@ const Navigate=useNavigate()
           console.log(err);
         });
     } else {
-     Swal.fire({
-       icon: "error",
-       title: "Oops...",
-       text: "Login First!",
-       footer: '<a href="">Why do I have this issue?</a>',
-     });
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Login First!",
+        footer: '<a href="">Why do I have this issue?</a>',
+      });
     }
   };
 
-
   const login = useGoogleLogin({
-    onSuccess: async tokenResponse => {
+    onSuccess: async (tokenResponse) => {
       const data = axios.get("https://www.googleapis.com/oauth2/v3/userinfo", {
         headers: {
-          "Autorization": `Bearer ${tokenResponse.access_token}`
-        }
-      })
-      console.log(data)
+          Autorization: `Bearer ${tokenResponse.access_token}`,
+        },
+      });
+      console.log(data);
     },
   });
 
-
   const signin = useGoogleLogin({
-    onSuccess: async credentialResponse => {
+    onSuccess: async (credentialResponse) => {
       console.log(credentialResponse);
-      const decoded = jwt_decode(credentialResponse.credential)
-      console.log(decoded)
-    }
-  })
-
-
-
+      const decoded = jwt_decode(credentialResponse.credential);
+      console.log(decoded);
+    },
+  });
 
   return (
     <div>
@@ -173,6 +175,7 @@ const Navigate=useNavigate()
                     className="input-field button"
                   >
                     <input className="login_Btn" type="button" value="Login" />
+                  
                   </div>
                   <div>
                     <div
@@ -334,6 +337,6 @@ const Navigate=useNavigate()
       </div>
     </div>
   );
-}
+};
 
-export default Adminlogin
+export default Adminlogin;
