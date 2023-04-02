@@ -25,26 +25,41 @@ Anthropologie is a unique, full-lifestyle shopping destination, with a mostly ex
 # Home Page  
 <table>
   <tr>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677479901/samples/mobile_2_wnfs3h.png"/></td>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677481572/samples/mobile_4_x9chbh.png"/></td>
+    <td valign="top"><img width="686" alt="image" src="https://user-images.githubusercontent.com/97578587/229338076-c4ae1bf9-feab-43e4-abd0-bb201602ff16.png"></td>
+    <td valign="top"><img width="240" alt="image" src="https://user-images.githubusercontent.com/97578587/229338098-f9188e82-16ee-4844-a0d0-9f27a1e0450e.png"></td>
   </tr>
 </table> 
 
 # Admin Page (Add,Edit and Delete Product )   
 <table>
   <tr>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677479901/samples/mobile_2_wnfs3h.png"/></td>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677481572/samples/mobile_4_x9chbh.png"/></td>
+    <td valign="top"></td>
+    <td valign="top"></td>
   </tr>
 </table>
 
-# Product Page 
+# Product Page
+
+<img width="682" alt="image" src="https://user-images.githubusercontent.com/97578587/229337853-6c716b40-59d2-4687-8345-39536aca94d7.png">
+
+
+<p align="center" width="100%">
 <table>
   <tr>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677479901/samples/mobile_2_wnfs3h.png"/></td>
-    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677481572/samples/mobile_4_x9chbh.png"/></td>
+    <td valign="top"><img width="398" alt="image" src="https://user-images.githubusercontent.com/97578587/229337884-6efd2ed9-a618-4692-ba1a-ee98a3c24183.png"></td>
+    <td valign="top"><img width="235" alt="image" src="https://user-images.githubusercontent.com/97578587/229337938-9245c3cd-6158-4228-a0fc-392e2190349f.png"></td>
   </tr>
 </table>
+</p>
+
+# SingleProduct Page
+<table>
+  <tr>
+    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677481874/samples/mobile_7_lnlhm1.png"/></td>
+    <td valign="top"><img src="https://res.cloudinary.com/ducgyycpy/image/upload/v1677481891/samples/mobile_8_j8sue5.png"/></td>
+  </tr>
+</table>
+
 
 # Product Detail Page 
 <table>
