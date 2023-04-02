@@ -9,18 +9,19 @@ import { Spinner } from "@chakra-ui/react";
 
 const CartPage = () => {
   const [allCart, setAllCart] = React.useState([]);
+  const [total,setTotal] = React.useState(0)
   const [isButLoading, setIsButLoading] = useState(false);
   const store = useSelector((store) => store.cartReducer.cart);
   const dispatch = useDispatch();
   const navigate = useNavigate()
 
   const handleCheckout = () => {
-  setIsButLoading(true);
-     setTimeout(() => {
-       setIsButLoading(false);
-       navigate("/ship");
-     }, 2000);
- 
+    setIsButLoading(true);
+    setTimeout(() => {
+      setIsButLoading(false);
+      navigate("/ship");
+    }, 2000);
+
 
   };
 
@@ -30,6 +31,14 @@ const CartPage = () => {
     dispatch(getAllCart())
     if (store) {
       setAllCart(store)
+      let total = 0
+
+      for (let i = 0; i < store.length; i++) {
+        total += +store[i].price
+
+      }
+      setTotal(total)
+      
     }
     console.log("AllcartItem", allCart)
 
@@ -39,7 +48,7 @@ const CartPage = () => {
     // console.log("cartstore", store)
   }, []);
 
- 
+
 
 
 
@@ -78,7 +87,7 @@ const CartPage = () => {
                 <div className="cartpage-right-top">
                   <div>
                     <span>Subtotal</span>
-                    <span>$ 220.00</span>
+                    <span>$ {total}</span>
                   </div>
                   <div>
                     <span>Shipping</span>
@@ -90,7 +99,7 @@ const CartPage = () => {
                   </div>
                   <div>
                     <span style={{ color: "black" }}>Total</span>
-                    <span>$ 220.00 </span>
+                    <span>$ {total} </span>
                   </div>
                 </div>
                 <div>

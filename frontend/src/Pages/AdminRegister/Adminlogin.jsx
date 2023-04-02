@@ -2,7 +2,7 @@ import React from "react";
 import "./Admin_Login.css";
 import jwt_decode from "jwt-decode";
 
-import "react-toastify/dist/ReactToastify.css";
+// import "react-toastify/dist/ReactToastify.css";
 
 import { GoogleLogin } from "@react-oauth/google";
 import { useGoogleLogin } from "@react-oauth/google";
