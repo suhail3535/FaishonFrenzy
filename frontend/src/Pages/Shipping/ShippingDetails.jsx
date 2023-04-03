@@ -25,8 +25,8 @@ const ShippingDetails = () => {
     setIsButLoading(true);
     setTimeout(() => {
       setIsButLoading(false);
-      Swal.fire("Congratulations!", "Payment successfull!", "success");
-      navigate("/ordersuccessfull");
+      // Swal.fire("Congratulations!", "Payment successfull!", "success");
+      navigate("/paymentmethod");
     }, 2000);
   };
 

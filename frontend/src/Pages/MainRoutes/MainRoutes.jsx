@@ -14,6 +14,7 @@ import Manage from "../Admin/Manage";
 import Shoes from "../Shoes/Shoes";
 import Clothing from "../Clothing/Clothing";
 import AdminLogin from "../AdminRegister/Adminlogin";
+import PaymentMethod from "../PaymentMethod/PaymentMethod";
 
 const MainRoutes = () => {
   return (
@@ -31,6 +32,7 @@ const MainRoutes = () => {
         <Route path="/manage" element={<Manage />} />
         <Route path="/adminlogin" element={<AdminLogin />} />
         <Route path="/top" element={<top />} />
+        <Route path="/paymentmethod" element={<PaymentMethod />} />
         <Route path="/admin_Dashboard" element={<Dashboard />} />
         <Route path="/edit/:id" element={<Edit />} />
         <Route path="/:name/:id" element={<SingleProduct />} />

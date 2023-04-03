@@ -34,13 +34,13 @@ const ShippingDetailsCard = ({
         description: "",
         status: "info",
         variant: "left-accent",
-        duration: 2500,
+        duration: 1500,
         isClosable: true,
         position: "top",
       });
-    }, 2000);
+    }, 500);
   };
-
+dispatch(getRequestAddress())
   useEffect(() => {
     dispatch(getRequestAddress());
   }, []);
