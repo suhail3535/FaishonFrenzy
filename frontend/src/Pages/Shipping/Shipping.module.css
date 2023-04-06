@@ -159,10 +159,10 @@
 @media screen and (max-width: 560px) {
   .continue_to_payment_btn {
     position: fixed;
-    bottom: -22px;
-    left: 0;
-    right: 0;
-    padding: 0 20px;
+    bottom: -15px;
+    left: 10;
+    right: 20;
+    padding: 5 20px;
     width: 100%;
   }
 
