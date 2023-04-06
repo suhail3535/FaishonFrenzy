@@ -107,23 +107,23 @@ const ShippingAdresss = () => {
 
     //  Swal.fire("", "Product added!", "success");
   };
-    const getAllCartItem = async () => {
-      dispatch(getAllCart());
-      if (store) {
-        setAllCart(store);
-        let total = 0;
+//     const getAllCartItem = async () => {
+//       dispatch(getAllCart());
+//       if (store) {
+//         setAllCart(store);
+//         let total = 0;
 
-        for (let i = 0; i < store.length; i++) {
-          total += +store[i].price;
-        }
-        setTotal(total);
-      }
-      console.log("AllcartItem", allCart);
-    };
- useEffect(() => {
-   getAllCartItem();
+//         for (let i = 0; i < store.length; i++) {
+//           total += +store[i].price;
+//         }
+//         setTotal(total);
+//       }
+//       console.log("AllcartItem", allCart);
+//     };
+//  useEffect(() => {
+//    getAllCartItem();
    
- }, []);
+//  }, []);
 
   return (
     <div>
@@ -142,13 +142,14 @@ const ShippingAdresss = () => {
         <div id={styles.main_container_inside_first_div}>
           <VStack
             align="flex-start"
-            border={"0px solid orange"}
+            border={"2px solid orange"}
             boxShadow={"rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"}
             marginBottom={"40px"}
             spacing={10}
-            padding={10}
+            padding={10} 
+            width={"100%"}
           >
-            <VStack>
+            <VStack> 
               <HStack>
                 <FormControl>
                   <FormLabel>First Name*</FormLabel>

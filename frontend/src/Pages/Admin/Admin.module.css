@@ -1,250 +1,289 @@
 #main_container {
-    border: 0px solid green;
-    display: flex;
-    justify-content: space-between;
-    width: 95%;
-    margin: 5px auto;
+  border: 2px solid green;
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin: 5px auto;
 }
-
 
 #add_new_product_div {
-    border: 0px solid gray;
-    padding: 10px 20px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    width: 30%;
-    margin: 20px auto;
-    border-radius: 15px;
-  
+  border: 2px solid gray;
+  padding: 10px 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 30%;
+  margin: 20px auto;
+  border-radius: 15px;
 }
 #product_list_div {
-    border: 0px solid rgb(0, 47, 255);
-    padding: 10px 20px;
-    gap: 10px;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    width: 60%;
-    border-radius: 15px;
-    margin: 20px auto;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border: 2px solid rgb(0, 47, 255);
+  padding: 10px 20px;
+  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  width: 60%;
+  border-radius: 15px;
+  margin: 20px auto;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 #add_product {
-    background-color: #17274a;
-    border: 2px solid transparent;
-    /* height: 60px; */
-    width: 80%;
-    display: block;
-    padding: 10px 15px;
-    color: white;
-    font-weight: bold;
-    margin: 20px auto;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
- 
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-#main_dashbord{
-border: 0px solid green;
-display: grid;
-grid-template-columns: repeat(2,1fr);
+  background-color: #17274a;
+  /* border: 2px solid transparent; */
+  border: 1px solid red;
+  /* height: 60px; */
+  width: 80%;
+  display: block;
+  padding: 10px 15px;
+  color: white;
+  font-weight: bold;
+  margin: 20px auto;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
 
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-#welcome_dashbord{
-    border: 2px solid rgb(81, 0, 255);
-    display: flex;
-   justify-content: space-between;
-    gap: 50px;
+#main_dashbord {
+  border: 1px solid green;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
-
-#manage_dashboard{
-     border: 2px solid rgb(255, 0, 102);
+#welcome_dashbord {
+  border: 2px solid rgb(81, 0, 255);
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
 }
 
+#manage_dashboard {
+  border: 2px solid rgb(255, 0, 102);
+}
 
-#Admincart_component{
-       border: 1px solid #CFD8DC;
-    padding: 5px 20px;
+#Admincart_component {
+  border: 1px solid #cfd8dc;
+  padding: 5px 20px;
 }
 
 #add_product:hover {
-    background-color: white;
-    color: #17274a;
-    border: 2px solid #17274a;
-   
+  background-color: white;
+  color: #17274a;
+  border: 2px solid #17274a;
 }
 #edit {
-    /* background-color: #17274a; */
-    border: 2px solid transparent;
-    height: 35px;
-   
-    display: block;
-    padding: 0px 15px;
-    color: blue;
-    
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-    border-radius: 8px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  /* background-color: #17274a; */
+  border: 2px solid transparent;
+  height: 35px;
+
+  display: block;
+  padding: 0px 15px;
+  color: blue;
+
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 #edit:hover {
-    background-color: rgba(80, 177, 6, 0.875);
-    /* color: #17274a; */
-     border: 2px solid #f8f8f8; 
-    border-radius: 15px;
-    color: white;
-    
+  background-color: rgba(80, 177, 6, 0.875);
+  /* color: #17274a; */
+  border: 2px solid #f8f8f8;
+  border-radius: 15px;
+  color: white;
 }
 #delete {
-  
-    border: 2px solid transparent;
-    height: 35px;
-    margin-left: 10px;
+  border: 2px solid transparent;
+  height: 35px;
+  margin-left: 10px;
 
-    display: block;
-    padding: 0px 15px;
-    color: red;
-   
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-    border-radius: 8px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: block;
+  padding: 0px 15px;
+  color: red;
+
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 #delete:hover {
-    background-color: rgb(229, 14, 14);
-    color: white;
-    border: 2px solid tomato;
-    border-radius: 15px;
- 
-
+  background-color: rgb(229, 14, 14);
+  color: white;
+  border: 2px solid tomato;
+  border-radius: 15px;
 }
 
 #heading {
-    border: 0px solid red;
-    padding: 5px;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #17274a;
-    font-family: "Visuelt Pro", sans-serif;
+  border: 0px solid red;
+  padding: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #17274a;
+  font-family: "Visuelt Pro", sans-serif;
 }
-#tab1{
-    border: 5px solid green;
+#tab1 {
+  border: 5px solid green;
 }
 
 #admin_card {
-    border: 0px solid green;
-    padding: 10px;
-    display: flex;
-    border-radius: 15px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border: 0px solid green;
+  padding: 10px;
+  display: flex;
+  border-radius: 15px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-#image_div{
-    border: 1px solid red;
+#image_div {
+  border: 1px solid red;
 }
 /* edit&delete button */
 #button {
-    border: 0px solid red;
-    /* padding: 10px; */
-    display: flex;
-    overflow: hidden;
-    width: 200px;
-    margin: auto;
-    padding: 2px;
-    justify-content: space-around;
-    gap: 5px;
+  border: 0px solid red;
+  /* padding: 10px; */
+  display: flex;
+  overflow: hidden;
+  width: 200px;
+  margin: auto;
+  padding: 2px;
+  justify-content: space-around;
+  gap: 5px;
 }
 
 #input {
-    border: 0px solid red;
-    width: 40%;
-    margin: 30px auto;
-    padding: 20px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border: 0px solid red;
+  width: 40%;
+  margin: 30px auto;
+  padding: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 #editbtn {
-    width: 40%;
-    background-color: rgb(126, 162, 219);
-    margin-left: 160px;
-}
-
-@media all and (max-width: 1200px) and (min-width: 800px) {
-    #container {
-        flex-direction: column;
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media all and (max-width: 799px) and (min-width: 300px) {
-    #container {
-        flex-direction: column;
-        grid-template-columns: repeat(1, 1fr);
-    }
+  width: 40%;
+  background-color: rgb(126, 162, 219);
+  margin-left: 160px;
 }
 
 /* <------------component--------------> */
 
 .paymentCard-cont {
-    display: flex;
-    /* border: 1px solid blue; */
-    padding: 10px 0px;
-  }
-  .paymentCard-cont > div:nth-child(1) {
-    flex: 2;
-    /* border: 1px solid red; */
-    text-align: center;
-  }
-  .paymentCard-cont > div:nth-child(2) {
-    flex: 1;
-    /* border: 1px solid red; */
-    text-align: center;
-  }
-  .paymentCard-cont > div:nth-child(3) {
-    flex: 1;
-    /* border: 1px solid red; */
-    text-align: center;
-  }
-  .paymentCard-cont > div:nth-child(4) {
-    flex: 1;
-    /* border: 1px solid red; */
-    text-align: center;
-  }
-  .paymentCard-info > div > img {
-    width: 140px;
-  }
-  .paymentCard-info {
-    display: flex;
-  }
-  .paymentCard-info-cont > p:nth-child(1) {
-    font-size: 13px;
-    line-height: 19.5px;
-    font-weight: 400;
-    text-decoration: rgb(22, 122, 146);
-    color: black;
-    text-align: left
-  }
-  .paymentCard-info-cont > p:nth-child(1):hover{
-      color: #167A92
-  }
-  .paymentCard-info-cont > p > span {
-      font-size: 13px;
-      line-height: 19.5px;
-      text-decoration: rgb(38, 38, 44);
-      text-align: left;
-      color: #26262C;
-      font-weight: 400;
-      background-color: RGBA(0, 0, 0, 0)
-  }
-  .paymentCard-info-cont > p {
-      color: #5C5C5F;
-      font-size: 13px;
-      line-height: 19.5px;
-      font-weight: 400;
-      text-align: left;
-  
-  }
-  .paymentCard-info-qty > select{
-      padding: 12px 16px;
-  }
-  .paymentCard-info-img-div{
-    margin-right: 20px;
-  }
+  display: flex;
+  /* border: 1px solid blue; */
+  padding: 10px 0px;
+}
+.paymentCard-cont > div:nth-child(1) {
+  flex: 2;
+  /* border: 1px solid red; */
+  text-align: center;
+}
+.paymentCard-cont > div:nth-child(2) {
+  flex: 1;
+  /* border: 1px solid red; */
+  text-align: center;
+}
+.paymentCard-cont > div:nth-child(3) {
+  flex: 1;
+  /* border: 1px solid red; */
+  text-align: center;
+}
+.paymentCard-cont > div:nth-child(4) {
+  flex: 1;
+  /* border: 1px solid red; */
+  text-align: center;
+}
+.paymentCard-info > div > img {
+  width: 140px;
+}
+.paymentCard-info {
+  display: flex;
+}
+.paymentCard-info-cont > p:nth-child(1) {
+  font-size: 13px;
+  line-height: 19.5px;
+  font-weight: 400;
+  text-decoration: rgb(22, 122, 146);
+  color: black;
+  text-align: left;
+}
+.paymentCard-info-cont > p:nth-child(1):hover {
+  color: #167a92;
+}
+.paymentCard-info-cont > p > span {
+  font-size: 13px;
+  line-height: 19.5px;
+  text-decoration: rgb(38, 38, 44);
+  text-align: left;
+  color: #26262c;
+  font-weight: 400;
+  background-color: RGBA(0, 0, 0, 0);
+}
+.paymentCard-info-cont > p {
+  color: #5c5c5f;
+  font-size: 13px;
+  line-height: 19.5px;
+  font-weight: 400;
+  text-align: left;
+}
+.paymentCard-info-qty > select {
+  padding: 12px 16px;
+}
+.paymentCard-info-img-div {
+  margin-right: 20px;
+}
 
-  /* <------------------------> */
+/* <------------------------> */
+@media screen and (max-width: 980px) {
+  #main_container {
+    display: grid;
+    grid-template-areas: "add add" "prod prod";
+  }
+  #add_new_product_div {
+    grid-area: add;
+    width: 100%;
+  }
+  #product_list_div {
+    grid-area: prod;
+    width: 100%;
+  }
+  #manage_prod {
+    display: grid;
+    width: 100%;
+    grid-template-areas:
+      "img detail"
+      "img rating"
+      "img price"
+      "img delete"
+      "img edit";
+  }
+  #manage_prod img {
+    width: 100%;
+    height: 280px; 
+    aspect-ratio: 2/3;
+    object-fit: contain;
+  }
+  #manage_prod > div:nth-child(1) {
+    grid-area: img;  
+  }
+  #manage_prod > div:nth-child(2) {
+    grid-area: detail;
+  }
+  #manage_prod > div:nth-child(3) {
+    grid-area: price;
+    text-align: left;
+  }
+  #manage_prod > div:nth-child(4) {
+    grid-area: rating;
+    text-align: left;
+  }
+  #manage_prod > div:nth-child(5) {
+    grid-area: edit;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+  #manage_prod > div:nth-child(6) {
+    grid-area: delete;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+  #delete {
+    margin-left: 0px;
+  }
+}
+/* @media all and (max-width: 799px) and (min-width: 300px) {
+}  */

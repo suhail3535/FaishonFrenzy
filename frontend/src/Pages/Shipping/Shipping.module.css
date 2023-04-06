@@ -1,71 +1,65 @@
 #main_container {
-    border: 0px solid rgb(185, 96, 96);
-    /* height: 1200px; */
-    display: flex;
-    width: 95%;
-    margin: 2px auto;
-  
-    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+  border: 2px solid rgb(185, 96, 96);
+  /* height: 1200px; */
+  display: flex;
+  width: 95%;
+  margin: 2px auto;
+
+  /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
 }
-
-
 
 #main_container_inside_first_div {
-     border: 1px solid #CFD8DC;
-    width: 70%;
-    margin: 40px auto;
-    padding: 20px;
-      overflow: hidden;
-   
+  border: 0px solid #ac1e9c;
+  width: 70%;
+  margin: 40px auto;
+  padding: 20px;
+  overflow: hidden;
 }
 #main_container_inside_second_div {
- border: 1px solid #EEEEEE;
-    width: 30%;
-    margin: 20px;
-    padding: 20px;
-    margin-top: 40px;
-    height: 20%;
+  border: 1px solid #cbae0d;
+  width: 30%;
+  margin: 20px;
+  padding: 20px;
+  margin-top: 40px;
+  height: 20%;
 }
 #second {
-    /* border: 1px solid gray; */
-    border: 1px solid #CFD8DC;
-    width: 30%;
-    margin: 20px;
-    padding: 20px;
-    margin-top: 40px;
-    height: 30%;
-   
+  border: 2px solid gray;
+  border: 1px solid #cfd8dc;
+  width: 30%;
+  margin: 20px;
+  padding: 20px;
+  margin-top: 40px;
+  height: 30%;
 }
-#cardOne{
-   border: 1px solid #CFD8DC;
-    width: 60%;
-    margin-top: 40px;
+#cardOne {
+  border: 1px solid #cfd8dc;
+  width: 60%;
+  margin-top: 40px;
 }
-
 
 .ship_to_this_add_btn {
-     border: 1px solid #CFD8DC;
-    background-color: rgb(75,86,102);
-    font-weight: bold;
+  border: 1px solid #09a6ea;
+  background-color: rgb(75, 86, 102);
+  font-weight: bold;
 
-    height: 45px;
-    width: 90%;
-    display: block;
-    /* padding: 20px 25px; */
-    color: white;
- 
-    word-spacing: 0px;
-    margin: 20px auto;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
- 
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  height: 45px;
+  width: 90%;
+  display: block;
+  /* padding: 20px 25px; */
+  color: white;
+
+  word-spacing: 0px;
+  margin: 20px auto;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .ship_to_this_add_btn:hover {
-    background-color: white;
-    color: #17274a;
-    border: 1px solid #17274a;
-    
+  background-color: white;
+  color: #17274a;
+  border: 1px solid #17274a;
 }
 
 /* .Order_summmary_div p:nth-child(1) {
@@ -95,74 +89,89 @@
     border: 0px solid green;
 } */
 
-
 /* <-------------------------Shipping Address css-------------------------> */
 #address {
-    width: 30%;
-    margin: 20px auto;
-    /* padding: 20px; */
-    border: 2px solid red;
+  width: 30%;
+  margin: 20px auto;
+  /* padding: 20px; */
+  border: 2px solid red;
 }
 #method {
-    border: 2px solid rgb(101, 229, 16);
-    width: 60%;
-    height: auto;
-    margin-left: 50px;
-    margin: 20px auto;
-    border-radius: 15px;
+  border: 2px solid rgb(101, 229, 16);
+  width: 60%;
+  height: auto;
+  margin-left: 50px;
+  margin: 20px auto;
+  border-radius: 15px;
 
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 #container {
-    border: 0px solid rgb(106, 105, 105);
-    display: flex;
-    justify-content: space-around;
-    width: 90%;
-    margin: auto;
+  border: 0px solid rgb(106, 105, 105);
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  margin: auto;
 }
 .single_card_address {
-    border: 0px solid gray;
-  
-    padding: 25px;
-    margin: 20px auto;
-   
-    /* transition: all 0.2s ease-in-out; */
+  border: 0px solid gray;
+
+  padding: 25px;
+  margin: 20px auto;
+
+  /* transition: all 0.2s ease-in-out; */
 }
 /* .single_card_address:hover {
    
     transform: scale(1.01);
 } */
 
-
-
-#container{
-    border:0px solid green;
-    width: 90%;
-    margin: 20px auto;
-    display: flex;
-    justify-content: space-around;
+#container {
+  border: 0px solid green;
+  width: 90%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-around;
 }
 .continue_to_payment_btn {
-     border: 1px solid #CFD8DC;
-    background-color: rgb(75,86,102);
-font-weight: bold;
-    height: 45px;
-    width: 95%;
-    display: block;
-    /* padding: 20px 25px; */
-    color: white;
- 
-    word-spacing: 0px;
-    margin: 20px auto;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
- 
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border: 1px solid #cfd8dc;
+  background-color: rgb(75, 86, 102);
+  font-weight: bold;
+  height: 45px;
+  width: 95%;
+  display: block;
+  /* padding: 20px 25px; */
+  color: white;
+
+  word-spacing: 0px;
+  margin: 20px auto;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .continue_to_payment_btn:hover {
-    background-color: white;
-    color: #17274a;
-    border: 1px solid #17274a;
-    
+  background-color: white;
+  color: #17274a;
+  border: 1px solid #17274a;
 }
+
+@media screen and (max-width: 560px) {
+  .continue_to_payment_btn {
+    position: fixed;
+    bottom: -22px;
+    left: 0;
+    right: 0;
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  #container {
+    display: flex; 
+    flex-wrap: wrap;  
+  } 
+  #container div{
+    width: 100%;
+  }
+}
+

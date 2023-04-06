@@ -21,7 +21,7 @@ const Dashboard = () => {
           <Text
             textAlign="center"
             fontSize="xl"
-            color="#607D8B"
+            color="white"
             fontWeight={"bold"}
           >
             Manage your FashionFrenzy store easily.

@@ -9,7 +9,6 @@ const AdminCard = ({ _id, image, title, price, rating }) => {
   const dispatch = useDispatch();
 
   const handleDelete = (_id) => {
-  
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -53,11 +52,11 @@ const AdminCard = ({ _id, image, title, price, rating }) => {
 
   return (
     <div id={styles.Admincart_component}>
-      <div className="paymentCard-cont">
-        <div className="paymentCard-info">
-          <div className="paymentCard-info-img-div">
-            <img src={image} alt="" />
-          </div>
+      <div className="paymentCard-cont" id={styles.manage_prod}>
+        <div className="paymentCard-info-img-div">
+          <img src={image} alt="" />
+        </div>
+        <div className="paymentCard-info" id={styles.detail_box}>
           <div className="paymentCard-info-cont">
             <p>{title}</p>
 
@@ -79,11 +78,13 @@ const AdminCard = ({ _id, image, title, price, rating }) => {
         <div>${price}</div>
         <div>{rating} ⭐</div>
 
-        <Link to={`/edit/${_id}`}>
-          <button id={styles.edit} onClick={handleClick}>
-            Edit
-          </button>
-        </Link>
+        <div>
+          <Link to={`/edit/${_id}`}>
+            <button id={styles.edit} onClick={handleClick}>
+              Edit
+            </button>
+          </Link>
+        </div>
 
         <div>
           <button id={styles.delete} onClick={() => handleDelete(_id)}>

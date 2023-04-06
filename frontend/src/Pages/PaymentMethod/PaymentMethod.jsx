@@ -67,12 +67,13 @@ const PaymentMethod = () => {
       <div id={styles.container}>
       
 
-        <div id={styles.method}>
+        <div id={styles.method}> 
           <Tabs
             style={{
               paddingRight: "10px",
-              border: "0px solid red",
-            }}
+              border: "0px solid red", 
+              width:"100%" 
+            }}  
             variant="unstyled"
           >
             <TabList
