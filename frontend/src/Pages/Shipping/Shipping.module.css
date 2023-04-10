@@ -1,177 +1,612 @@
-#main_container {
-  border: 2px solid rgb(185, 96, 96);
-  /* height: 1200px; */
-  display: flex;
-  width: 95%;
-  margin: 2px auto;
 
-  /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
-}
 
-#main_container_inside_first_div {
-  border: 0px solid #ac1e9c;
-  width: 70%;
-  margin: 40px auto;
-  padding: 20px;
-  overflow: hidden;
-}
+
 #main_container_inside_second_div {
-  border: 1px solid #cbae0d;
-  width: 30%;
-  margin: 20px;
-  padding: 20px;
-  margin-top: 40px;
-  height: 20%;
+    border: 1px solid #6d6c69;
+    width: 30%;
+    margin: 20px;
+    padding: 20px;
+    margin-top: 40px;
+    height: 20%;
 }
 #second {
-  border: 2px solid gray;
-  border: 1px solid #cfd8dc;
-  width: 30%;
-  margin: 20px;
-  padding: 20px;
-  margin-top: 40px;
-  height: 30%;
+    border: 2px solid gray;
+    border: 1px solid #cfd8dc;
+    width: 30%;
+    margin: 20px;
+    padding: 20px;
+    margin-top: 40px;
+    height: 30%;
 }
 #cardOne {
-  border: 1px solid #cfd8dc;
-  width: 60%;
-  margin-top: 40px;
+    border: 1px solid #cfd8dc;
+    width: 60%;
+    margin-top: 40px;
 }
 
 .ship_to_this_add_btn {
-  border: 1px solid #09a6ea;
-  background-color: rgb(75, 86, 102);
-  font-weight: bold;
+    border: 1px solid #09a6ea;
+    background-color: rgb(75, 86, 102);
+    font-weight: bold;
 
-  height: 45px;
-  width: 90%;
-  display: block;
-  /* padding: 20px 25px; */
-  color: white;
+    height: 45px;
+    width: 90%;
+    display: block;
+    /* padding: 20px 25px; */
+    color: white;
 
-  word-spacing: 0px;
-  margin: 20px auto;
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
+    word-spacing: 0px;
+    margin: 20px auto;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
 
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .ship_to_this_add_btn:hover {
-  background-color: white;
-  color: #17274a;
-  border: 1px solid #17274a;
+    background-color: white;
+    color: #17274a;
+    border: 1px solid #17274a;
 }
 
-/* .Order_summmary_div p:nth-child(1) {
-    margin: 5px 0 15px 0;
-    padding: 0;
-    font: normal normal bold 24px/28px "Visuelt Pro", sans-serif;
-    letter-spacing: 1.2px;
-    color: #1e3352;
-    text-transform: uppercase;
-}
-.Order_summmary_div p:nth-child(2),
-.Order_summmary_div p:nth-child(3),
-.Order_summmary_div p:nth-child(4) {
-    text-align: left;
-    padding: 10px 0;
-    font: normal normal normal 14px/14px "Visuelt Pro", sans-serif;
-    color: #0d49efbd;
-}
-.Order_summmary_div p:nth-child(5) {
-    font: normal normal normal 14px/14px "Visuelt Pro", sans-serif;
-    color: #08045d;
-    padding: 10px 0;
-    font-weight: bold;
-}
-
-.Order_summmary_div {
-    border: 0px solid green;
-} */
 
 /* <-------------------------Shipping Address css-------------------------> */
 #address {
-  width: 30%;
-  margin: 20px auto;
-  /* padding: 20px; */
-  border: 2px solid red;
+    width: 30%;
+    margin: 20px auto;
+    /* padding: 20px; */
+    border: 2px solid red;
 }
 #method {
-  border: 2px solid rgb(101, 229, 16);
-  width: 60%;
-  height: auto;
-  margin-left: 50px;
-  margin: 20px auto;
-  border-radius: 15px;
+    border: 2px solid rgb(101, 229, 16);
+    width: 60%;
+    height: auto;
+    margin-left: 50px;
+    margin: 20px auto;
+    border-radius: 15px;
 
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 #container {
-  border: 0px solid rgb(106, 105, 105);
-  display: flex;
-  justify-content: space-around;
-  width: 90%;
-  margin: auto;
+    border: 0px solid rgb(106, 105, 105);
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: auto;
 }
 .single_card_address {
-  border: 0px solid gray;
+    border: 0px solid gray;
 
-  padding: 25px;
-  margin: 20px auto;
+    padding: 25px;
+    margin: 20px auto;
 
-  /* transition: all 0.2s ease-in-out; */
 }
-/* .single_card_address:hover {
-   
-    transform: scale(1.01);
-} */
 
 #container {
-  border: 0px solid green;
-  width: 90%;
-  margin: 20px auto;
-  display: flex;
-  justify-content: space-around;
+    border: 0px solid green;
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
 }
 .continue_to_payment_btn {
-  border: 1px solid #cfd8dc;
-  background-color: rgb(75, 86, 102);
-  font-weight: bold;
-  height: 45px;
-  width: 95%;
-  display: block;
-  /* padding: 20px 25px; */
-  color: white;
+    border: 1px solid #cfd8dc;
+    background-color: rgb(75, 86, 102);
+    font-weight: bold;
+    height: 45px;
+    width: 95%;
+    display: block;
+    /* padding: 20px 25px; */
+    color: white;
 
-  word-spacing: 0px;
-  margin: 20px auto;
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
+    word-spacing: 0px;
+    margin: 20px auto;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
 
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .continue_to_payment_btn:hover {
-  background-color: white;
-  color: #17274a;
-  border: 1px solid #17274a;
+    background-color: white;
+    color: #17274a;
+    border: 1px solid #17274a;
 }
 
-@media screen and (max-width: 560px) {
-  .continue_to_payment_btn {
-    position: fixed;
-    bottom: -15px;
-    left: 10;
-    right: 20;
-    padding: 5 20px;
-    width: 100%;
-  }
 
-  #container {
-    display: flex; 
-    flex-wrap: wrap;  
-  } 
-  #container div{
-    width: 100%;
-  }
+
+/* ******************* */
+#main_div {
+    border: 1px solid rgb(97, 95, 95);
+    /* height: 1200px; */
+    display: flex;
+    width: 90%;
+    margin: 20px auto;
+    justify-content: space-around;
+    border-radius: 15px;
+    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+}
+#first_div {
+    border: 0px solid rgb(215, 198, 15);
+    width: 70%;
+    margin: 0px auto;
+    padding: 20px;
+    border-radius: 15px;
 }
 
+.buttonpay:hover {
+    background-color: #9b96f3;
+}
+
+
+
+#otp {
+    border: 0px solid rgb(207, 30, 210);
+    margin-right: 1px;
+    margin-top: 20px;
+    width: 90%;
+    padding: 5px;
+}
+#name {
+    border: 0px solid black;
+    width: 90%;
+    padding: 5px;
+}
+#date {
+    border: 1px solid green;
+    margin-right: 0px;
+    margin-top: 40px;
+    width: 90%;
+    padding: 5px;
+}
+
+#check {
+    border: 1px solid black;
+    align-items: left;
+    width: 85%;
+    margin: 20px auto;
+}
+
+#container {
+    border: 0px solid rgb(237, 237, 19);
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: auto;
+}
+#address {
+    width: 30%;
+    margin: 20px auto;
+    border: 0px solid red;
+    /* padding: 20px; */
+}
+#method {
+    border: 0px solid rgb(147, 150, 145);
+    width: 60%;
+    height: auto;
+    margin-left: 50px;
+    margin: 20px auto;
+    border-radius: 15px;
+
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.single_card_address {
+    border: 2px solid transparent;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 15px 20px;
+    margin: 20px auto;
+    border-radius: 15px;
+    transition: all 0.2s ease-in-out;
+}
+.single_card_address:hover {
+    border: 2px solid #17274a;
+    transform: scale(1.01);
+}
+
+.bookbtn3 {
+    background-color: #17274a;
+    border: 2px solid transparent;
+
+    /* height: 60px; */
+    width: 40%;
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    font-weight: bold;
+    /* margin: 40px auto; */
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.bookbtn3:hover {
+    background-color: white;
+    color: #17274a;
+    border: 2px solid #17274a;
+    border-radius: 15px;
+}
+#vs_stack1 {
+    width: 35%;
+    margin: 20px auto;
+    padding-bottom: 40px;
+    border-radius: 15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#deleteButton {
+    width: 100px;
+    padding: 5px 8px;
+    background-color: orange;
+    border-radius: 8px;
+}
+#heading {
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+#tab {
+    padding-right: 10px;
+    border: 0px solid red;
+}
+#tablist {
+    display: flex;
+    justify-content: space-around;
+    border: 0px solid red;
+}
+#tabfirst {
+    margin: 30px auto;
+    padding: 10px;
+
+    background-color: #e8eaf6;
+    width: 25%;
+}
+#tabfirst :hover {
+    border: 0px solid green;
+    color: black;
+
+    border-radius: 5px;
+}
+
+#main_container {
+    border: 1px dotted rgba(255, 255, 0, 0.056);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 15px;
+    padding: 10px;
+    gap: 10px;
+}
+
+#vstack {
+    border: 0px solid rgb(0, 255, 13);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    padding: 10px 20px;
+    width: 100%;
+}
+#firstname {
+    border: 0px solid green;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+#input {
+    /* border: 1px solid rgb(255, 0, 170); */
+    border: 2px solid gray;
+    height: 40px;
+    width: 400px;
+    gap: 20px;
+}
+#country {
+    border: 0px solid blue;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+#address1 {
+    border: 0px solid blue;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+#city {
+    border: 0px solid rgb(0, 255, 174);
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+#last_div {
+    border: 0px solid blue;
+    width: 100%;
+}
+
+/* <---------for laptop View--------> */
+@media screen and (max-width: 1400px) {
+    #container {
+        border: 1px dotted gray;
+        display: block;
+        padding: 20px;
+        font-size: 20px;
+    }
+    #address {
+        width: 100%;
+        margin: 10px auto;
+        border: 0px solid red;
+        padding: 10px;
+    }
+    #method {
+        border: 0px solid rgb(102, 225, 20);
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        border-radius: 15px;
+
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+    .bookbtn2 {
+        width: 80%;
+    }
+
+    #main {
+        border: 0px solid rgb(185, 96, 96);
+        /* height: 1200px; */
+        display: flex;
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    #firstname {
+        border: 0px solid green;
+        width: 100%;
+        display: flex;
+        padding: 20px;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    #input {
+        border: 2px solid gray;
+        height: 40px;
+        width: 100%;
+        gap: 10px;
+        border-radius: 10px;
+    }
+    #country {
+        border: 0px solid blue;
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    #address1 {
+        border: 0px solid blue;
+        width: 100%;
+        display: flex;
+        padding: 10px;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    #city {
+        border: 0px solid rgb(0, 255, 174);
+        width: 100%;
+        display: flex;
+        padding: 10px;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    #last_div {
+        border: 0px solid blue;
+        padding: 10px;
+    }
+    #last_div input {
+        border: 2px solid gray;
+        border-radius: 5px;
+        width: 100%;
+    }
+    #last_div div {
+        border: 0px solid red;
+        width: 95%;
+    }
+    #two {
+        border: 1px solid gray;
+        width: 70%;
+        margin: 20px auto;
+        padding: 20px;
+
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .fourth {
+        border: 1px solid gray;
+        height: auto;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    #third {
+        border: 1px solid gray;
+        height: auto;
+        padding: 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    #review_order button {
+        border: 0px solid green;
+        width: 90%;
+    }
+}
+/* <---------for Tab View--------> */
+@media screen and (max-width: 768px) {
+    #container {
+        border: 1px dotted gray;
+        display: block;
+        padding: 20px;
+        font-size: 20px;
+    }
+    #main_div {
+    border: 0px solid rgb(185, 96, 170);
+    /* height: 1200px; */
+    display: block;
+    width: 90%;
+    margin: 20px auto;
+
+    border-radius: 15px;
+    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+}
+#main_container_inside_second_div {
+    border: 0px solid #cbae0d;
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+
+}
+#first_div {
+    border: 0px solid rgb(215, 198, 15);
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+
+}
+    #address {
+        width: 100%;
+        margin: 10px auto;
+        border: 0px solid red;
+        padding: 10px;
+    }
+    #method {
+        border: 0px solid rgb(102, 225, 20);
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        border-radius: 15px;
+
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+    .bookbtn2 {
+        width: 80%;
+    }
+
+    #main {
+        border: 0px solid rgb(185, 96, 96);
+        /* height: 1200px; */
+        display: block;
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    #firstname {
+        border: 0px solid green;
+        width: 100%;
+        display: block;
+        padding: 20px;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    #input {
+        border: 2px solid gray;
+        height: 40px;
+        width: 100%;
+        gap: 10px;
+        border-radius: 10px;
+    }
+    #country {
+        border: 0px solid blue;
+        width: 100%;
+        display: block;
+        gap: 10px;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    #address1 {
+        border: 0px solid blue;
+        width: 100%;
+        display: block;
+        padding: 10px;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    #city {
+        border: 0px solid rgb(0, 255, 174);
+        width: 100%;
+        display: block;
+        padding: 10px;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    #last_div {
+        border: 0px solid blue;
+        padding: 10px;
+    }
+    #last_div input {
+        border: 2px solid gray;
+        border-radius: 5px;
+        width: 100%;
+    }
+    #last_div div {
+        border: 0px solid red;
+        width: 95%;
+    }
+    #two {
+        border: 1px solid gray;
+        width: 70%;
+        margin: 20px auto;
+        padding: 20px;
+
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .fourth {
+        border: 1px solid gray;
+        height: auto;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    #third {
+        border: 1px solid gray;
+        height: auto;
+        padding: 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    #review_order button {
+        border: 0px solid green;
+        width: 90%;
+    }
+}
+/* <---------for Mobile View--------> */
+@media screen and (max-width: 400px) {
+    #otp {
+        border: 0px solid rgb(207, 30, 210);
+        margin-right: 1px;
+        margin-top: 20px;
+        width: 120%;
+        align-items: center;
+        padding: 20px;
+    }
+    #name {
+        border: 0px solid black;
+        width: 100%;
+        padding: 5px;
+    }
+    #method {
+        border: 0px solid rgb(102, 225, 20);
+        width: 100%;
+        height: auto;
+        margin: auto;
+        padding: 5px;
+    }
+    #tablist {
+        display: flex;
+        justify-content: space-around;
+        border: 0px solid rgb(30, 0, 255);
+        width: 100%;
+        padding: 0px 20px;
+        margin: auto;
+    }
+}
