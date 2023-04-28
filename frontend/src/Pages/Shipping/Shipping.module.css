@@ -25,7 +25,7 @@
 }
 
 .ship_to_this_add_btn {
-    border: 1px solid #09a6ea;
+    border: 0px solid #09a6ea;
     background-color: rgb(75, 86, 102);
     font-weight: bold;
 
@@ -190,7 +190,9 @@
 }
 
 .single_card_address {
-    border: 2px solid transparent;
+    /* border: 2px solid transparent;
+     */
+     border: 2px solid red;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     padding: 15px 20px;
     margin: 20px auto;
@@ -440,7 +442,7 @@
     }
 }
 /* <---------for Tab View--------> */
-@media screen and (max-width: 768px) {
+@media all and (min-width: 768px) and (max-width:1024px) {
     #container {
         border: 1px dotted gray;
         display: block;
@@ -580,33 +582,156 @@
     }
 }
 /* <---------for Mobile View--------> */
-@media screen and (max-width: 400px) {
-    #otp {
-        border: 0px solid rgb(207, 30, 210);
-        margin-right: 1px;
-        margin-top: 20px;
-        width: 120%;
-        align-items: center;
+@media all and (min-width: 300px) and (max-width: 767px) {
+    #container {
+        border: 1px dotted gray;
+        display: block;
         padding: 20px;
+        font-size: 20px;
     }
-    #name {
-        border: 0px solid black;
+    #main_div {
+    border: 0px solid rgb(185, 96, 170);
+    /* height: 1200px; */
+    display: block;
+    width: 90%;
+    margin: 20px auto;
+
+    border-radius: 15px;
+    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+}
+#main_container_inside_second_div {
+    border: 0px solid #cbae0d;
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+
+}
+#first_div {
+    border: 0px solid rgb(215, 198, 15);
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+
+}
+    #address {
         width: 100%;
-        padding: 5px;
+        margin: 10px auto;
+        border: 0px solid red;
+        padding: 10px;
     }
     #method {
         border: 0px solid rgb(102, 225, 20);
         width: 100%;
         height: auto;
-        margin: auto;
-        padding: 5px;
+        padding: 10px;
+        border-radius: 15px;
+
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     }
-    #tablist {
-        display: flex;
-        justify-content: space-around;
-        border: 0px solid rgb(30, 0, 255);
+
+
+    #main {
+        border: 0px solid rgb(185, 96, 96);
+        /* height: 1200px; */
+        display: block;
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    #firstname {
+        border: 0px solid green;
         width: 100%;
-        padding: 0px 20px;
-        margin: auto;
+        display: block;
+        padding: 20px;
+        gap: 10px;
+        margin-bottom: 20px;
     }
+
+    #input {
+        border: 2px solid gray;
+        height: 40px;
+        width: 100%;
+        gap: 10px;
+        padding: 0px 10px;
+        border-radius: 10px;
+    }
+    #country {
+        border: 0px solid blue;
+        width: 100%;
+        display: block;
+        gap: 10px;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    #address1 {
+        border: 0px solid blue;
+        width: 100%;
+        display: block;
+        padding: 10px;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    #city {
+        border: 0px solid rgb(0, 255, 174);
+        width: 100%;
+        display: block;
+        padding: 10px;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    #last_div {
+        border: 0px solid blue;
+        padding: 10px;
+    }
+    #last_div input {
+        border: 2px solid gray;
+        border-radius: 5px;
+        width: 100%;
+    }
+    #last_div div {
+        border: 0px solid red;
+        width: 95%;
+    }
+    #two {
+        border: 1px solid gray;
+        width: 70%;
+        margin: 20px auto;
+        padding: 20px;
+
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .fourth {
+        border: 1px solid gray;
+        height: auto;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    #third {
+        border: 1px solid gray;
+        height: auto;
+        padding: 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    #review_order button {
+        border: 0px solid green;
+        width: 90%;
+    }
+    .ship_to_this_add_btn {
+        border: 0px solid yellow;
+        width: 100%;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    #second {
+    border: 2px solid gray;
+    border: 1px solid #cfd8dc;
+    width: 100%;
+    margin: 20px;
+    padding: 20px;
+    margin-top: 40px;
+    height: 30%;
+}
 }

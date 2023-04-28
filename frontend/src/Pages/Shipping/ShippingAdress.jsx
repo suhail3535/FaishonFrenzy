@@ -104,9 +104,9 @@ const ShippingAdresss = () => {
             }, 2000);
         }
 
-        //  Swal.fire("", "Product added!", "success");
+        
     };
-    //     const getAllCartItem = async () => {
+
     //       dispatch(getAllCart());
     //       if (store) {
     //         setAllCart(store);
