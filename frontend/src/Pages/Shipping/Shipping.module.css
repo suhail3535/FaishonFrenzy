@@ -1,7 +1,7 @@
 #main_container_inside_second_div {
-    border: 1px solid #6d6c69;
-    width: 30%;
-    margin: 20px;
+    border: 1px dotted #6d6c69;
+    width: 50%;
+    margin: 20px auto;
     padding: 20px;
     margin-top: 40px;
     height: 20%;
@@ -25,7 +25,7 @@
     border: 0px solid #09a6ea;
     background-color: rgb(75, 86, 102);
     font-weight: bold;
-    height: 40px;
+    height: 50px;
 
     width: 90%;
     display: block;
@@ -110,7 +110,7 @@
 #main_div {
     border: 1px solid rgb(97, 95, 95);
     /* height: 1200px; */
-    display: flex;
+    /* display: flex; */
     width: 90%;
     margin: 20px auto;
     justify-content: space-around;
@@ -284,9 +284,10 @@
 
 #input {
     /* border: 1px solid rgb(255, 0, 170); */
-    border: 2px solid gray;
+    border: 1px solid gray;
     height: 40px;
-    width: 400px;
+    width: 100%;
+    padding: 10px;
     gap: 20px;
 }
 #country {
@@ -320,7 +321,7 @@
 @media screen and (max-width: 1400px) {
     #container {
         border: 1px dotted gray;
-        display: block;
+        display: flex;
         padding: 20px;
         font-size: 20px;
     }
@@ -766,7 +767,7 @@
     }
     .ship_to_this_add_btn {
         border: 0px solid yellow;
-        width: 70%;
+        width: 100%;
         margin: 40px auto;
         font-size: 15px;
         font-weight: bold;

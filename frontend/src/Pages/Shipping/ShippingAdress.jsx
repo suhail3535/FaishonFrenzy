@@ -105,22 +105,7 @@ const ShippingAdresss = () => {
         }
     };
 
-    //       dispatch(getAllCart());
-    //       if (store) {
-    //         setAllCart(store);
-    //         let total = 0;
 
-    //         for (let i = 0; i < store.length; i++) {
-    //           total += +store[i].price;
-    //         }
-    //         setTotal(total);
-    //       }
-    //       console.log("AllcartItem", allCart);
-    //     };
-    //  useEffect(() => {
-    //    getAllCartItem();
-
-    //  }, []);
 
     return (
         <div>
@@ -264,35 +249,7 @@ const ShippingAdresss = () => {
 
                 <div id={styles.main_container_inside_second_div}>
                     <div id={styles.third}>
-                        <div className="cartpage-right-container">
-                            <div className="cartpage-right-top">
-                                <div>
-                                    <span>Subtotal</span>
-                                    <span>$ {total}</span>
-                                </div>
-                                <div>
-                                    <span>Shipping</span>
-                                    <span>TBD</span>
-                                </div>
-                                <div>
-                                    <span>Estimated Tax</span>
-                                    <span>$ 0.00</span>
-                                </div>
-                                <div>
-                                    <span style={{ color: "black" }}>
-                                        Total
-                                    </span>
-                                    <span>$ {total} </span>
-                                </div>
-                            </div>
-                            <div>
-                                <div>
-                                    Or 4 interest-free installments of $55.00
-                                    with{" "}
-                                </div>
-                                <div>Klarna or afterpay</div>
-                            </div>
-                        </div>
+
                         <div>
                             <button
                                 onClick={handleSubmit}
