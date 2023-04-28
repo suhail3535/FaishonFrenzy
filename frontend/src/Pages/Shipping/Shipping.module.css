@@ -25,7 +25,7 @@
     border: 0px solid #09a6ea;
     background-color: rgb(75, 86, 102);
     font-weight: bold;
-    height: auto;
+    height: 40px;
 
     width: 90%;
     display: block;
@@ -479,6 +479,7 @@
     }
     .bookbtn2 {
         width: 80%;
+        border: 5px solid rgb(102, 225, 20);
     }
 
     #main {
@@ -581,10 +582,11 @@
     .ship_to_this_add_btn {
         border: 0px solid #09a6ea;
         background-color: rgb(75, 86, 102);
-        width: 70%;
+        width: 80%;
+        height: 50px;
         margin: 40px auto;
         font-size: 15px;
-        font-weight: bold;
+
 
         /* padding: 20px 25px; */
         color: white;
@@ -599,7 +601,7 @@
     #cardOne {
     border: 1px solid #cfd8dc;
     width: 100%;
-    
+
     margin-top: 40px;
 }
     .single_card_address {
