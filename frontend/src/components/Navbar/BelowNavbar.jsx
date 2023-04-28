@@ -54,7 +54,7 @@ export default function BelowNavbar() {
       <Box bg={useColorModeValue("white", "gray.900")} px={6}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <Flex gap={10}>
-            <Link href="/admin">
+            <Link href="">
               <OnhoverProp NewArray={Toprated} title={"New!"} />
             </Link>
 

@@ -201,7 +201,7 @@ export default function Navbar() {
   }, []);
 
 
-  
+
 
   return (
     <>
@@ -224,7 +224,7 @@ export default function Navbar() {
                   >
                     <p style={{ fontSize: "120%" }}> 𝙵𝚊𝚒𝚜𝚑𝚘𝚗𝙵𝚛𝚎𝚗𝚣𝚢</p>
                   </div>
-                  {/* <Image borderRight={"0.1px solid #b1b5be"} borderLeft={"0.1px solid #b1b5be"} w={"200px"} height={"65px"} src={source} alt={"error"} /> */}
+
                 </RouterLink>
               </Box>
               <div
@@ -367,7 +367,7 @@ export default function Navbar() {
                     <RouterLink to="/adminlogin">Admin login</RouterLink>
                   </MenuItem>
 
-                  
+
                   <MenuItem>LogOut</MenuItem>
                   {/* <MenuItem>SignUP</MenuItem> */}
                 </MenuList>
@@ -398,7 +398,7 @@ export default function Navbar() {
 
               <Divider borderColor={"gray"} />
 
-              <Link href="/admin">
+              <Link href="/">
                 <Collapseble Filter={FilterPrice} filterBy={"New!"} />
               </Link>
 
