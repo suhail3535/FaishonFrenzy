@@ -1,6 +1,3 @@
-
-
-
 #main_container_inside_second_div {
     border: 1px solid #6d6c69;
     width: 30%;
@@ -28,8 +25,8 @@
     border: 0px solid #09a6ea;
     background-color: rgb(75, 86, 102);
     font-weight: bold;
+    height: auto;
 
-    height: 45px;
     width: 90%;
     display: block;
     /* padding: 20px 25px; */
@@ -47,7 +44,6 @@
     color: #17274a;
     border: 1px solid #17274a;
 }
-
 
 /* <-------------------------Shipping Address css-------------------------> */
 #address {
@@ -78,7 +74,6 @@
 
     padding: 25px;
     margin: 20px auto;
-
 }
 
 #container {
@@ -111,8 +106,6 @@
     border: 1px solid #17274a;
 }
 
-
-
 /* ******************* */
 #main_div {
     border: 1px solid rgb(97, 95, 95);
@@ -135,8 +128,6 @@
 .buttonpay:hover {
     background-color: #9b96f3;
 }
-
-
 
 #otp {
     border: 0px solid rgb(207, 30, 210);
@@ -192,7 +183,7 @@
 .single_card_address {
     /* border: 2px solid transparent;
      */
-     border: 2px solid red;
+    border: 0px solid red;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     padding: 15px 20px;
     margin: 20px auto;
@@ -442,7 +433,7 @@
     }
 }
 /* <---------for Tab View--------> */
-@media all and (min-width: 768px) and (max-width:1024px) {
+@media all and (min-width: 768px) and (max-width: 1024px) {
     #container {
         border: 1px dotted gray;
         display: block;
@@ -450,29 +441,27 @@
         font-size: 20px;
     }
     #main_div {
-    border: 0px solid rgb(185, 96, 170);
-    /* height: 1200px; */
-    display: block;
-    width: 90%;
-    margin: 20px auto;
+        border: 0px solid rgb(185, 96, 170);
+        /* height: 1200px; */
+        display: block;
+        width: 90%;
+        margin: 20px auto;
 
-    border-radius: 15px;
-    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
-}
-#main_container_inside_second_div {
-    border: 0px solid #cbae0d;
-    width: 90%;
-    margin: 20px auto;
-    padding: 20px;
-
-}
-#first_div {
-    border: 0px solid rgb(215, 198, 15);
-    width: 90%;
-    margin: auto;
-    padding: 20px;
-
-}
+        border-radius: 15px;
+        /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+    }
+    #main_container_inside_second_div {
+        border: 0px solid #cbae0d;
+        width: 90%;
+        margin: 20px auto;
+        padding: 20px;
+    }
+    #first_div {
+        border: 0px solid rgb(215, 198, 15);
+        width: 90%;
+        margin: auto;
+        padding: 20px;
+    }
     #address {
         width: 100%;
         margin: 10px auto;
@@ -568,6 +557,15 @@
         padding: 20px;
         margin-top: 20px;
     }
+    #second {
+    border: 2px solid gray;
+    border: 1px solid #cfd8dc;
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    margin-top: 40px;
+    height: 30%;
+}
 
     #third {
         border: 1px solid gray;
@@ -580,6 +578,39 @@
         border: 0px solid green;
         width: 90%;
     }
+    .ship_to_this_add_btn {
+        border: 0px solid #09a6ea;
+        background-color: rgb(75, 86, 102);
+        width: 70%;
+        margin: 40px auto;
+        font-size: 15px;
+        font-weight: bold;
+
+        /* padding: 20px 25px; */
+        color: white;
+
+        word-spacing: 0px;
+        margin: 20px auto;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+    #cardOne {
+    border: 1px solid #cfd8dc;
+    width: 100%;
+    
+    margin-top: 40px;
+}
+    .single_card_address {
+        border: 0px solid red;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        width: 95%;
+        padding: 15px 20px;
+        margin: 20px auto;
+        border-radius: 15px;
+        transition: all 0.2s ease-in-out;
+    }
 }
 /* <---------for Mobile View--------> */
 @media all and (min-width: 300px) and (max-width: 767px) {
@@ -590,29 +621,26 @@
         font-size: 20px;
     }
     #main_div {
-    border: 0px solid rgb(185, 96, 170);
-    /* height: 1200px; */
-    display: block;
-    width: 90%;
-    margin: 20px auto;
+        border: 0px solid rgb(185, 96, 170);
 
-    border-radius: 15px;
-    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
-}
-#main_container_inside_second_div {
-    border: 0px solid #cbae0d;
-    width: 90%;
-    margin: 20px auto;
-    padding: 20px;
+        display: block;
+        width: 90%;
+        margin: 20px auto;
 
-}
-#first_div {
-    border: 0px solid rgb(215, 198, 15);
-    width: 90%;
-    margin: auto;
-    padding: 20px;
-
-}
+        border-radius: 15px;
+    }
+    #main_container_inside_second_div {
+        border: 0px solid #cbae0d;
+        width: 90%;
+        margin: 20px auto;
+        padding: 20px;
+    }
+    #first_div {
+        border: 0px solid rgb(215, 198, 15);
+        width: 90%;
+        margin: auto;
+        padding: 20px;
+    }
     #address {
         width: 100%;
         margin: 10px auto;
@@ -628,7 +656,6 @@
 
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     }
-
 
     #main {
         border: 0px solid rgb(185, 96, 96);
@@ -715,23 +742,39 @@
         font-size: 20px;
         font-weight: bold;
     }
+    .single_card_address {
+        /* border: 2px solid transparent;
+     */
+        border: 0px solid red;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        width: 95%;
+        padding: 15px 20px;
+        margin: 20px auto;
+        border-radius: 15px;
+        transition: all 0.2s ease-in-out;
+    }
+    #cardOne {
+        border: 1px solid #cfd8dc;
+        width: 100%;
+        margin-top: 40px;
+    }
     #review_order button {
         border: 0px solid green;
         width: 90%;
     }
     .ship_to_this_add_btn {
         border: 0px solid yellow;
-        width: 100%;
+        width: 70%;
+        margin: 40px auto;
         font-size: 15px;
         font-weight: bold;
     }
     #second {
-    border: 2px solid gray;
-    border: 1px solid #cfd8dc;
-    width: 100%;
-    margin: 20px;
-    padding: 20px;
-    margin-top: 40px;
-    height: 30%;
-}
+        border: 2px solid gray;
+        border: 1px solid #cfd8dc;
+        width: 100%;
+        margin: 0px;
+        margin-top: 40px;
+        height: 30%;
+    }
 }

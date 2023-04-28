@@ -103,8 +103,6 @@ const ShippingAdresss = () => {
                 navigate("/shipping_address");
             }, 2000);
         }
-
-        
     };
 
     //       dispatch(getAllCart());
@@ -261,8 +259,6 @@ const ShippingAdresss = () => {
                                 </div>
                             </VStack>
                         </div>
-
-
                     </div>
                 </div>
 

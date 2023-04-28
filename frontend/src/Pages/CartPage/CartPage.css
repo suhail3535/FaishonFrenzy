@@ -199,13 +199,29 @@
 
  .proced-btn{
   border: 0px solid red;
-  /* position: fixed; */
-  width: 90%;
+
+  width: 95%;
   margin: auto;
-  /* bottom: 120px; */
+  font-size: 10px;
   right: 0;
   left: 0;
 }
-
+.cartpage-right-container > span > button {
+  padding: 16px 60px;
+  margin: auto;
+  text-align: center;
+  font-weight: 500;
+font-size: 12px;
+  width: 100%;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  background-color: #3b475b;
+  color: white;
+  margin-bottom: 20px;
+  cursor: pointer;
+  display: flex;
+  /* border: 1px solid black; */
+}
 
 }
