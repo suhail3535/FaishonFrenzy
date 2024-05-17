@@ -33,14 +33,14 @@ app.use("/admin", adminRouter);
   //  app.use(auth)
 app.use("/adminsdetails", adminRouter); //this route is for admin login and details.
 
-// app.use(
-//   cors({
-//     origin: "",
-//     // origin: "http://localhost:5173",
-//     methods: ["POST", "GET"],
-//     credentials: true
-//   })
-// );
+app.use(
+  cors({
+    origin: "",
+    // origin: "http://localhost:5173",
+    methods: ["POST", "GET"],
+    credentials: true
+  })
+);
 
 // Enable preflight for all routes
 app.options('*', cors());
