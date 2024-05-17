@@ -40,9 +40,10 @@ app.use(
     methods: ["POST", "GET"],
     credentials: true
   })
+
 );
 
-// Enable preflight for all routes
+
 app.options('*', cors());
 
 
