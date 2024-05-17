@@ -22,6 +22,7 @@ import styles from "./Payment.module.css";
 import CreditCardIcon from "@mui/icons-material/CreditCard";
 import { useDispatch, useSelector } from "react-redux";
 // import { getRequestAddress } from "../../Redux/UserReducer/action";
+// const storedCartData = JSON.parse(localStorage.getItem('cartData'));
 
 // import PaymentCard from "./PaymentCard";
 import { Button } from "@mui/material";
@@ -36,10 +37,12 @@ const PaymentMethod = () => {
 
   const handlePay = () => {
     setIsButLoading(true);
+    localStorage.clear();
     setTimeout(() => {
       setIsButLoading(false);
       Swal.fire("Congratulations!", "Payment successfull!", "success");
       navigate("/");
+
     }, 2000);
   };
 
@@ -65,15 +68,15 @@ const PaymentMethod = () => {
         Payment Method
       </Heading>
       <div id={styles.container}>
-      
 
-        <div id={styles.method}> 
+
+        <div id={styles.method}>
           <Tabs
             style={{
               paddingRight: "10px",
-              border: "0px solid red", 
-              width:"100%" 
-            }}  
+              border: "0px solid red",
+              width:"100%"
+            }}
             variant="unstyled"
           >
             <TabList

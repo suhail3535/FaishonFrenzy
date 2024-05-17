@@ -11,7 +11,7 @@ const cors=require("cors");
 const { shoesRouter } = require("./Routes/shoes.routes");
 const { clotingRouter } = require("./Routes/cloting.routes");
 const { admin_Details_Router } = require("./Routes/admins_details.route");
-const { auth } = require("./middlewere/auth.middleware"); 
+const { auth } = require("./middlewere/auth.middleware");
 const app = express();
 app.use(express.json());
 app.use(cors())
@@ -26,12 +26,25 @@ app.use("/carts", cartRouter);
 app.use("/address",shippingRouter);
 
 app.use("/dress", dressRouter);
-app.use("/shoes", shoesRouter); 
-app.use("/cloths", clotingRouter); 
+app.use("/shoes", shoesRouter);
+app.use("/cloths", clotingRouter);
 app.use("/admin", adminRouter);
   //this route is for admin site.
   //  app.use(auth)
 app.use("/adminsdetails", adminRouter); //this route is for admin login and details.
+
+// app.use(
+//   cors({
+//     origin: "",
+//     // origin: "http://localhost:5173",
+//     methods: ["POST", "GET"],
+//     credentials: true
+//   })
+// );
+
+// Enable preflight for all routes
+app.options('*', cors());
+
 
 
 

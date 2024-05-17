@@ -9,7 +9,7 @@ export const getShoes = (param) => async (dispatch) => {
   try {
     dispatch({ type: SHOES_DATA_LOADING });
     let res = await axios
-      .get("https://sleepy-pear-toga.cyclic.app/shoes", param)
+      .get("http://localhost:7700/shoes", param)
       .then((e) => {
         dispatch({ type: SHOES_DATA_SUCCESS, payload: e.data });
         return e.data;

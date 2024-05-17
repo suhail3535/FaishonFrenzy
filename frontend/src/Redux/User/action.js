@@ -15,7 +15,7 @@ export const getProduct = () => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_DATA_LOADING });
     let res = await axios
-      .get("https://sleepy-pear-toga.cyclic.app/users")
+      .get("http://localhost:7700/users")
       .then((res) => {
         dispatch({ type: PRODUCT_DATA_SUCCESS, payload: res.data });
         return res.data;
@@ -48,7 +48,7 @@ export const deldatasuccess = () => {
 export const postRequest = (payload) => (dispatch) => {
   dispatch(getpostRequest());
   axios
-    .post("https://sleepy-pear-toga.cyclic.app/users/register", payload)
+    .post("http://localhost:7700/users/register", payload)
     .then((res) => {
       console.log(res.data);
       dispatch(getpostSuccess(res.data));
@@ -62,7 +62,7 @@ export const postRequest = (payload) => (dispatch) => {
 export const deletedata = (_id) => (dispatch) => {
   dispatch(getpostRequest());
   return axios
-    .delete(`https://sleepy-pear-toga.cyclic.app/admin/delete/${_id}`)
+    .delete(`http://localhost:7700/admin/delete/${_id}`)
     .then((res) => {
       // console.log(res.data);
       dispatch(deldatasuccess());
@@ -77,7 +77,7 @@ export const deletedata = (_id) => (dispatch) => {
 export const editProduct = (_id, newData) => (dispatch) => {
   dispatch(getpostRequest());
   axios
-    .patch(`https://sleepy-pear-toga.cyclic.app/admin/update/${_id}`, newData)
+    .patch(`http://localhost:7700/admin/update/${_id}`, newData)
     .then((res) => {
       console.log(res.data);
       dispatch({ type: PATCH_SUCCESS });

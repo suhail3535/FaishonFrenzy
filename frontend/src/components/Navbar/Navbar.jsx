@@ -175,7 +175,14 @@ const getData = async (val) => {
 
 export default function Navbar() {
   const cartData = useSelector((res) => res.cartReducer.cart);
-  // console.log(cartData);
+
+  // Save cartData to localStorage
+  localStorage.setItem('cartData', JSON.stringify(cartData));
+
+  // Retrieve cartData from localStorage
+  const storedCartData = JSON.parse(localStorage.getItem('cartData'));
+
+  // console.log(storedCartData,"lo");
   const [allCart, setAllCart] = useState([]);
   const dispatch = useDispatch();
 
@@ -333,7 +340,7 @@ export default function Navbar() {
                   }}
                 />
                 <h1 style={{ marginTop: "-30px", textAlign: "center" }}>
-                  {cartData.length}
+                  {storedCartData.length}
                 </h1>
                 {/* </Flex> */}
               </Box>

@@ -23,14 +23,14 @@ export const Adminlogin = () => {
   const handleSubmit = () => {
     if (name && email && password) {
       axios
-        .post(`https://sleepy-pear-toga.cyclic.app/users/register`, {
+        .post(`http://localhost:7700/users/register`, {
           name: name,
           email: email,
           password: password,
         })
         .then((res) => {
         ;
-          
+
 
           setTimeout(() => {
             toast({
@@ -71,12 +71,12 @@ export const Adminlogin = () => {
   const handleSubmitlogin = () => {
     if (email && password) {
       axios
-        .post(`https://sleepy-pear-toga.cyclic.app/users/login`, {
+        .post(`http://localhost:7700/users/login`, {
           email: email,
           password: password,
         })
         .then((res) => {
-       
+
 
           Swal.fire({
             position: "center",
@@ -113,15 +113,15 @@ export const Adminlogin = () => {
           Autorization: `Bearer ${tokenResponse.access_token}`,
         },
       });
-    
+
     },
   });
 
   const signin = useGoogleLogin({
     onSuccess: async (credentialResponse) => {
-  
+
       const decoded = jwt_decode(credentialResponse.credential);
-   
+
     },
   });
 
@@ -175,7 +175,7 @@ export const Adminlogin = () => {
                     className="input-field button"
                   >
                     <input className="login_Btn" type="button" value="Login" />
-                  
+
                   </div>
                   <div>
                     <div

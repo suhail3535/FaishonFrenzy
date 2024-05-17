@@ -28,11 +28,6 @@ export const SingleProduct = () => {
   const param = useParams();
   console.log("prod Id", param);
 
-  // const cartValidate = (newCartProd) => {
-
-  //   return duplicate
-
-  // }
 
   const handleCart = (data) => {
 
@@ -88,7 +83,7 @@ export const SingleProduct = () => {
   const fetchSigleProd = async () => {
     try {
       const details = await axios.get(
-        `https://sleepy-pear-toga.cyclic.app/${param.name}/${param.id}`
+        `http://localhost:7700/${param.name}/${param.id}`
       );
       console.log("singleDetail", details.data);
       setProdDetail(details.data[0]);
