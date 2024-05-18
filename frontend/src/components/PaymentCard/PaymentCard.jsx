@@ -3,7 +3,7 @@ import "./PaymentCard.css"
 
 const PaymentCard = ({ title, image, price, name, rating }) => {
     const [qty, setQty] = React.useState(1)
-    console.log(qty)
+    // console.log(qty)
 
     const handleChange = () => [
 
