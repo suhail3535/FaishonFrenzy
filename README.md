@@ -4,7 +4,7 @@ Fashion Frenzy is ECommerce Website & is a clone of Anthropologie. With a vast c
 
 ## Deployed Link
 
-Visit:https://frontend-suhail3535.vercel.app/
+Visit:https://faishonfrenzyecom.vercel.app/
 
 ## Clone of Anthropologie
 
