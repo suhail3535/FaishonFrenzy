@@ -37,7 +37,7 @@ app.use(
   cors({
     origin: "https://trainee-assignment-dashboard.vercel.app/",
     // origin: "http://localhost:5173",
-    methods: ["POST", "GET"],
+    methods: ["POST", "GET","UPDATE","DELETE"],
     credentials: true
   })
 
