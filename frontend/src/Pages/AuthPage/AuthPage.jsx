@@ -2,10 +2,7 @@ import React from "react";
 import "./AuthPage.css";
 import jwt_decode from "jwt-decode";
 import Swal from "sweetalert2";
-// const clientID = 559548995076-sohrprkhs7n88k53f4casrqisqk9otfs.apps.googleusercontent.com
-// const clientSecret = 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
-import { GoogleLogin } from "@react-oauth/google";
-import { useGoogleLogin } from "@react-oauth/google";
+
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@chakra-ui/react";
@@ -92,24 +89,6 @@ const AuthPage = () => {
         }
     };
 
-    const login = useGoogleLogin({
-        onSuccess: async (tokenResponse) => {
-            const data = axios.get(
-                "https://www.googleapis.com/oauth2/v3/userinfo",
-                {
-                    headers: {
-                        Autorization: `Bearer ${tokenResponse.access_token}`,
-                    },
-                }
-            );
-        },
-    });
-
-    const signin = useGoogleLogin({
-        onSuccess: async (credentialResponse) => {
-            const decoded = jwt_decode(credentialResponse.credential);
-        },
-    });
 
     return (
         <div className="auth-back-img">
@@ -191,7 +170,7 @@ const AuthPage = () => {
                                             OR
                                         </div>
                                         <div
-                                            onClick={() => login()}
+                                            // onClick={() => login()}
                                             style={{ marginTop: "0px" }}
                                             className="input-field button">
                                             <input
@@ -322,7 +301,7 @@ const AuthPage = () => {
                                     </div>
 
                                     <div
-                                        onClick={() => signin()}
+                                        // onClick={() => signin()}
                                         style={{ marginTop: "0px" }}
                                         className="input-field button">
                                         <input
