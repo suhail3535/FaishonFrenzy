@@ -35,7 +35,7 @@ app.use("/adminsdetails", adminRouter); //this route is for admin login and deta
 
 app.use(
   cors({
-    origin: "https://trainee-assignment-dashboard.vercel.app",
+    origin: "https://faishon-frenzy.vercel.app",
     // origin: "http://localhost:5173",
     methods: ["POST", "GET","UPDATE","DELETE"],
     credentials: true
