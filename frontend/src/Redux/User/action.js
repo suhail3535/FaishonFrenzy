@@ -15,12 +15,12 @@ export const getProduct = () => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_DATA_LOADING });
     let res = await axios
-      .get("http://localhost:7700/users")
+      .get("https://faishon-frenzy.vercel.app/users")
       .then((res) => {
         dispatch({ type: PRODUCT_DATA_SUCCESS, payload: res.data });
         return res.data;
       });
-    console.log(res);
+    // console.log(res);
   } catch (err) {
     dispatch({ type: PRODUCT_DATA_ERROR });
   }
@@ -48,9 +48,9 @@ export const deldatasuccess = () => {
 export const postRequest = (payload) => (dispatch) => {
   dispatch(getpostRequest());
   axios
-    .post("http://localhost:7700/users/register", payload)
+    .post("https://faishon-frenzy.vercel.app/users/register", payload)
     .then((res) => {
-      console.log(res.data);
+      // console.log(res.data);
       dispatch(getpostSuccess(res.data));
     })
     .then((error) => {
@@ -62,7 +62,7 @@ export const postRequest = (payload) => (dispatch) => {
 export const deletedata = (_id) => (dispatch) => {
   dispatch(getpostRequest());
   return axios
-    .delete(`http://localhost:7700/admin/delete/${_id}`)
+    .delete(`https://faishon-frenzy.vercel.app/admin/delete/${_id}`)
     .then((res) => {
       // console.log(res.data);
       dispatch(deldatasuccess());
@@ -77,9 +77,9 @@ export const deletedata = (_id) => (dispatch) => {
 export const editProduct = (_id, newData) => (dispatch) => {
   dispatch(getpostRequest());
   axios
-    .patch(`http://localhost:7700/admin/update/${_id}`, newData)
+    .patch(`https://faishon-frenzy.vercel.app/admin/update/${_id}`, newData)
     .then((res) => {
-      console.log(res.data);
+      // console.log(res.data);
       dispatch({ type: PATCH_SUCCESS });
     })
     .catch((err) => {

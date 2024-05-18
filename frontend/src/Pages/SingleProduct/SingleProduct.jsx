@@ -26,14 +26,12 @@ export const SingleProduct = () => {
 
 
   const param = useParams();
-  console.log("prod Id", param);
+  // console.log("prod Id", param);
 
 
   const handleCart = (data) => {
 
-    console.log("single", data)
-    console.log("proddetail", prodDetail)
-    console.log("store", store)
+
     const duplicate = store.filter((el) => el.title === data.name)
     console.log("duplicate", duplicate)
     if (duplicate.length > 0) {
@@ -83,7 +81,7 @@ export const SingleProduct = () => {
   const fetchSigleProd = async () => {
     try {
       const details = await axios.get(
-        `http://localhost:7700/${param.name}/${param.id}`
+        `https://faishon-frenzy.vercel.app/${param.name}/${param.id}`
       );
       console.log("singleDetail", details.data);
       setProdDetail(details.data[0]);

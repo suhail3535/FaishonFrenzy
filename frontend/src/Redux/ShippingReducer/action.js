@@ -29,7 +29,7 @@ export const deldatasuccess = () => {
 export const postRequestAddress = (payload) => (dispatch) => {
   dispatch(getpostRequest());
   axios
-    .post("http://localhost:7700/address/add", payload)
+    .post("https://faishon-frenzy.vercel.app/address/add", payload)
     .then((res) => {
       console.log("post", res.data);
       dispatch(getpostSuccessAddress(res.data));
@@ -42,7 +42,7 @@ export const postRequestAddress = (payload) => (dispatch) => {
 export const getRequestAddress = () => (dispatch) => {
   dispatch(getpostRequest());
   axios
-    .get("http://localhost:7700/address")
+    .get("https://faishon-frenzy.vercel.app/address")
     .then((res) => {
       //   console.log("get",res.data);
       dispatch(getdataSuccessAddress(res.data));
@@ -55,7 +55,7 @@ export const getRequestAddress = () => (dispatch) => {
 export const deletedataAdd = (_id) => (dispatch) => {
   dispatch(getpostRequest());
   return axios
-    .delete(`http://localhost:7700/address/delete/${_id}`)
+    .delete(`https://faishon-frenzy.vercel.app/address/delete/${_id}`)
     .then((res) => {
       console.log(res.data);
       dispatch(deldatasuccess());

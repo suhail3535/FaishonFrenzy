@@ -9,9 +9,9 @@ import {
 export const addToCart = (payload) => async (dispatch) => {
   try {
     dispatch({ type: CART_DATA_LOADING });
-    console.log("reduxPayload", payload);
+    // console.log("reduxPayload", payload);
     let res = await axios.post(
-      `http://localhost:7700/carts/add`,
+      `https://faishon-frenzy.vercel.app/carts/add`,
       payload
     );
     dispatch({ type: CART_DATA_POST, payload: res.data });
@@ -26,12 +26,12 @@ export const getAllCart = () => async (dispatch) => {
   try {
     dispatch({ type: CART_DATA_LOADING });
     let res = await axios
-      .get(`http://localhost:7700/carts`)
+      .get(`https://faishon-frenzy.vercel.app/carts`)
       .then((e) => {
         dispatch({ type: CART_DATA_SUCCESS, payload: e.data });
         return e.data;
       });
-    console.log("fromRedux", res);
+    // console.log("fromRedux", res);
   } catch (err) {
     dispatch({ type: CART_DATA_ERROR });
   }
